@@ -29,7 +29,7 @@ export default function Home({ blog }) {
   return (
     <>
       <Head>
-        <title>NextJs Chrono</title>
+        <title>Chrono-Office | HP制作</title>
       </Head>
       <Mv />
       <div className="wrap">
