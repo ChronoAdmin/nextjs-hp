@@ -7,15 +7,12 @@ import { About } from "../../components/About";
 import { Service } from "../../components/Service";
 import { Light } from "../../components/Light";
 
-// GSAP
-import { gsap } from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
+
 gsap.registerPlugin(ScrollTrigger);
 import { useEffect, useRef } from "react";
 import { Flow } from "../../components/Flow";
 import { Video } from "../../components/Video";
 
-export const Gsap = () => {};
 
 // SSG
 export const getStaticProps = async () => {
