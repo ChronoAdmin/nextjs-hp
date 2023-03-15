@@ -1,0 +1,114 @@
+.Light {
+    width: 100%;
+    position: relative;
+    margin-top: 100px;
+    padding-top: 150px;
+}
+
+.title {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 70px;
+}
+
+.title > h1 {
+    padding-left: 0px;
+}
+
+.c_scrollleft {
+    width: 1px;
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+    right: -20%;
+    top: 50%;
+  }
+
+ .c_line {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: linear-gradient(to bottom, white 50%, rgba(255, 255, 255, 0) 50%);
+    background-position: 0 -100px ;
+    background-size: 100% 200%;
+    animation: scrolldown 2.2s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
+  }
+
+  @keyframes scrolldown {
+    0% {
+      background-position: 0 -100px ;
+    }
+    75% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 0 100px ;
+    }
+  }
+
+
+.blog_list {
+  width: 100%;
+  padding: 3%;
+} 
+
+.blog_list_title {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 5px;
+}
+
+.blogs {
+  width: 50%;
+  min-width: 400px;
+  margin: 0 auto;
+}
+
+.blogs > li {
+  font-size: 20px;
+  margin: 50px 0;
+  border-bottom: 1px solid #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10%;
+}
+
+.blogs > li > a  {
+  display: inline-block;
+  padding-bottom: 10px;
+  width: 40%;
+  min-width: 200px;
+  transition: all .3s ease-in-out;
+}
+.blogs > li > a:hover  {
+  color: #acacac;
+}
+
+.btn {
+  display: block;
+  background-color: rgba(138, 132, 132, 0.24);
+  width: 300px;
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+  transition: .3s;
+}
+
+.btn:hover {
+  background-color: rgba(138, 132, 132, 0.733);
+}
+
+
+
+.red {
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  height: 100vh;
+}
+.blue {
+  background-color: rgb(6, 6, 54);
+  width: 100%;
+  height: 100vh;
+}

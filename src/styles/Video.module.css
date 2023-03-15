@@ -1,0 +1,34 @@
+.video {
+    margin: 0 auto;
+    width: 100%;
+    height: 40vw;
+    min-width: 400px;
+    position: relative;
+    border-radius: 4px;
+}
+
+.video > video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.video::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000067;
+    /* background: linear-gradient(to bottom, #00000067 0%,#000000ec 100%); */
+}
+
+.video > h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+    font-size: 100px;
+}
