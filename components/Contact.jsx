@@ -4,10 +4,10 @@ import React, { useEffect, useState } from 'react';
 
 
 export const Contact = () => {
-    const [count, setCount] = useState(0);
-    useEffect(() => {
-        setCount(count + 1);
-      }, []);
+    // const [count, setCount] = useState(0);
+    // useEffect(() => {
+    //     setCount(count + 1);
+    //   }, []);
 
   return (
     <>
@@ -15,7 +15,7 @@ export const Contact = () => {
             <form className={styles.form} >
                 <h1>aaa</h1>
             </form>
-            <button onClick={() => setCount(count + 1)}>Click ME {count}</button>
+            {/* <button onClick={() => setCount(count + 1)}>Click ME {count}</button> */}
         </div>
     </>
   )
