@@ -4,23 +4,8 @@ import Link from "next/link";
 import { useEffect, useRef } from "react";
 import styles from "../src/styles/Light.module.css";
 
-export const Light = ({ blog }) => {
+export const Light = ({ articles }) => {
 
-  // 公開日時をフォーマット
-  const articles = blog.map((article) => {
-    const date = new Date(article.publishedAt);
-    const year = date.getFullYear();
-    const month = ("0" + (date.getMonth() + 1)).slice(-2);
-    const day = ("0" + date.getDate()).slice(-2);
-    const formattedDate = `${year}/${month}/${day}`;
-    return {
-      ...article,
-      publishedAt: formattedDate,
-    };
-  });
-  console.log(articles);
-
-  // ここからhtml
   return (
     <>
       <section className={styles.Light}>
