@@ -6,13 +6,9 @@ import { Mv } from "../../components/Mv";
 import { About } from "../../components/About";
 import { Service } from "../../components/Service";
 import { Light } from "../../components/Light";
-
-
-gsap.registerPlugin(ScrollTrigger);
-import { useEffect, useRef } from "react";
 import { Flow } from "../../components/Flow";
 import { Video } from "../../components/Video";
-
+import { Contact } from "../../components/Contact";
 
 // SSG
 export const getStaticProps = async () => {
@@ -37,15 +33,6 @@ export default function Home({ blog }) {
           <About />
           <Service />
           <Light blog={blog} />
-          {/* <div className={styles.blog_list}>
-            {blog.map((blog) => (
-              <li key={blog.id}>, 
-                <Link href={`blog/${blog.id}`} className={styles.main_li}>
-                  <div>{blog.title}</div>
-                </Link>
-              </li>
-            ))}
-          </div> */}
         </div>
         <div className="bgChange">
           <div className="inner">
@@ -53,9 +40,9 @@ export default function Home({ blog }) {
           </div>
         </div>
         <div className="bgChange2">
-            <Video />
+          <Video />
         </div>
-        <div className="bgChange3"></div>
+        <Contact />
       </div>
     </>
   );

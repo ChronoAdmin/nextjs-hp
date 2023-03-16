@@ -1,4 +1,5 @@
 // SSG
+import Head from "next/head";
 import Link from "next/link";
 import { client } from "../../../libs/client";
 import styles from "../../styles/Home.module.css";
@@ -27,29 +28,18 @@ export const getStaticPaths = async () => {
 
 export default function BlogId({ blog }) {
   return (
-    <main className={styles.main}>
-      <Link href="/" className={styles.back}>
-        Topへ戻る
-      </Link>
-      <h1 className={styles.title}>{blog.title}</h1>
-      <p className={styles.publisheadAt}>{blog.publisheadAt}</p>
-      <div
-        dangerouslySetInnerHTML={{ __html: `${blog.body}` }}
-        className={styles.post}
-      ></div>
-    </main>
+    <>
+      <main className={styles.main}>
+        <Link href="/" className={styles.back}>
+          Topへ戻る
+        </Link>
+        <h1 className={styles.title}>{blog.title}</h1>
+        <p className={styles.publisheadAt}>{blog.publisheadAt}</p>
+        <div
+          dangerouslySetInnerHTML={{ __html: `${blog.body}` }}
+          className={styles.post}
+        ></div>
+      </main>
+    </>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
