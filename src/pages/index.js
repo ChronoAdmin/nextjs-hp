@@ -13,15 +13,26 @@ import { Contact } from "../../components/Contact";
 // SSG
 export const getStaticProps = async () => {
   const data = await client.get({ endpoint: "blog" });
-  // console.log(data);
+  const articles = data.contents.map((article) => {
+    const date = new Date(article.publishedAt);
+    const year = date.getFullYear();
+    const month = ("0" + (date.getMonth() + 1)).slice(-2);
+    const day = ("0" + date.getDate()).slice(-2);
+    const formattedDate = `${year}/${month}/${day}`;
+    return {
+      ...article,
+      publishedAt: formattedDate,
+    };
+  });
   return {
     props: {
-      blog: data.contents,
+      articles: articles,
     },
   };
 };
 
-export default function Home({ blog }) {
+export default function Home({ articles }) {
+  
   return (
     <>
       <Head>
@@ -32,7 +43,7 @@ export default function Home({ blog }) {
         <div className="inner">
           <About />
           <Service />
-          <Light blog={blog} />
+          <Light articles={articles} />
         </div>
         <div className="bgChange">
           <div className="inner">
