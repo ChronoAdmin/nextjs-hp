@@ -37,6 +37,7 @@ export default function Home({ articles }) {
     <>
       <Head>
         <title>Chrono-Office | HP制作</title>
+        <meta name="google-site-verification" content="eiWwhL_ddr7VLMq5Oz1-p2UtYpd2QdPnLACqLTitQ9U" />
       </Head>
       <Mv />
       <div className="wrap">
