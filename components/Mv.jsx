@@ -16,9 +16,3 @@ export const Mv = () => {
   );
 };
 
-
-export const getStaticProps = async () => {
-  return {
-    props: {},
-  };
-};
