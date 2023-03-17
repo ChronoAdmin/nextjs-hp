@@ -1,13 +1,6 @@
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react'
 
 export default function Home(){
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-      setTimeout(() => setLoading(false), 5000);
-    }, []);
-  
     return (
       <div>
         <a href="/#sample1">TOPへ戻る(通常)</a>
