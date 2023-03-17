@@ -51,9 +51,9 @@ export default function Home({ articles }) {
             <Flow />
           </div>
         </div>
-        <div className="bgChange2">
+        {/* <div className="bgChange2">
           <Video />
-        </div>
+        </div> */}
         <Contact />
       </div>
     </>

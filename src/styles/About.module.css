@@ -13,6 +13,12 @@
     font-size: 70px;
 }
 
+@media screen and (max-width: 1575px) {
+    .title {
+        right: 0;
+    }
+ }
+
 .title > h1 {
     position: absolute;
     right: 20px;
@@ -129,7 +135,7 @@
     border: 1px solid #fff;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1327px) {
     .card {
         grid-template-columns: 1fr;
         min-width: 350px;
@@ -142,5 +148,38 @@
     .contentBx {
         height: auto;
         right: 0;
+    }
+}
+@media screen and (max-width: 900px) {
+    .card {
+        grid-template-columns: 1fr;
+        min-width: 250px;
+    }
+    .imgBx {
+        width: 350px;
+        height: 150px;
+        left: 0;
+    }
+    .contentBx {
+        width: 350px;
+        height: auto;
+        right: 0;
+        padding: 5%;
+    }
+    .contentBx::before {
+        display: none;
+
+    }
+}
+@media screen and (max-width: 500px) {
+    .imgBx {
+        width: 300px;
+    }
+    .contentBx {
+        width: 300px;
+    }
+    .contentBx::before {
+        display: none;
+
     }
 }
