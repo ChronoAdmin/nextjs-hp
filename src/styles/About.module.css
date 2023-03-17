@@ -8,20 +8,16 @@
 .title {
     position: absolute;
     top: 50px;
-    right: 0px;
+    right: 20px;
     writing-mode: vertical-rl;
     font-size: 70px;
 }
 
-@media screen and (max-width: 1575px) {
-    .title {
-        right: 0;
-    }
- }
+
 
 .title > h1 {
     position: absolute;
-    right: 20px;
+    right: 0px;
 }
 
 .c_scrolldown {
@@ -29,7 +25,7 @@
     height: 100px;
     position: absolute;
     top: 20px;
-    right: 30px;
+    right: 0px;
     overflow: hidden;
   }
 
@@ -156,12 +152,12 @@
         min-width: 250px;
     }
     .imgBx {
-        width: 350px;
+        width: 400px;
         height: 150px;
         left: 0;
     }
     .contentBx {
-        width: 350px;
+        width: 400px;
         height: auto;
         right: 0;
         padding: 5%;
@@ -171,15 +167,50 @@
 
     }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
+    .card {
+        margin-top: 20px;
+        margin-right: auto;
+    }
     .imgBx {
-        width: 300px;
+        width: 400px;
     }
     .contentBx {
-        width: 300px;
+        width: 400px;
+    }
+    .title {
+        font-size: 55px;
+    }
+ }
+@media screen and (max-width: 500px) {
+    .card {
+        margin-left: 10px;
+    }
+    .imgBx {
+        width: 230px;
+    }
+    .contentBx {
+        width: 230px;
     }
     .contentBx::before {
         display: none;
-
     }
+    .none {
+        display: none;
+    }
+    .title {
+        position: absolute;
+        top: 50px;
+        right: 0px;
+        writing-mode: vertical-rl;
+        font-size: 70px;
+    }
+    .c_scrolldown {
+        width: 1px;
+        height: 100px;
+        position: absolute;
+        top: 20px;
+        right: 0px;
+        overflow: hidden;
+      }
 }
