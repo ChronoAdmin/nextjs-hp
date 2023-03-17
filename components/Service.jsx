@@ -12,7 +12,7 @@ export const Service = () => {
   useEffect(() => {
     gsap.set(cardRef.current, {opacity: 0});
     gsap.from(cardRef.current,{
-      x: "-100px",
+      x: "-400px",
     })
     gsap.to(cardRef.current, {
       x: "0px",
@@ -22,9 +22,7 @@ export const Service = () => {
       scrollTrigger: {
         trigger: "#service",
         start: "top center",
-        end: "center center",
         toggleActions: "play reverse play reverse",
-        scrub:true,
       }
     })},[]);
   return (

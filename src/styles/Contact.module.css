@@ -18,7 +18,7 @@
 
 .nextImg {
   width: 40%;
-  min-width: 300px;
+  min-width: 160px;
   height: auto;
   margin: 80px auto;
   border: 1px solid #6cc;
@@ -48,7 +48,7 @@
 
 .otherImg {
     width: 40%;
-    min-width: 300px;
+    min-width: 160px;
     height: auto;
     margin: 80px auto;
     border: 1px solid rgb(219, 41, 79);
@@ -170,11 +170,11 @@
 .img_container > .txt {
   position: absolute;
   left: -100px;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
   opacity: 0;
   transition: all .5s ease-in-out;
-  width: 100%;
+  width: 90%;
   text-align: center;
 }
 
@@ -182,4 +182,31 @@
   opacity: 1;
   left: 50%;
   transform: translate(-50%,-50%);
+}
+
+
+@media screen and (max-width: 800px) { 
+  .contact {
+    width: 100%;
+    background: linear-gradient(to bottom, rgb(16, 4, 70), #000);
+    padding-top: 100px;
+  }
+  .contact h1 {
+    font-size: 55px;
+  }
+  .img_container {
+    display: grid;
+    height: 170px;
+    overflow: hidden;
+  }
+  .img_container > .txt {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    top: 40%;
+    opacity: 1;
+    transition: all .5s ease-in-out;
+    width: 90%;
+    text-align: center;
+  }
 }
