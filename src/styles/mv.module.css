@@ -39,3 +39,22 @@
 .contact:hover {
     box-shadow: 0px 0px 10px #0000008c;
 }
+
+.mv p {
+    font-size: 30px;
+    color: #fff;
+    text-shadow: 10px -5px 10px #0000008c;
+}
+
+.mv p:nth-of-type(1) {
+    position: absolute;
+    right: 15%;
+    bottom:17%;
+}
+
+.mv p:last-child {
+    position: absolute;
+    right: 15%;
+    bottom: 10%;
+    font-size: 40px;
+}

@@ -14,9 +14,9 @@ export const Flow = () => {
             <div className={styles.card}>
                 <span>1</span>
                 <div className={styles.text}>
-                    <h3>
+                    <h2>
                         要件定義
-                    </h3>
+                    </h2>
                     <p>
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis earum et illum fugit molestias incidunt vero voluptas expedita omnis dolorum.
                     </p>
@@ -25,9 +25,9 @@ export const Flow = () => {
             <div className={styles.card}>
                 <span>2</span>
                 <div className={styles.text}>
-                    <h3>
+                    <h2>
                         お見積り
-                    </h3>
+                    </h2>
                     <p>
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis earum et illum fugit molestias incidunt vero voluptas expedita omnis dolorum.
                     </p>
@@ -36,9 +36,9 @@ export const Flow = () => {
             <div className={styles.card}>
                 <span>3</span>
                 <div className={styles.text}>
-                    <h3>
+                    <h2>
                         制作
-                    </h3>
+                    </h2>
                     <p>
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis earum et illum fugit molestias incidunt vero voluptas expedita omnis dolorum.
                     </p>

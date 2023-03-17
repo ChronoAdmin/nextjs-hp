@@ -4,7 +4,11 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
 
+::selection {
+  color: rgb(0, 0, 0);
+  background-color: #0cc;
 }
 
 html,
@@ -68,3 +72,9 @@ img {
   min-width: 400px;
   margin: 0 auto;
 }
+
+@media screen and (max-width: 1575px) {
+  .inner {
+    width: 94%;
+  }
+ }
