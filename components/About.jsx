@@ -45,7 +45,7 @@ export const About = () => {
         <div className={styles.container}>
           <div className={styles.card}>
             <div className={styles.imgBx}>
-            <Image src="/images/About/About_image1.jpg" width={500} height={500}/>
+            <Image src="/images/About/About_image1.webp" width={500} height={500} alt="Aboutの写真です"/>
 
             </div>
             <div className={styles.contentBx}>

@@ -16,13 +16,14 @@ export const Contact = () => {
         <div className={styles.imgs}>
           <div className={styles.nextImg}>
             <Image
-              src="/images/stack/nextjs-1024x512.png"
+              src="/images/stack/nextjs-1024x512.webp"
               width={1920}
               height={1080}
+              alt="Nextjsの素材画像"
             />
           </div>
           <div className={styles.otherImg}>
-            <Image src="/images/stack/micro.png" width={1920} height={1080} />
+            <Image src="/images/stack/micro.webp" width={1920} height={1080} alt="microCMSの素材画像" />
           </div>
         </div>
         <div className={styles.container}>

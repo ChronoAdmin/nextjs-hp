@@ -40,7 +40,7 @@ export const Service = () => {
             <span className={styles.border_line}></span>
             <div className={styles.inner}>
               <div className={styles.inputBox}>
-                <Image src="/images/About/About_image1.jpg" width={500} height={500}/>
+                <Image src="/images/About/About_image1.webp" width={500} height={500} alt="Aboutの写真です"/>
                 <div className={styles.text}>
                   <span>Usernjjjame</span>
                 </div>
@@ -51,7 +51,7 @@ export const Service = () => {
             <span className={styles.border_line}></span>
             <div className={styles.inner}>
               <div className={styles.inputBox}>
-              <Image src="/images/About/About_image1.jpg" width={500} height={500}/>
+              <Image src="/images/About/About_image1.webp" width={500} height={500} alt="Aboutの写真です"/>
                 <div className={styles.text}>
                   <span>Usernjjjame</span>
                 </div>
@@ -62,7 +62,7 @@ export const Service = () => {
             <span className={styles.border_line}></span>
             <div className={styles.inner}>
               <div className={styles.inputBox}>
-              <Image src="/images/About/About_image1.jpg" width={500} height={500}/>
+              <Image src="/images/About/About_image1.webp" width={500} height={500} alt="Aboutの写真です"/>
                 <div className={styles.text}>
                   <span>Usernjjjame</span>
                 </div>
