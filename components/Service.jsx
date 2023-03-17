@@ -2,6 +2,7 @@ import styles from "../src/styles/Service.module.css";
 import {gsap} from "gsap"
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import React, { useEffect, useRef } from "react";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -39,7 +40,7 @@ export const Service = () => {
             <span className={styles.border_line}></span>
             <div className={styles.inner}>
               <div className={styles.inputBox}>
-                <img src="/images/About/About_image1.jpg" alt="" />
+                <Image src="/images/About/About_image1.jpg" width={500} height={500}/>
                 <div className={styles.text}>
                   <span>Usernjjjame</span>
                 </div>
@@ -50,7 +51,7 @@ export const Service = () => {
             <span className={styles.border_line}></span>
             <div className={styles.inner}>
               <div className={styles.inputBox}>
-                <img src="/images/About/About_image1.jpg" alt="" />
+              <Image src="/images/About/About_image1.jpg" width={500} height={500}/>
                 <div className={styles.text}>
                   <span>Usernjjjame</span>
                 </div>
@@ -61,7 +62,7 @@ export const Service = () => {
             <span className={styles.border_line}></span>
             <div className={styles.inner}>
               <div className={styles.inputBox}>
-                <img src="/images/About/About_image1.jpg" alt="" />
+              <Image src="/images/About/About_image1.jpg" width={500} height={500}/>
                 <div className={styles.text}>
                   <span>Usernjjjame</span>
                 </div>
