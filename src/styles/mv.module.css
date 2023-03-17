@@ -58,3 +58,10 @@
     bottom: 10%;
     font-size: 40px;
 }
+
+@media screen and (max-width: 500px) { 
+    .mv {
+        height: 80vw;
+        padding-bottom: 0;
+    }
+}

@@ -19,7 +19,7 @@ export const Light = ({ articles }) => {
           <div className={styles.blogs}>
             {articles.map((article) => (
               <li key={article.id}>
-                <div>{article.publishedAt}</div>
+                <div className={styles.data}>{article.publishedAt}</div>
                 <Link href={`blog/${article.id}`} className={styles.main_li}>
                   {article.title}
                 </Link>
