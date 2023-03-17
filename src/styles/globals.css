@@ -14,18 +14,8 @@
 html,
 body {
   max-width: 1920px;
-  overflow-x: hidden;
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-
+  /* overflow-x: hidden; */
+  color: #fff;
 }
 
 a {
@@ -69,7 +59,7 @@ img {
 
 .inner {
   width: 80%;
-  min-width: 400px;
+  min-width: 300px;
   margin: 0 auto;
 }
 

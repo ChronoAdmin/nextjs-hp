@@ -56,6 +56,8 @@
     justify-items: center;
 }
 
+
+
 .box {
     position: relative;
     width: 380px;
@@ -135,25 +137,6 @@
     }
 }
 
-/* .box:nth-child(2)::before,
-.box:nth-child(2)::after 
- {
-    background: linear-gradient(0deg,transparent,transparent,#45ff7d,#45ff7d,#45ff7d);
-}
-.box:nth-child(2) .border_line::before, 
-.box:nth-child(2) .border_line::after  {
-    background: linear-gradient(0deg,transparent,transparent,#ab45ff,#ab45ff,#ab45ff);
-}
-
-.box:nth-child(3)::before,
-.box:nth-child(3)::after 
- {
-     background: linear-gradient(0deg,transparent,transparent,#4586ff,#4577ff,#4586ff);
-    }
-    .box:nth-child(3) .border_line::before, 
-    .box:nth-child(3) .border_line::after  {
-        background: linear-gradient(0deg,transparent,transparent,#ffa845,#ffa845,#ffa845);
-    } */
 
 .inner {
     position: absolute;
@@ -188,4 +171,75 @@
 
 .inputBox > span {
     display: block;
+}
+
+
+@media screen and (max-width: 1280px) { 
+    .cards {
+        grid-template-columns: 1fr;
+    }
+    .box:nth-child(1){
+        margin-right: 20%;
+    }
+    .box:nth-child(2){
+        margin-left: 20%;
+    }
+    .box:nth-child(3){
+        margin-right: 20%;
+    }
+}
+
+@media screen and (max-width: 800px) { 
+    .title{
+        font-size: 55px;
+    }
+    .service {
+        padding-top: 150px;
+    }
+}
+
+@media screen and (max-width: 500px) { 
+    .box{
+        width: 230px;
+        height: 270px;
+    }
+    .box::before {
+        position: absolute;
+        content: "";
+        top: -50%;
+        left: -50%;
+        width: 230px;
+        height: 270px;
+    }
+    .box::after {
+        position: absolute;
+        content: "";
+        top: -50%;
+        left: -50%;
+        width: 230px;
+        height: 270px;
+    }
+    .border_line::before {
+        position: absolute;
+        content: "";
+        top: -50%;
+        left: -50%;
+        width: 230px;
+        height: 270px;
+    }
+    
+    .border_line::after {
+        position: absolute;
+        content: "";
+        top: -50%;
+        left: -50%;
+        width: 230px;
+        height: 270px;
+    }
+    .inputBox > img {
+        height: 120px;
+        width: 100%;
+        border-radius: 2px;
+        object-fit: cover;
+    }
 }
