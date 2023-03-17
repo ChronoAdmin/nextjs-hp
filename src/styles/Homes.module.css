@@ -1,0 +1,11 @@
+.div {
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+    color: #000;
+    font-size: 100px;
+    font-family: "HG行書体", monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
