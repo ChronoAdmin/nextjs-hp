@@ -69,8 +69,15 @@ export const Contact = () => {
               <div className={styles.desc}>microCMS</div>
             </div>
           </div>
+          <div className={styles.compare}>
+            <h2>←NextJsを使用した場合 / 従来の技術を使用した場合→</h2>
+            <p>(ページの内容は一緒です)</p>
+            <div className={styles.compareImgs}>
+            <Image src="/images/stack/next.google.png" width={1916} height={898}/>
+            <Image src="/images/stack/next.google.png" width={1916} height={898}/>
+            </div>
+          </div>
         </div>
-        {/* <button onClick={() => setCount(count + 1)}>Click ME {count}</button> */}
       </div>
     </>
   );
