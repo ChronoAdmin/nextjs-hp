@@ -9,6 +9,8 @@ import { Light } from "../../components/Light";
 import { Flow } from "../../components/Flow";
 import { Video } from "../../components/Video";
 import { Contact } from "../../components/Contact";
+import { Analytics } from '@vercel/analytics/react';
+
 
 // SSG
 export const getStaticProps = async () => {

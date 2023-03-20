@@ -214,3 +214,27 @@
     text-align: center;
   }
 }
+
+.compare h2 {
+  text-align: center;
+  letter-spacing: 2px;
+}
+.compare p {
+  font-size: 14px;
+  margin-bottom: 20px;
+text-align: center;
+}
+
+.compareImgs {
+  width: 100%;
+  display: flex;
+  gap: 5%;
+  justify-content: center;
+} 
+
+.compare img {
+  max-height: 898px;
+  max-width: 40%;
+  width: auto;
+  height: auto;
+}
