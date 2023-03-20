@@ -70,18 +70,6 @@ export const Contact = () => {
             </div>
           </div>
         </div>
-        <div className={styles.gifs}>
-          <div>
-            <a href="/sample/" id="sample1">
-              sample
-            </a>
-          </div>
-          <div>
-            <Link href="/sample/" id="sample2">
-              sample2
-            </Link>
-          </div>
-        </div>
         {/* <button onClick={() => setCount(count + 1)}>Click ME {count}</button> */}
       </div>
     </>
