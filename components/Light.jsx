@@ -7,15 +7,9 @@ import styles from "../src/styles/Light.module.css";
 
 export const Light = ({ articles }) => {
   const latestArticles = articles.slice(0, 4);
-  {latestArticles.map((article) => (
-      title = article.title
-    ))}
 
   return (
     <>
-    <Head>
-      <title>{title}</title>
-    </Head>
       <section className={styles.Light}>
         <div className={styles.title}>
           <h1>Blog</h1>
