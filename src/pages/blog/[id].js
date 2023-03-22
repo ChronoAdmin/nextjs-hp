@@ -29,6 +29,10 @@ export const getStaticPaths = async () => {
 export default function BlogId({ blog }) {
   return (
     <>
+    <Head>
+      <title>{blog.title}</title>
+      <meta name="description" content={blog.description} />
+    </Head>
       <main className={styles.main}>
         <Link href="/" className={styles.back}>
           Topへ戻る

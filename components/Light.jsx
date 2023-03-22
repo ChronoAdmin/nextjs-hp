@@ -1,13 +1,21 @@
 import gsap, { TweenMax } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import Head from "next/head";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import styles from "../src/styles/Light.module.css";
 
 export const Light = ({ articles }) => {
+  const latestArticles = articles.slice(0, 4);
+  {latestArticles.map((article) => (
+      title = article.title
+    ))}
 
   return (
     <>
+    <Head>
+      <title>{title}</title>
+    </Head>
       <section className={styles.Light}>
         <div className={styles.title}>
           <h1>Blog</h1>
@@ -17,7 +25,7 @@ export const Light = ({ articles }) => {
         </div>
         <div className={styles.blog_list}>
           <div className={styles.blogs}>
-            {articles.map((article) => (
+            {latestArticles.map((article) => (
               <li key={article.id}>
                 <div className={styles.data}>{article.publishedAt}</div>
                 <Link href={`blog/${article.id}`} className={styles.main_li}>

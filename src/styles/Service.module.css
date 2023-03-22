@@ -67,7 +67,7 @@
     overflow: hidden;
 }
 
-.box::before {
+/* .box::before {
     position: absolute;
     content: "";
     top: -50%;
@@ -91,7 +91,7 @@
     transform-origin: bottom right;
     animation: anim 6s linear infinite;
     animation-delay: -3s;
-}
+} */
 
 .border_line {
     position: absolute;
@@ -146,7 +146,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000;
+    background-color: #835151;
 }
 
 .inputBox {

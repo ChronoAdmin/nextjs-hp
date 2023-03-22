@@ -40,12 +40,12 @@ img {
 .wrap {
   width: 100%;
   margin: 0 auto;
-  background-color: #000;
+  background-color: #154647;
 }
 
 .bgChange {
   width: 100%;
-  background: linear-gradient(to bottom, #000 0% ,rgb(16, 4, 70) 100%);
+  background: linear-gradient(to bottom, #154647 0% ,rgb(16, 4, 70) 100%);
 }
 .bgChange2 {
   width: 100%;
