@@ -1,7 +1,19 @@
 .contact {
   width: 100%;
   background: linear-gradient(to bottom, rgb(16, 4, 70), #000);
-  padding-top: 250px;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  position: relative;
+}
+
+.contact::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  box-shadow: 0 10px 10px rgba(16, 4, 70, 0.418);
 }
 
 .contact > h1 {
@@ -215,6 +227,10 @@
   }
 }
 
+.compare {
+  margin-top: 100px;
+}
+
 .compare h2 {
   text-align: center;
   letter-spacing: 2px;
@@ -238,3 +254,4 @@ text-align: center;
   width: auto;
   height: auto;
 }
+

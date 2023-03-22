@@ -9,8 +9,8 @@ import { Light } from "../../components/Light";
 import { Flow } from "../../components/Flow";
 import { Video } from "../../components/Video";
 import { Contact } from "../../components/Contact";
-import { Analytics } from '@vercel/analytics/react';
-
+import { Analytics } from "@vercel/analytics/react";
+import { Plan } from "../../components/Plan";
 
 // SSG
 export const getStaticProps = async () => {
@@ -26,6 +26,10 @@ export const getStaticProps = async () => {
       publishedAt: formattedDate,
     };
   });
+  articles.sort((a, b) => {
+    return new Date(b.publishedAt) - new Date(a.publishedAt);
+  });
+  console.log(articles);
   return {
     props: {
       articles: articles,
@@ -34,13 +38,9 @@ export const getStaticProps = async () => {
 };
 
 export default function Home({ articles }) {
-  
   return (
     <>
-      <Head>
-        <title>Chrono-Office | HP制作</title>
-        <meta name="google-site-verification" content="eiWwhL_ddr7VLMq5Oz1-p2UtYpd2QdPnLACqLTitQ9U" />
-      </Head>
+
       <Mv />
       <div className="wrap">
         <div className="inner">
@@ -53,10 +53,8 @@ export default function Home({ articles }) {
             <Flow />
           </div>
         </div>
-        {/* <div className="bgChange2">
-          <Video />
-        </div> */}
         <Contact />
+        <Plan />
       </div>
     </>
   );
