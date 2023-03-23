@@ -76,6 +76,7 @@ export const Mv = () => {
         width={1920}
         height={1080}
         className={styles.bg}
+        alt="MVの画像(1920*1080)"
       />
       <div className={styles.txtBox} ref={textRef}>
         <h1>Chrono Office</h1>

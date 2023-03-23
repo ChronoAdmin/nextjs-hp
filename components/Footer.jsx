@@ -8,7 +8,7 @@ export const Footer = () => {
       <footer className={styles.footer}>
         <div className={styles.container}>
           <div className={styles.left}>
-            <Image src="/images/logo.png" width={500} height={300}/>
+            <Image src="/images/logo.png" width={500} height={300} alt="ChronoOfficeのロゴ画像"/>
           </div>
           <div className={styles.right}>
             <ul>
