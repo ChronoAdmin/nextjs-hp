@@ -15,7 +15,7 @@
 html,
 body {
   max-width: 1920px;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   color: #fff;
  font-family:  'Oswald', sans-serif;;
   /* font-family: 'Shippori Mincho', serif;  */
@@ -76,9 +76,9 @@ img {
   width: 200px;
   height: 200px;
   position: absolute;
-  right: 5%;
+  right: 10px;
   margin-left: -30px;
-  bottom: 40px;
+  bottom: 0px;
   z-index: 5;
   display: flex;
   flex-flow: column;
@@ -133,3 +133,18 @@ img {
   animation-delay:0s;
   -webkit-animation-delay:0s; /* Safari 和 Chrome */
 }
+
+@media screen and (max-width: 1389px) {
+  .arrows1{
+    margin-left: 0;
+    height: 0;
+  }
+ }
+
+ @media screen and (max-width: 375px) { 
+  .scroll p {
+    color: blue;
+    font-size: 40px;
+  }
+  
+ }

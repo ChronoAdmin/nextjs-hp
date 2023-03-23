@@ -120,7 +120,7 @@
 
   .card {
     width: 100%;
-    margin: 0 auto 50px auto;
+    margin: 0;
     height: 254px;
   }
   .card:nth-child(8) {
@@ -134,4 +134,16 @@
     margin-top: 100px;
     padding-bottom: 0px;
   }
+
+  .card {
+    height: 120px;
+  }
 }
+
+@media screen and (max-width: 500px) {
+  .cards{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+ }
