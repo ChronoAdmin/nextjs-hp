@@ -160,7 +160,32 @@ img {
   .arrows path {
     height: 10px;
     width: 50px;
-    stroke: #0cc;
+    stroke: rgb(2, 73, 73);
   }
   
+ }
+
+ .com {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40vh;
+  background-color: #154647;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 1;
+  background-image: url("/images/Plan/plan_bg.jpg");
+  background-size: cover;
+  background-position: center;
+ }
+ .com::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  backdrop-filter: blur(10px);
  }

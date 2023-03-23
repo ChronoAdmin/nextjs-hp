@@ -4,6 +4,8 @@
   padding-top: 150px;
   padding-bottom: 150px;
   position: relative;
+  font-family: 'Shippori Mincho', serif; 
+
 }
 
 .contact::before {
@@ -234,7 +236,53 @@
   }
 }
 
+.compare {
+  margin-top: 40px;
+}
+
+.compare2 {
+  width: 100%;
+}
+
+.compare2 img {
+  height: auto;
+  width: 100%;
+  display: none;
+}
+
+.compare2 h2 {
+  display: none;
+}
+
+.compare h2 {
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+.compare p {
+  font-size: 11px;
+  margin-bottom: 20px;
+text-align: center;
+}
+
+.compareImgs {
+  width: 100%;
+  display: flex;
+  gap: 5%;
+  justify-content: center;
+} 
+
+.compare img {
+  max-height: 898px;
+  max-width: 40%;
+  width: auto;
+  height: auto;
+}
+
 @media screen and (max-width: 375px) {
+  .contact {
+    padding-bottom: 40px;
+  }
   .img_container {
     height: auto;
   }
@@ -271,36 +319,16 @@
 .txt {
   margin-bottom: 30px;
 }
-
-
- }
-
 .compare {
-  margin-top: 40px;
+  display: none;
 }
-
-.compare h2 {
+.compare2 img {
+  display: block;
+}
+.compare2 h2 {
+  display: block;
+  font-size: 20px;
   text-align: center;
-  letter-spacing: 2px;
-  font-size: 12px;
+  margin-bottom: 14px;
 }
-.compare p {
-  font-size: 11px;
-  margin-bottom: 20px;
-text-align: center;
 }
-
-.compareImgs {
-  width: 100%;
-  display: flex;
-  gap: 5%;
-  justify-content: center;
-} 
-
-.compare img {
-  max-height: 898px;
-  max-width: 40%;
-  width: auto;
-  height: auto;
-}
-

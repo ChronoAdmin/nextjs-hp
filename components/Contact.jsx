@@ -1,17 +1,36 @@
 import styles from "../src/styles/Contact.module.css";
-import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export const Contact = () => {
-  // const [count, setCount] = useState(0);
-  // useEffect(() => {
-  //     setCount(count + 1);
-  //   }, []);
+  const textRef = useRef(null);
+
+  useEffect(() => {
+    gsap.set(textRef.current, { opacity: 0 });
+    gsap.from(textRef.current, {
+      y: "-50px",
+    });
+    gsap.to(textRef.current, {
+      y: "0px",
+      opacity: 1,
+      duration: 2,
+      ease: "power4.out",
+      scrollTrigger: {
+        trigger: "#contact",
+        start: "top center",
+        end: "center center",
+        // toggleActions: "play reverse play reverse",
+        // scrub: true,
+      },
+    });
+  }, []);
 
   return (
     <>
-      <div className={styles.contact}>
+      <div className={styles.contact} id="contact" ref={textRef}>
         <h1>技術スタック</h1>
         <div className={styles.imgs}>
           <div className={styles.nextImg}>
@@ -86,6 +105,14 @@ export const Contact = () => {
                 height={898}
               />
             </div>
+          </div>
+          <div className={styles.compare2}>
+            <h2>NextJsを使用した当サイトの点数</h2>
+            <Image
+              src="/images/stack/next.google.png"
+              width={1916}
+              height={898}
+            />{" "}
           </div>
         </div>
       </div>
