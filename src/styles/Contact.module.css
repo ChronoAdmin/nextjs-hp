@@ -191,7 +191,7 @@
 }
 
 .gifs {
-    height: 50vh;
+    /* height: 50vh; */
 }
 
 .txt {
@@ -212,7 +212,7 @@
   .contact {
     width: 100%;
     background: linear-gradient(to bottom, rgb(16, 4, 70), #000);
-    padding-top: 100px;
+    padding-top: 60px;
   }
   .contact h1 {
     font-size: 55px;
@@ -234,16 +234,58 @@
   }
 }
 
+@media screen and (max-width: 375px) {
+  .img_container {
+    height: auto;
+  }
+  .nextImg {
+    width: 40%;
+    min-width: 160px;
+    height: auto;
+    margin: 20px auto;
+    border: 1px solid #6cc;
+    box-shadow: 0 0 10px #6cc,
+    0 0 5px inset rgb(219, 41, 79) ;
+    position: relative;
+  }
+  
+.otherImg {
+  width: 40%;
+  min-width: 160px;
+  height: auto;
+  margin: 20px auto;
+  border: 1px solid rgb(219, 41, 79);
+  box-shadow: 0 0 10px rgb(219, 41, 79),
+  0 0 5px inset #6cc;
+  position: relative;
+}
+.txt > p {
+  line-height: 1.5;
+  letter-spacing: 1.3px;
+    max-width: 800px; /* 最大幅を800pxに指定 */
+    margin: 0 auto; /* 中央寄せにする */
+    box-sizing: border-box; /* paddingを含めたボックスサイズ指定 */
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+.txt {
+  margin-bottom: 30px;
+}
+
+
+ }
+
 .compare {
-  margin-top: 100px;
+  margin-top: 40px;
 }
 
 .compare h2 {
   text-align: center;
   letter-spacing: 2px;
+  font-size: 12px;
 }
 .compare p {
-  font-size: 14px;
+  font-size: 11px;
   margin-bottom: 20px;
 text-align: center;
 }

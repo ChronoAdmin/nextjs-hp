@@ -38,9 +38,11 @@ export const Contact = () => {
                 <div className={styles.txt}>
                   <p>
                     Next.jsは、Reactフレームワークをベースにしたツールです。これを使うと、サイトの表示スピードが速くなり、SEO（検索エンジン最適化）もしやすくなります。また、開発の効率も上がります。
-                    <br />
+                  </p>
+                  <p>
                     さらに、Vercelというクラウドプラットフォームで簡単かつ高速にデプロイできます。
-                    <br />
+                  </p>
+                  <p>
                     つまり、Next.jsを使うと、高速・SEO対策・開発効率がアップするので、HP制作におすすめです。
                   </p>
                 </div>
@@ -73,8 +75,16 @@ export const Contact = () => {
             <h2>←NextJsを使用した場合 / 従来の技術を使用した場合→</h2>
             <p>(ページの内容は一緒です)</p>
             <div className={styles.compareImgs}>
-            <Image src="/images/stack/next.google.png" width={1916} height={898}/>
-            <Image src="/images/stack/next.google.png" width={1916} height={898}/>
+              <Image
+                src="/images/stack/next.google.png"
+                width={1916}
+                height={898}
+              />
+              <Image
+                src="/images/stack/next.google.png"
+                width={1916}
+                height={898}
+              />
             </div>
           </div>
         </div>

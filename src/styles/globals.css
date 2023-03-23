@@ -15,7 +15,7 @@
 html,
 body {
   max-width: 1920px;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   color: #fff;
  font-family:  'Oswald', sans-serif;;
   /* font-family: 'Shippori Mincho', serif;  */
@@ -143,8 +143,24 @@ img {
 
  @media screen and (max-width: 375px) { 
   .scroll p {
-    color: blue;
-    font-size: 40px;
+    display: none;
+  }
+  .scroll {
+    width: 50px;
+    height: auto;
+    position: absolute;
+    right: 10px;
+    margin-left: 0px;
+    bottom: 0px;
+    z-index: 5;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  .arrows path {
+    height: 10px;
+    width: 50px;
+    stroke: #0cc;
   }
   
  }
