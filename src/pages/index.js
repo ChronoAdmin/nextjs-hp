@@ -11,6 +11,7 @@ import { Video } from "../../components/Video";
 import { Contact } from "../../components/Contact";
 import { Analytics } from "@vercel/analytics/react";
 import { Plan } from "../../components/Plan";
+import { Footer } from "../../components/Footer";
 
 // SSG
 export const getStaticProps = async () => {
@@ -40,7 +41,6 @@ export const getStaticProps = async () => {
 export default function Home({ articles }) {
   return (
     <>
-
       <Mv />
       <div className="wrap">
         <div className="inner">
@@ -54,8 +54,12 @@ export default function Home({ articles }) {
           </div>
         </div>
         <Contact />
-        <Plan />
+        {/* <Plan /> */}
       </div>
+      <div className="com">
+        <p>...Comming Soon</p>
+      </div>
+      <Footer />
     </>
   );
 }

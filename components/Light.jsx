@@ -1,16 +1,38 @@
-import gsap, { TweenMax } from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import Head from "next/head";
+import styles from "../src/styles/Light.module.css";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
-import styles from "../src/styles/Light.module.css";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export const Light = ({ articles }) => {
   const latestArticles = articles.slice(0, 4);
+  const textRef = useRef(null);
+
+  useEffect(() => {
+    gsap.set(textRef.current, { opacity: 0 });
+    gsap.from(textRef.current, {
+      y: "-50px",
+    });
+    gsap.to(textRef.current, {
+      y: "0px",
+      opacity: 1,
+      duration: 2,
+      ease: "power4.out",
+      scrollTrigger: {
+        trigger: "#Light",
+        start: "top center",
+        end: "center center",
+        // toggleActions: "play reverse play reverse",
+        // scrub: true,
+      },
+    });
+  }, []);
 
   return (
     <>
-      <section className={styles.Light}>
+      <section className={styles.Light} id="Light" ref={textRef}>
         <div className={styles.title}>
           <h1>Blog</h1>
           <div className={styles.c_scrollleft}>
