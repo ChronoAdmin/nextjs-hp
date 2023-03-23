@@ -1,13 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-<body>
-    <h1>株式会社 北原組</h1>
-</body>
-</html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>マウスに追従するパーティクル</title>
+    <style>
+      canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <script>
+      // パーティクルの数
+      var particleCount = 1000;
+
+  // パーティクルを格納する配列
+  var particles = [];
+
+  // canvas要素の取得
+  var canvas = document.getElementById("canvas");
+  var ctx = canvas.getContext("2d");
+
+  // canvas要素のサイズの設定
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  // マウス座標の初期化
+  var mouseX = canvas.width / 2;
+  var mouseY = canvas.height / 2;
+
+  // パーティクルの生成
+  for (var i = 0; i < particleCount; i++) {
+    particles.push(new Particle());
+  }
+
+  // アニメーションの開始
+  requestAnimationFrame(animationLoop);
+
+  // マウス座標の更新
+  canvas.addEventListener("mousemove", function (event) {
+    mouseX = event.clientX;
+    mouseY = event.clientY;
+  });
+
+  // パーティクルの定義
+  function Particle() {
+    this.x = canvas.width / 2;
+    this.y = canvas.height / 2;
+    this.vx = Math.random() * 2 - 1;
+    this.vy = Math.random() * 2 - 1;
+    this.size = Math.random() * 2 + 1;
+  }
+
+  // アニメーションのループ
+  function animationLoop() {
+    // canvasをクリア
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    // パーティクルの更新と描画
+for (var i = 0; i < particles.length; i++) {
+  var p = particles[i];
+
+  // パーティクルの座標を更新
+  p.x += p.vx;
+  p.y += p.vy;
+
+  // 画面端で跳ね返るようにする
+  if (p.x < 0 || p.x > canvas.width) {
+    p.vx *= -1;
+  }
+  if (p.y < 0 || p.y > canvas.height) {
+    p.vy *= -1;
+  }
+
+  // マウスの座標との距離を計算
+  var dx = p.x - mouseX;
+  var dy = p.y - mouseY;
+  var dist = Math.sqrt(dx * dx + dy * dy);
+
+  // マウスの近くにいるパーティクルは加速度を与える
+  if (dist < 100) {
+    var ax = dx / 20;
+    var ay = dy / 20;
+    p.vx -= ax;
+    p.vy -= ay;
+  }
+
+  // パーティクルの描画
+  ctx.beginPath();
+  ctx.fillStyle = "#fff";
+  ctx.arc(p.x, p.y, p.size, 0, 2 * Math.PI);
+  ctx.fill();
+}}
+
+// アニメーションの再生
+requestAnimationFrame(animationLoop);
