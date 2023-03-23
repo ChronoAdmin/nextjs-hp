@@ -3,6 +3,7 @@
     position: relative;
     width: 100%;
     padding-top: 50px;
+    font-family: 'Shippori Mincho', serif; 
 }
 
 .title {
@@ -185,12 +186,16 @@
 @media screen and (max-width: 500px) {
     .card {
         margin-left: 10px;
+        max-width: 300px;
+        margin: 0;
     }
     .imgBx {
-        width: 230px;
+        width: 300px;
+        opacity: 0.9;
     }
     .contentBx {
-        width: 230px;
+        width: 300px;
+        opacity: 0.9;
     }
     .contentBx::before {
         display: none;
@@ -201,7 +206,7 @@
     .title {
         position: absolute;
         top: 50px;
-        right: 0px;
+        right: -20px;
         writing-mode: vertical-rl;
         font-size: 70px;
     }
@@ -210,7 +215,7 @@
         height: 100px;
         position: absolute;
         top: 20px;
-        right: 0px;
+        right: 20px;
         overflow: hidden;
       }
 }

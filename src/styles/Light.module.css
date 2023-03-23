@@ -3,6 +3,7 @@
     position: relative;
     margin-top: 100px;
     padding-top: 150px;
+    font-family: 'Shippori Mincho', serif; 
 }
 
 .title {
@@ -142,3 +143,18 @@
     font-size: 55px;
   }
 }
+
+@media screen and (max-width: 375px) {
+  .Light {
+    margin-top: 50px;
+  }
+  .blogs > li {
+    padding: 0;
+  }
+  .blogs > li > a  {
+    display: inline-block;
+    width: 100%;
+    transition: all .3s ease-in-out;
+    font-size: 16px;
+  }
+ }

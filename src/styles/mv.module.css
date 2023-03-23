@@ -124,3 +124,23 @@
         padding-bottom: 0;
     }
 }
+
+
+@media screen and (max-width: 375px) { 
+    .txtBox {
+        position: absolute;
+        left: 5%;
+        top: 30%;
+        transform: translateY(-50%);
+        z-index: 4;
+    }
+    .txtBox h1 {
+        font-size: 2rem;
+        text-shadow: 10px -5px 10px #0000008c;
+    }
+    
+    .txtBox p {
+        font-size: 13px;
+        text-shadow: 10px -5px 10px #0000008c;
+    }
+}

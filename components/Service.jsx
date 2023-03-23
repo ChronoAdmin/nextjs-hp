@@ -53,7 +53,7 @@ export const Service = () => {
         </div>
         <div className={styles.cards} ref={boxesRef}>
           <div className={styles.box}>
-            <span className={styles.border_line}></span>
+            <h2 className={styles.border_line}></h2>
             <div className={styles.inner}>
               <div className={styles.inputBox}>
                 <Image
@@ -63,13 +63,14 @@ export const Service = () => {
                   alt="Aboutの写真です"
                 />
                 <div className={styles.text}>
-                  <span>Usernjjjame</span>
+                  <h2>HP作成</h2>
+                  <p>従来の作り方とは違う技術を用いてHP作成を行っておりますので、競合他社との差別化を図ることが可能です。</p>
                 </div>
               </div>
             </div>
           </div>
           <div className={styles.box}>
-            <span className={styles.border_line}></span>
+            <h2 className={styles.border_line}></h2>
             <div className={styles.inner}>
               <div className={styles.inputBox}>
                 <Image
@@ -79,13 +80,14 @@ export const Service = () => {
                   alt="Aboutの写真です"
                 />
                 <div className={styles.text}>
-                  <span>Usernjjjame</span>
+                  <h2>Blog構築</h2>
+                  <p>Blog機能を付けたいためだけにWordPressを導入する必要はありません。時代は<span className={styles.blue}>HeadressCMS！</span></p>
                 </div>
               </div>
             </div>
           </div>
           <div className={styles.box}>
-            <span className={styles.border_line}></span>
+            <h2 className={styles.border_line}></h2>
             <div className={styles.inner}>
               <div className={styles.inputBox}>
                 <Image
@@ -95,7 +97,8 @@ export const Service = () => {
                   alt="Aboutの写真です"
                 />
                 <div className={styles.text}>
-                  <span>Usernjjjame</span>
+                  <h2>SEO対策</h2>
+                  <p>高速表示 × ページコンポーネント<br />を利用してサイト点数大幅UP！</p>
                 </div>
               </div>
             </div>
