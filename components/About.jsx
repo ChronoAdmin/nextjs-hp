@@ -19,14 +19,14 @@ export const About = () => {
     gsap.to(textRef.current, {
       y: "0px",
       opacity: 1,
-      duration: 3,
+      duration: 2,
       ease: "power4.out",
       scrollTrigger: {
         trigger: "#about",
         start: "top center",
         end: "center center",
-        toggleActions: "play reverse play reverse",
-        scrub: true,
+        // toggleActions: "play reverse play reverse",
+        // scrub: true,
       },
     });
   }, []);

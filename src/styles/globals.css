@@ -1,4 +1,5 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600&display=swap');
 
 * {
   box-sizing: border-box;
@@ -14,8 +15,10 @@
 html,
 body {
   max-width: 1920px;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   color: #fff;
+ font-family:  'Oswald', sans-serif;;
+  /* font-family: 'Shippori Mincho', serif;  */
 }
 
 a {
@@ -68,3 +71,65 @@ img {
     width: 94%;
   }
  }
+
+.scroll {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  right: 5%;
+  margin-left: -30px;
+  bottom: 40px;
+  z-index: 5;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+ 
+.arrows {
+  height: 100px;
+  width: 100px;
+}
+
+.scroll p {
+  color: #ff0000;
+  font-size: 40px;
+}
+
+.arrows path {
+  stroke: #ff0000;
+  fill: transparent;
+  stroke-width: 1px;  
+  animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite; 
+}
+
+@keyframes arrow
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+.arrows path.a1 {
+  animation-delay:-1s;
+  -webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+  animation-delay:-0.5s;
+  -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 { 
+  animation-delay:0s;
+  -webkit-animation-delay:0s; /* Safari 和 Chrome */
+}

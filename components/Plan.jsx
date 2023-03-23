@@ -1,4 +1,7 @@
 import styles from "../src/styles/Plan.module.css";
+import planBg from '/public/images/Plan/plan_bg.jpg';
+import Image from "next/image";
+
 
 export const Plan = () => {
   return (
