@@ -98,11 +98,13 @@ export const Contact = () => {
                 src="/images/stack/next.google.png"
                 width={1916}
                 height={898}
+                alt="サイトの速度測定結果の画像"
               />
               <Image
                 src="/images/stack/next.google.png"
                 width={1916}
                 height={898}
+                alt="サイトの速度測定結果の画像"
               />
             </div>
           </div>
@@ -112,7 +114,8 @@ export const Contact = () => {
               src="/images/stack/next.google.png"
               width={1916}
               height={898}
-            />{" "}
+              alt="サイトの速度測定結果の画像"
+            />
           </div>
         </div>
       </div>

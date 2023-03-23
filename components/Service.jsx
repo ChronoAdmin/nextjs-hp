@@ -57,10 +57,10 @@ export const Service = () => {
             <div className={styles.inner}>
               <div className={styles.inputBox}>
                 <Image
-                  src="/images/About/About_image1.webp"
+                  src="/images/Service/service1.png"
                   width={500}
                   height={500}
-                  alt="Aboutの写真です"
+                  alt="HP作成の素材です"
                 />
                 <div className={styles.text}>
                   <h2>HP作成</h2>
@@ -74,10 +74,10 @@ export const Service = () => {
             <div className={styles.inner}>
               <div className={styles.inputBox}>
                 <Image
-                  src="/images/About/About_image1.webp"
+                  src="/images/Service/service2.png.jpg"
                   width={500}
                   height={500}
-                  alt="Aboutの写真です"
+                  alt="Blog構築の素材です"
                 />
                 <div className={styles.text}>
                   <h2>Blog構築</h2>
@@ -91,10 +91,10 @@ export const Service = () => {
             <div className={styles.inner}>
               <div className={styles.inputBox}>
                 <Image
-                  src="/images/About/About_image1.webp"
+                  src="/images/Service/service3.png"
                   width={500}
                   height={500}
-                  alt="Aboutの写真です"
+                  alt="SEO対策の素材です"
                 />
                 <div className={styles.text}>
                   <h2>SEO対策</h2>
