@@ -4,8 +4,17 @@ import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
 import { gsap } from "gsap";
 
-
 export const Mv = () => {
+  const listRef = useRef(null);
+
+  // navi
+  const handleItemClick = (event) => {
+    const currentItem = event.currentTarget;
+    const items = Array.from(listRef.current.children);
+    items.forEach((item) => item.classList.remove(styles.active));
+    currentItem.classList.add(styles.active);
+  };
+
   // gsap
   const textRef = useRef(null);
   const buttonRef = useRef(null);
@@ -22,20 +31,6 @@ export const Mv = () => {
       duration: 2,
       ease: "power4.out",
     });
-    // buttonRef
-    // gsap.set(Array.from(buttonRef.current.children), { opacity: 0, x: 100 });
-    // if (buttonRef.current) {
-    //   console.log("true");
-    //   gsap.to(Array.from(buttonRef.current.children), {
-    //     x: 0,
-    //     opacity: 1,
-    //     duration: 1,
-    //     stagger: 0.4,
-    //     ease: "power4.out",
-    //   });
-    // } else {
-    //   console.log("false");
-    // }
   }, []);
 
   // タイピング
@@ -56,8 +51,7 @@ export const Mv = () => {
         setIsFirstTextCompleted(true);
         setTextClass(styles.japanese);
         setTimeout(() => {
-          const targetText =
-            "オンラインであなたのビジネスの成長をサポートします。";
+          const targetText = "オンラインであなたのビジネスの成長をサポート";
           let currentIndex = 0;
 
           const intervalId2 = setInterval(() => {
@@ -72,39 +66,23 @@ export const Mv = () => {
   return (
     <div className={styles.mv} id="mv">
       <Image
-        src="/images/Plan/plan_bg.jpg"
+        src="/images/mv.webp"
         width={1920}
         height={1080}
         className={styles.bg}
         alt="MVの画像(1920*1080)"
       />
       <div className={styles.txtBox} ref={textRef}>
-        <h1>Chrono Office</h1>
         <p className={textClass}>{typedText}</p>
-        {/* <p>We will support the growth of your business online.</p> */}
       </div>
-      {/* <div className={styles.buttonArea} ref={buttonRef}>
-        <Link href="/contact" className={styles.button} id="hp">
-          HP作成
-        </Link>
-        <Link href="/contact" className={styles.button} id="lp">
-          LP作成
-        </Link>
-        <Link href="/contact" className={styles.button} id="blog">
-          ブログ構築
-        </Link>
-        <Link href="/contact" className={styles.button} id="seo">
-          SEO対策
-        </Link>
-      </div> */}
       <div className="scroll">
-        <p>ScrollDown</p>
         <svg className="arrows">
           <path className="a1" d="M0 0 L30 32 L60 0"></path>
           <path className="a2" d="M0 20 L30 52 L60 20"></path>
           <path className="a3" d="M0 40 L30 72 L60 40"></path>
         </svg>
       </div>
+
       <style jsx>{`
         .japanese {
           font-family: "Shippori Mincho", serif;
@@ -114,6 +92,7 @@ export const Mv = () => {
           font-family: Oswald, sans-serif;
         }
       `}</style>
+      
     </div>
   );
 };

@@ -11,6 +11,7 @@ import { Video } from "../../components/Video";
 import { Stack } from "../../components/Stack";
 import { Analytics } from "@vercel/analytics/react";
 import { Footer } from "../../components/Footer";
+import { Navigation } from "../../components/Navigation";
 
 // SSG
 export const getStaticProps = async () => {
@@ -40,6 +41,7 @@ export const getStaticProps = async () => {
 export default function Home({ articles }) {
   return (
     <>
+      <Navigation />
       <Mv />
       <div className="wrap">
         <div className="inner">
@@ -59,6 +61,14 @@ export default function Home({ articles }) {
         <p>...Comming Soon</p>
       </div>
       <Footer />
+      <script
+        type="module"
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+      ></script>
+      <script
+        nomodule
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+      ></script>
     </>
   );
 }

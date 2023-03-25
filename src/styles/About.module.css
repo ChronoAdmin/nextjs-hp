@@ -13,7 +13,6 @@
     writing-mode: vertical-rl;
     font-size: 70px;
     font-family:  'Oswald', sans-serif;;
-
 }
 
 
@@ -123,6 +122,7 @@
 .content > p {
     margin-top: 10px;
     color: #fff;
+    font-size: 18px;
 }
 
 .content_A {
@@ -147,6 +147,7 @@
     .contentBx {
         height: auto;
         right: 0;
+        padding: 5%;
     }
 }
 
