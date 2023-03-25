@@ -5,12 +5,11 @@ import Head from "next/head";
 import { Mv } from "../../components/Mv";
 import { About } from "../../components/About";
 import { Service } from "../../components/Service";
-import { Light } from "../../components/Light";
+import { Blog } from "../../components/Blog";
 import { Flow } from "../../components/Flow";
 import { Video } from "../../components/Video";
-import { Contact } from "../../components/Contact";
+import { Stack } from "../../components/Stack";
 import { Analytics } from "@vercel/analytics/react";
-import { Plan } from "../../components/Plan";
 import { Footer } from "../../components/Footer";
 
 // SSG
@@ -46,14 +45,14 @@ export default function Home({ articles }) {
         <div className="inner">
           <About />
           <Service />
-          <Light articles={articles} />
+          <Blog articles={articles} />
         </div>
         <div className="bgChange">
           <div className="inner">
             <Flow />
           </div>
         </div>
-        <Contact />
+        <Stack />
         {/* <Plan /> */}
       </div>
       <div className="com">

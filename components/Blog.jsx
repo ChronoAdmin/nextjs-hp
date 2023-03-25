@@ -1,4 +1,4 @@
-import styles from "../src/styles/Light.module.css";
+import styles from "../src/styles/Blog.module.css";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export const Light = ({ articles }) => {
+export const Blog = ({ articles }) => {
   const latestArticles = articles.slice(0, 4);
   const textRef = useRef(null);
 
