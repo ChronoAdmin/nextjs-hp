@@ -12,6 +12,7 @@ import { Stack } from "../../components/Stack";
 import { Analytics } from "@vercel/analytics/react";
 import { Footer } from "../../components/Footer";
 import { Navigation } from "../../components/Navigation";
+import { Helmet } from 'react-helmet'
 
 // SSG
 export const getStaticProps = async () => {
@@ -41,6 +42,16 @@ export const getStaticProps = async () => {
 export default function Home({ articles }) {
   return (
     <>
+      <Helmet>
+        <script
+          type="module"
+          src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+          nomodule
+          src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+        ></script>
+      </Helmet>
       <Navigation />
       <Mv />
       <div className="wrap">
@@ -61,14 +72,6 @@ export default function Home({ articles }) {
         <p>...Comming Soon</p>
       </div>
       <Footer />
-      <script
-        type="module"
-        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-      ></script>
-      <script
-        nomodule
-        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-      ></script>
     </>
   );
 }
