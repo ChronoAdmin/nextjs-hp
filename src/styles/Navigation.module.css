@@ -1,0 +1,129 @@
+
+.navigation {
+    position: fixed;
+    top: 10px;
+    right: 5px;
+    background-color: #535353d5;
+    z-index: 5;
+    width: 400px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+  }
+  
+  .navigation ul {
+    position: relative;
+    display: flex;
+    width: 350px;
+  }
+  
+  .navigation ul li {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+  }
+  
+  .navigation ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  .icon {
+    position: relative;
+    display: block;
+    font-size: 1.5rem;
+    line-height: 75px;
+    transition: .5s;
+    color: #ffffff9f;
+  }
+  
+  li:hover a .icon {
+    color: #ffffff;
+  }
+  .navigation ul li.active a .icon {
+    color: rgb(0, 161, 161);
+    transform: translateY(-8px)
+    ;
+  }
+  
+  .text {
+    position: absolute;
+    opacity: 0;
+    font-size: 0.5em;
+    color: #fdfdfd;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transform: translateY(0);
+  }
+  
+  
+  .navigation ul li.active a .text {
+    transform: translateY(13px);
+    opacity: 1;
+  }
+  
+  .indicator {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+  }
+  
+  .indicator::before {
+    content: "";
+    position: absolute;
+    bottom: 12px;
+    width: 80%;
+    height: 14px;
+    background: rgb(0, 161, 161);
+    border-radius: 10px;
+  }
+  .indicator::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 7.5px;
+    height: 7.5px;
+    border-radius: 50%;
+    background: #535353;
+    box-shadow: 0 0 0 2px rgb(0, 161, 161),
+    50px 50px rgb(0, 161, 161),
+    40px 0 rgb(0, 161, 161),
+    0 40px rgb(1, 110, 110);
+    transform: rotate(45deg);
+    animation: animate 2s ease-in-out infinite;
+  }
+  
+  @keyframes animate {
+    0%,100%{
+      transform: rotate(35deg);
+    }
+    50%{
+      transform: rotate(55deg);
+    }
+  }
+  
+  .navigation ul li:nth-child(2).active ~ .indicator {
+    transform: translateX(calc(70px * 1));
+  }
+  .navigation ul li:nth-child(3).active ~ .indicator {
+    transform: translateX(calc(70px * 2));
+  }
+  .navigation ul li:nth-child(4).active ~ .indicator {
+    transform: translateX(calc(70px * 3));
+  }
+  .navigation ul li:nth-child(5).active ~ .indicator {
+    transform: translateX(calc(70px * 4));
+  }

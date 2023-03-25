@@ -71,32 +71,26 @@ img {
     width: 94%;
   }
  }
+ 
 
 .scroll {
-  width: 200px;
-  height: 200px;
+  width: 70px;
+  height: 70px;
   position: absolute;
   right: 10px;
   margin-left: -30px;
   bottom: 0px;
   z-index: 5;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
 }
  
 .arrows {
-  height: 100px;
-  width: 100px;
+  height: 70px;
+  width: 70px;
 }
 
-.scroll p {
-  color: #ff0000;
-  font-size: 40px;
-}
 
 .arrows path {
-  stroke: #ff0000;
+  stroke: rgb(2, 73, 73);
   fill: transparent;
   stroke-width: 1px;  
   animation: arrow 2s infinite;
@@ -134,36 +128,8 @@ img {
   -webkit-animation-delay:0s; /* Safari 和 Chrome */
 }
 
-@media screen and (max-width: 1389px) {
-  .arrows1{
-    margin-left: 0;
-    height: 0;
-  }
- }
 
- @media screen and (max-width: 375px) { 
-  .scroll p {
-    display: none;
-  }
-  .scroll {
-    width: 50px;
-    height: auto;
-    position: absolute;
-    right: 10px;
-    margin-left: 0px;
-    bottom: 0px;
-    z-index: 5;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-  }
-  .arrows path {
-    height: 10px;
-    width: 50px;
-    stroke: rgb(2, 73, 73);
-  }
-  
- }
+ 
 
  .com {
   display: flex;
