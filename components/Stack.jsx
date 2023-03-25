@@ -1,11 +1,11 @@
-import styles from "../src/styles/Contact.module.css";
+import styles from "../src/styles/Stack.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-export const Contact = () => {
+export const Stack = () => {
   const textRef = useRef(null);
 
   useEffect(() => {

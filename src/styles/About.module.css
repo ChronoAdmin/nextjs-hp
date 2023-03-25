@@ -12,6 +12,8 @@
     right: 20px;
     writing-mode: vertical-rl;
     font-size: 70px;
+    font-family:  'Oswald', sans-serif;;
+
 }
 
 
@@ -147,55 +149,20 @@
         right: 0;
     }
 }
-@media screen and (max-width: 900px) {
-    .card {
-        grid-template-columns: 1fr;
-        min-width: 250px;
-    }
-    .imgBx {
-        width: 400px;
-        height: 150px;
-        left: 0;
-    }
-    .contentBx {
-        width: 400px;
-        height: auto;
-        right: 0;
-        padding: 5%;
-    }
-    .contentBx::before {
-        display: none;
 
-    }
-}
-@media screen and (max-width: 800px) {
+
+@media screen and (max-width: 520px) {
     .card {
-        margin-top: 20px;
-        margin-right: auto;
-    }
-    .imgBx {
-        width: 400px;
-    }
-    .contentBx {
-        width: 400px;
-    }
-    .title {
-        font-size: 55px;
-    }
- }
-@media screen and (max-width: 500px) {
-    .card {
-        margin-left: 10px;
         max-width: 300px;
         margin: 0;
     }
     .imgBx {
-        width: 300px;
-        opacity: 0.9;
+        display: none;
     }
     .contentBx {
-        width: 300px;
+        width: 100%;
         opacity: 0.9;
+        padding: 5%;
     }
     .contentBx::before {
         display: none;
