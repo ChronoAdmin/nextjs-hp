@@ -2,6 +2,10 @@ import styles from "/src/styles/Navigation.module.css";
 import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
+import {AiOutlineHome,AiOutlineDesktop,AiOutlineMail} from "react-icons/ai"
+import {BsBagCheck} from "react-icons/bs"
+import {TfiWrite} from "react-icons/tfi"
+
 
 import { useRouter } from "next/router"; // 1. useRouter をインポート
 export const Navigation = () => {
@@ -16,6 +20,7 @@ export const Navigation = () => {
     currentItem.classList.add(styles.active);
   };
   return (
+    <>
     <div className={styles.navigation}>
       <ul ref={listRef}>
         <li
@@ -26,7 +31,7 @@ export const Navigation = () => {
         >
           <Link href="/">
             <span className={styles.icon}>
-              <ion-icon name="home-outline"></ion-icon>
+              <AiOutlineHome />
             </span>
             <span className={styles.text}>Home</span>
           </Link>
@@ -39,7 +44,7 @@ export const Navigation = () => {
         >
           <Link href="/hp">
             <span className={styles.icon}>
-              <ion-icon name="desktop-outline"></ion-icon>
+              <AiOutlineDesktop />
             </span>
             <span className={styles.text}>HP作成</span>
           </Link>
@@ -52,7 +57,7 @@ export const Navigation = () => {
         >
           <Link href="/ec">
             <span className={styles.icon}>
-              <ion-icon name="bag-check-outline"></ion-icon>
+              <BsBagCheck />
             </span>
             <span className={styles.text}>ECサイト</span>
           </Link>
@@ -65,7 +70,7 @@ export const Navigation = () => {
         >
           <Link href="/ec">
             <span className={styles.icon}>
-              <ion-icon name="pricetags-outline"></ion-icon>
+              <TfiWrite />
             </span>
             <span className={styles.text}>Blog構築</span>
           </Link>
@@ -78,12 +83,15 @@ export const Navigation = () => {
         >
           <Link href="/ec">
             <span className={styles.icon}>
-              <ion-icon name="mail-outline"></ion-icon>
+              <AiOutlineMail />
             </span>
             <span className={styles.text}>Contact</span>
           </Link>
         </li>
+      <div className={styles.indicator}></div>
       </ul>
     </div>
+
+    </>
   );
 };
