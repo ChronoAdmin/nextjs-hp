@@ -52,9 +52,9 @@ export default function Home({ articles }) {
         <Stack />
         {/* <Plan /> */}
       </div>
-      <div className="com">
+      {/* <div className="com">
         <p>...Comming Soon</p>
-      </div>
+      </div> */}
       <Footer />
     </>
   );
