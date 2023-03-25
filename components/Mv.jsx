@@ -65,13 +65,14 @@ export const Mv = () => {
 
   return (
     <div className={styles.mv} id="mv">
-      <Image
+      {/* <Image
         src="/images/mv.webp"
         width={1920}
         height={1080}
         className={styles.bg}
         alt="MVの画像(1920*1080)"
-      />
+      /> */}
+      <img src="/images/mv.webp" alt="MVの画像(1920*1080)"className={styles.bg} />
       <div className={styles.txtBox} ref={textRef}>
         <p className={textClass}>{typedText}</p>
       </div>
@@ -92,7 +93,6 @@ export const Mv = () => {
           font-family: Oswald, sans-serif;
         }
       `}</style>
-      
     </div>
   );
 };
