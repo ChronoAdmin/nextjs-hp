@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -56,15 +57,19 @@ export const Service = () => {
             <h2 className={styles.border_line}></h2>
             <div className={styles.inner}>
               <div className={styles.inputBox}>
-                <Image
-                  src="/images/Service/service1.png"
-                  width={500}
-                  height={500}
-                  alt="HP作成の素材です"
-                />
+                <div className={styles.imgBox}>
+                  <Image
+                    src="/images/undraw/programming.svg"
+                    width={500}
+                    height={500}
+                    alt="HP作成の素材です"
+                  />
+                </div>
                 <div className={styles.text}>
                   <h2>HP作成</h2>
-                  <p>従来の作り方とは違う技術を用いてHP作成を行っておりますので、競合他社との差別化を図ることが可能です。</p>
+                  <p>
+                    従来の作り方とは違う技術を用いてHP作成を行っておりますので、競合他社との差別化を図ることが可能です。
+                  </p>
                 </div>
               </div>
             </div>
@@ -73,15 +78,20 @@ export const Service = () => {
             <h2 className={styles.border_line}></h2>
             <div className={styles.inner}>
               <div className={styles.inputBox}>
+              <div className={styles.imgBox}>
                 <Image
-                  src="/images/Service/service2.png.jpg"
+                  src="/images/undraw/blog.svg"
                   width={500}
                   height={500}
                   alt="Blog構築の素材です"
                 />
+              </div>
                 <div className={styles.text}>
                   <h2>Blog構築</h2>
-                  <p>Blog機能を付けたいためだけにWordPressを導入する必要はありません。時代は<span className={styles.blue}>HeadressCMS！</span></p>
+                  <p>
+                    Blog機能を付けたいためだけにWordPressを導入する必要はありません。時代は
+                    <span className={styles.blue}>HeadressCMS！</span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -90,19 +100,28 @@ export const Service = () => {
             <h2 className={styles.border_line}></h2>
             <div className={styles.inner}>
               <div className={styles.inputBox}>
+              <div className={styles.imgBox}>
                 <Image
-                  src="/images/Service/service3.png"
+                  src="/images/undraw/seo.svg"
                   width={500}
                   height={500}
                   alt="SEO対策の素材です"
                 />
+              </div>
                 <div className={styles.text}>
                   <h2>SEO対策</h2>
-                  <p>高速表示 × ページコンポーネント<br />を利用してサイト点数大幅UP！</p>
+                  <p>
+                    高速表示 × ページコンポーネント
+                    <br />
+                    を利用してサイト点数大幅UP！
+                  </p>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        <div className={styles.more}>
+          <Link href="/service">More Service</Link>
         </div>
       </section>
     </>

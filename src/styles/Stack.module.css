@@ -1,11 +1,11 @@
 .contact {
   width: 100%;
   background: linear-gradient(to bottom, rgb(16, 4, 70), #000);
+  background: linear-gradient(to bottom, #154647, rgb(16, 4, 70));
   padding-top: 150px;
   padding-bottom: 150px;
   position: relative;
-  font-family: 'Shippori Mincho', serif; 
-
+  font-family: "Shippori Mincho", serif;
 }
 
 .contact::before {
@@ -36,299 +36,158 @@
   height: auto;
   margin: 80px auto;
   border: 1px solid #6cc;
-  box-shadow: 0 0 10px #6cc,
-  0 0 5px inset rgb(219, 41, 79) ;
+  box-shadow: 0 0 10px #6cc, 0 0 5px inset rgb(219, 41, 79);
   position: relative;
 }
 
 .nextImg::after {
-    position: absolute;
-    content: "";
-    top: 40%;
-    right: 0;
-    transform: translate(50%,-50%);
-    height: 1px;
-    width: 50%;
-    background-color: rgb(219, 41, 79);
-    box-shadow: 0 0 10px rgb(219, 41, 79);
+  position: absolute;
+  content: "";
+  top: 40%;
+  right: 0;
+  transform: translate(50%, -50%);
+  height: 1px;
+  width: 50%;
+  background-color: rgb(219, 41, 79);
+  box-shadow: 0 0 10px rgb(219, 41, 79);
 }
 
 .nextImg > img {
-    position: absolute;
-    top: 10%;
-  width: 100%;
-  height: auto;
-}
-
-.otherImg {
-    width: 40%;
-    min-width: 160px;
-    height: auto;
-    margin: 80px auto;
-    border: 1px solid rgb(219, 41, 79);
-    box-shadow: 0 0 10px rgb(219, 41, 79),
-    0 0 5px inset #6cc;
-    position: relative;
-}
-
-.otherImg::before {
-    position: absolute;
-    content: "";
-    top: 60%;
-    left: 0;
-    transform: translate(-50%,-50%);
-    height: 1px;
-    width: 50%;
-    background-color: #6cc;
-    box-shadow: 0 0 10px #6cc;
-    transition: .5s ease-in-out;
-    animation: color6cc 3s infinite;
-}
-
-.otherImg > img {
-    width: 100%;
-    height: auto;
-}
-
-/*  */
-.container {
-  padding: 10px;
-}
-
-
-
-.next_container {
-  min-width: 300px;
-  width: 80%;
-  max-width: 1000px;
-  /* height: min-content; */
-  transition: all .3s;
-  position: relative;
-  box-shadow: 0px 15px 20px -5px rgba(0, 0, 0, 0.5);
-  margin: 40px auto 8px auto;
-  border-radius: 10px;
-
-}
-.cms_container {
-  min-width: 300px;
-  width: 80%;
-  max-width: 1000px;
-  /* height: min-content; */
-  transition: all .3s;
-  position: relative;
-  border-radius: 10px;
-  box-shadow: 0px 15px 20px -5px rgba(0, 0, 0, 0.5);
-  margin: 40px auto 40px auto;
-}
-
-.next_container:hover {
-  transform: scale(1.01);
-}
-
-.cms_container:hover{
-  transform: scale(1.01);
-}
-
-.next_img {
-  transition: all .3s;
-  background: #6cc;
-  background: -webkit-linear-gradient(to right, #002733, rgb(78, 155, 155));
-  background: linear-gradient(to right, #002733, rgb(78, 155, 155));
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  padding: 10px;
-}
-
-
-
-.cms_img {
-  transition: all .3s;
-  background: #ff0084;
-  background: -webkit-linear-gradient(to right, #33001a, #ff0084);
-  background: linear-gradient(to right, #33001a, #ff0084);
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  padding: 10px;
-
-}
-
-
-
-.img_container {
-  height: 270px;
-  overflow: hidden;
-}
-
-.desc {
   position: absolute;
-  bottom: .5rem;
-  left: .5rem;
-  text-align: start;
-  padding: .5rem 1em;
-  /* width: 90%; */
-  padding: 10px 40px;
-  transition: all 0.5s ease;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  backdrop-filter: blur(.1rem);
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-}
-
-.desc:hover {
-  transform: perspective(100px) translateX(7px) rotateX(3deg) rotateY(3deg) scale(1);
-  box-shadow: none;
-}
-
-.title {
-  color: aliceblue;
-}
-
-.gifs {
-    /* height: 50vh; */
-}
-
-.txt {
-  max-width: 800px; /* 最大幅を800pxに指定 */
-}
-
-.txt > p {
-  line-height: 1.5;
-  letter-spacing: 1.3px;
-    max-width: 800px; /* 最大幅を800pxに指定 */
-    margin: 0 auto; /* 中央寄せにする */
-    box-sizing: border-box; /* paddingを含めたボックスサイズ指定 */
-    font-size: 15px;
-}
-
-
-@media screen and (max-width: 800px) { 
-  .contact {
-    width: 100%;
-    background: linear-gradient(to bottom, rgb(16, 4, 70), #000);
-    padding-top: 60px;
-  }
-  .contact h1 {
-    font-size: 55px;
-  }
-  .img_container {
-    display: grid;
-    height: 170px;
-    overflow: hidden;
-  }
-  .img_container > .txt {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    top: 40%;
-    opacity: 1;
-    transition: all .5s ease-in-out;
-    width: 90%;
-    text-align: center;
-  }
-}
-
-.compare {
-  margin-top: 40px;
-}
-
-.compare2 {
+  top: 10%;
   width: 100%;
-}
-
-.compare2 img {
-  height: auto;
-  width: 100%;
-  display: none;
-}
-
-.compare2 h2 {
-  display: none;
-}
-
-.compare h2 {
-  text-align: center;
-  letter-spacing: 2px;
-  font-size: 12px;
-}
-.compare p {
-  font-size: 11px;
-  margin-bottom: 20px;
-text-align: center;
-}
-
-.compareImgs {
-  width: 100%;
-  display: flex;
-  gap: 5%;
-  justify-content: center;
-} 
-
-.compare img {
-  max-height: 898px;
-  max-width: 40%;
-  width: auto;
   height: auto;
 }
 
-@media screen and (max-width: 375px) {
-  .contact {
-    padding-bottom: 40px;
-  }
-  .img_container {
-    height: auto;
-  }
-  .nextImg {
-    width: 40%;
-    min-width: 160px;
-    height: auto;
-    margin: 20px auto;
-    border: 1px solid #6cc;
-    box-shadow: 0 0 10px #6cc,
-    0 0 5px inset rgb(219, 41, 79) ;
-    position: relative;
-  }
-  
 .otherImg {
   width: 40%;
   min-width: 160px;
   height: auto;
-  margin: 20px auto;
+  margin: 80px auto;
   border: 1px solid rgb(219, 41, 79);
-  box-shadow: 0 0 10px rgb(219, 41, 79),
-  0 0 5px inset #6cc;
+  box-shadow: 0 0 10px rgb(219, 41, 79), 0 0 5px inset #6cc;
   position: relative;
 }
-.txt > p {
-  line-height: 1.5;
-  letter-spacing: 1.3px;
-    max-width: 800px; /* 最大幅を800pxに指定 */
-    margin: 0 auto; /* 中央寄せにする */
-    box-sizing: border-box; /* paddingを含めたボックスサイズ指定 */
-    font-size: 12px;
-    margin-bottom: 20px;
+
+.otherImg::before {
+  position: absolute;
+  content: "";
+  top: 60%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  height: 1px;
+  width: 50%;
+  background-color: #6cc;
+  box-shadow: 0 0 10px #6cc;
+  transition: 0.5s ease-in-out;
+  animation: color6cc 3s infinite;
 }
-.txt {
-  margin-bottom: 30px;
+
+.otherImg > img {
+  width: 100%;
+  height: auto;
 }
-.compare {
-  display: none;
+
+/*  */
+.container {
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(to right, #004b58, #ff0084);
 }
-.compare2 img {
-  display: block;
-}
-.compare2 h2 {
-  display: block;
+
+.container p {
   font-size: 20px;
-  text-align: center;
-  margin-bottom: 14px;
 }
+
+.more {
+  margin-left: auto;
+  margin-top: 10px;
+  height: 50px;
+  width: 150px;
+  border-radius: 5px;
+  transition: .3s;
+}
+.more:hover {
+  opacity: 0.7;
+}
+
+.more a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #8a555594;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 800px) {
+  .contact {
+    width: 100%;
+    padding-top: 60px;
+  }
+  .imgs {
+    display: block;
+  }
+
+  .nextImg {
+    width: 80%;
+    min-width: 160px;
+    height: auto;
+    margin: 80px auto;
+    border: 1px solid #6cc;
+    box-shadow: 0 0 10px #6cc,
+  0 0 5px inset rgb(219, 41, 79) ;
+    position: relative;
+    background-color: #002733;
+  }
+  .nextImg::after,.otherImg::before {
+    position: absolute;
+    content: "";
+    display: none;
+  }
+  .nextImg > img {
+    position: unset;
+    width: 100%;
+    height: auto;
+  }
+  .otherImg {
+    width: 80%;
+    height: auto;
+    background-color: #002733;
+  }
+  .otherImg img {
+    position: unset;
+    height: auto;
+    width: 100%;
+  }
+  .contact h1 {
+    font-size: 45px;
+  }
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(to right, #004b58, #ff0084);
+  }
+  .container p {
+    font-size: 16px;
+  }
+  
+}
+
+
+
+@media screen and (max-width: 505px) {
+  .contact {
+    padding-bottom: 40px;
+  }
+  .nextImg {
+    margin: 20px auto;
+  }
+
+  .otherImg {
+    margin: 20px auto;
+  }
 }

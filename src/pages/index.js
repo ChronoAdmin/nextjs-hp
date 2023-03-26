@@ -44,11 +44,9 @@ export default function Home({ articles }) {
           <Service />
           <Blog articles={articles} />
         </div>
-        <div className="bgChange">
           <div className="inner">
             <Flow />
           </div>
-        </div>
         <Stack />
         {/* <Plan /> */}
       </div>
