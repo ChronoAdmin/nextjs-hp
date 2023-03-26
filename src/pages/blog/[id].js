@@ -2,7 +2,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import { client } from "../../../libs/client";
-import styles from "../../styles/Home.module.css";
+import styles from "../../styles/BlogContents.module.css";
 
 export const getStaticProps = async (context) => {
   const id = context.params.id;
