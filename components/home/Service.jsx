@@ -1,4 +1,4 @@
-import styles from "../src/styles/Service.module.css";
+import styles from "../../src/styles/home/Service.module.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import React, { useEffect, useRef } from "react";
