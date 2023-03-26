@@ -51,7 +51,7 @@ export const Stack = () => {
           </div>
         </div>
         <div className={styles.container}>
-          <div className={styles.next_container}>
+          {/* <div className={styles.next_container}>
             <div className={styles.img_container}>
               <div className={styles.next_img}>
                 <div className={styles.txt}>
@@ -116,6 +116,21 @@ export const Stack = () => {
               height={898}
               alt="サイトの速度測定結果の画像"
             />
+          </div> */}
+          <p>
+            Next.jsは、Reactフレームワークをベースにしたツールです。これを使うと、サイトの表示スピードが速くなり、SEO（検索エンジン最適化）もしやすくなります。また、開発の効率も上がります。
+          </p>
+          <p>
+            さらに、Vercelというクラウドプラットフォームで簡単かつ高速にデプロイできます。
+          </p>
+          <p>
+            つまり、Next.jsを使うと、高速・SEO対策・開発効率がアップするので、HP制作におすすめです。
+          </p>
+          <div className={styles.more}>
+          <Link href="/">
+            ReadMore
+          </Link>
+
           </div>
         </div>
       </div>
