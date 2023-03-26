@@ -45,7 +45,7 @@ export const About = () => {
         <div className={styles.container}>
           <div className={styles.card}>
             <div className={styles.imgBx}>
-            <Image src="/images/About/About_image1.webp" width={500} height={500} alt="Aboutの写真です"/>
+            <Image src="/HatchfulExport-All/logo.png" width={600} height={600} alt="Chrono-Officeのlogo画像"/>
 
             </div>
             <div className={styles.contentBx}>
