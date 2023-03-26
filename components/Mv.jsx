@@ -71,6 +71,7 @@ export const Mv = () => {
         height={1080}
         className={styles.bg}
         alt="MVの画像(1920*1080)"
+        priority
       />
       <div className={styles.txtBox} ref={textRef}>
         <p className={textClass}>{typedText}</p>
