@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "../src/styles/mv.module.css";
+import styles from "../../src/styles/home/mv.module.css";
 import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
 import { gsap } from "gsap";

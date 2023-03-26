@@ -1,4 +1,4 @@
-import styles from "../src/styles/Stack.module.css";
+import styles from "../../src/styles/home/Stack.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
@@ -39,6 +39,7 @@ export const Stack = () => {
               width={1024}
               height={512}
               alt="Nextjsの素材画像"
+              priority
             />
           </div>
           <div className={styles.otherImg}>
@@ -47,6 +48,7 @@ export const Stack = () => {
               width={1024}
               height={512}
               alt="microCMSの素材画像"
+              priority
             />
           </div>
         </div>

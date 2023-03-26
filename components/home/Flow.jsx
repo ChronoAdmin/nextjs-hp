@@ -1,4 +1,4 @@
-import styles from "../src/styles/Flow.module.css";
+import styles from "../../src/styles/home/Flow.module.css";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";

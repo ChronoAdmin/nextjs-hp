@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef } from "react";
-import styles from "../src/styles/About.module.css";
+import styles from "../../src/styles/home/About.module.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 

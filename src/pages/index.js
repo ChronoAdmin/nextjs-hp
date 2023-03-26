@@ -1,12 +1,13 @@
 import { client } from "../../libs/client";
-import { Mv } from "../../components/Mv";
-import { About } from "../../components/About";
-import { Service } from "../../components/Service";
+import { Mv } from "../../components/home/Mv";
+import { About } from "../../components/home/About";
+import { Service } from "../../components/home/Service";
 import { Blog } from "../../components/Blog";
-import { Flow } from "../../components/Flow";
-import { Stack } from "../../components/Stack";
+import { Flow } from "../../components/home/Flow";
+import { Stack } from "../../components/home/Stack";
 import { Footer } from "../../components/Footer";
 import { Navigation } from "../../components/Navigation";
+import { Roll } from "../../components/home/Roll";
 
 // SSG
 export const getStaticProps = async () => {
@@ -53,6 +54,7 @@ export default function Home({ articles }) {
       {/* <div className="com">
         <p>...Comming Soon</p>
       </div> */}
+      <Roll />
       <Footer />
     </>
   );
