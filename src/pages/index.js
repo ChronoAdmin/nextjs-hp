@@ -9,8 +9,8 @@ import { Footer } from "../../components/Footer";
 import { Navigation } from "../../components/Navigation";
 import { Roll } from "../../components/home/Roll";
 import { Ec } from "../../components/home/Ec";
-import { useEffect } from "react";
-import { fetchDataFromApi } from "../../libs/api";
+// import { useEffect } from "react";
+// import { fetchDataFromApi } from "../../libs/api";
 
 // let categoryUrls = fetchDataFromApi("api/categories?populate=*");
 // console.log("Category URLs object:", categoryUrls);
@@ -34,33 +34,33 @@ export const getStaticProps = async () => {
     return new Date(b.publishedAt) - new Date(a.publishedAt);
   });
 
-  let categoryUrls = await fetchDataFromApi("/api/categories?populate=*");
+  // let categoryUrls = await fetchDataFromApi("/api/categories?populate=*");
 
-  console.log(
-    "Category URLs object:",
-    categoryUrls.data[0].attributes.img.data.attributes.url
-  );
-  categoryUrls = categoryUrls.data
-    .map((category) => {
-      if (
-        category.attributes &&
-        category.attributes.img &&
-        category.attributes.img.data
-      ) {
-        return {
-          title: category.attributes.title,
-          url: category.attributes.img.data.attributes.url,
-        };
-      }
-      return null;
-    })
-    .filter((obj) => obj !== null && obj.url !== undefined);
+  // console.log(
+  //   "Category URLs object:",
+  //   categoryUrls.data[0].attributes.img.data.attributes.url
+  // );
+  // categoryUrls = categoryUrls.data
+  //   .map((category) => {
+  //     if (
+  //       category.attributes &&
+  //       category.attributes.img &&
+  //       category.attributes.img.data
+  //     ) {
+  //       return {
+  //         title: category.attributes.title,
+  //         url: category.attributes.img.data.attributes.url,
+  //       };
+  //     }
+  //     return null;
+  //   })
+  //   .filter((obj) => obj !== null && obj.url !== undefined);
 
   // 記事情報と商品情報を1つのpropsオブジェクトに含める
   return {
     props: {
       articles: articles,
-      categoryUrls,
+      // categoryUrls,
     },
   };
 };
