@@ -34,21 +34,21 @@ export const Roll = () => {
   return (
     <>
       <div className={styles.Roll} id="Roll">
-        {/* <video src="/images/roll.mp4" autoPlay loop muted playsInline />
+        <video src="/images/roll.mp4" autoPlay loop muted playsInline alt="roll video" />
         <div className={styles.box}>
           <div>
             <span>
-              <video src="/images/roll.mp4" autoPlay loop muted playsInline />
+              <video src="/images/roll.mp4" autoPlay loop muted playsInline alt="roll video" />
             </span>
             <span>
-              <video src="/images/roll.mp4" autoPlay loop muted playsInline />
+              <video src="/images/roll.mp4" autoPlay loop muted playsInline alt="roll video" />
             </span>
             <span>
-              <video src="/images/roll.mp4" autoPlay loop muted playsInline />
+              <video src="/images/roll.mp4" autoPlay loop muted playsInline alt="roll video" />
             </span>
           </div>
         </div>
-        <h2 ref={textRef}>High Quality Site</h2> */}
+        <h2 ref={textRef}>High Quality Site</h2>
       </div>
       <div className={styles.corporate}>
         <Image
