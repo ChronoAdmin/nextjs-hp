@@ -56,6 +56,7 @@ export const Roll = () => {
           src="/images/corporate.webp"
           width={1920}
           height={1080}
+          alt="corporate img"
         />
         <div className={styles.widthBack}>
           <p>町を作り、未来を作る</p>
