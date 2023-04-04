@@ -9,6 +9,7 @@ import { Footer } from "../../components/Footer";
 import { Navigation } from "../../components/Navigation";
 import { Roll } from "../../components/home/Roll";
 import { Ec } from "../../components/home/Ec";
+import { Contact } from "../../components/home/Contact";
 // import { useEffect } from "react";
 // import { fetchDataFromApi } from "../../libs/api";
 
@@ -89,6 +90,7 @@ export default function Home({ articles, categoryUrls }) {
       </div>
       <Roll />
       <Ec />
+      <Contact />
       <Footer />
       {/* <div className="category-urls">
         {categoryUrls.map((obj, index) => (
