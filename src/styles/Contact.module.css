@@ -65,6 +65,7 @@
     display: flex;
     flex-flow: column;
     justify-content: center;
+    height: auto;
 }
 
 .right form label {
@@ -88,14 +89,53 @@
     background-color: #ffffff2f;
     border: none;
     font-family: "Shippori Mincho", serif;
+    height: 80%;
 
 
 }
 .right textarea:focus {
     outline: none;
     border: none;
-    font-size: 20px;
+    font-size: 18px;
+}
+
+.submitBtn {
+    width: 100px !important;
 }
 
 
 
+@media screen and (max-width:1280px) {
+    .card {
+        width: 90%;
+        height: 90%;
+    }
+    .right form label {
+        margin-bottom: 10px;
+    }
+    .right form input {
+        margin: 0 auto;
+        outline: none;
+        background-color: rgba(127, 255, 212, 0);
+        border: none;
+        border-bottom: 1px solid #36363681;
+        width: 80%;
+        font-size: 16px;
+        font-family: "Shippori Mincho", serif;
+    
+    }
+
+}
+@media screen and (max-width:795px) {
+    .left {
+        display: none;
+    }
+    .right {
+        width: 100%;
+    }
+
+    .contact {
+        height: 60vh;
+    }
+
+}
