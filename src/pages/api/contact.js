@@ -1,4 +1,4 @@
-import nodemailer from "nodemailer";
+import nodemailer from "nodemailer/lib";
 
 export default function handler(req, res) {
   const transporter = nodemailer.createTransport({
