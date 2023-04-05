@@ -1,37 +1,43 @@
+import axios from "axios";
 import styles from "../../src/styles/Contact.module.css";
-import { useState } from "react";
+import { useRef, useState } from "react";
+
 
 export const Contact = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        message: ''
-      })
-    
-      const [formResponse, setFormResponse] = useState(null)
-    
-      const handleInputChange = e => {
-        setFormData({ ...formData, [e.target.name]: e.target.value })
+  const nameRef = useRef(null)
+  const phoneRef = useRef(null)
+  const emailRef = useRef(null)
+  const messageRef = useRef(null)
+
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  
+    let data = {
+      name: nameRef.current.value,
+      email: emailRef.current.value,
+      phone: phoneRef.current.value,
+      message: messageRef.current.value,
+    };
+  
+    await fetch("api/contact", {
+      method: "POST",
+      headers: {
+        Accept: "application/json, text/plain",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    }).then((res) => {
+      if (res.status === 200) {
+        console.log("送信成功");
+        res.text().then((text) => console.log(text));
+      } else {
+        res.text().then((text) => console.error(`Error: ${text}`));
       }
-    
-      const handleSubmit = async e => {
-        e.preventDefault()
-        try {
-          const response = await axios.post(
-            'https://api.staticforms.xyz/submit',
-            formData,
-            {
-              headers: {
-                'Content-Type': 'application/json',
-                'API-Key': process.env.STATIC_access_key
-              }
-            }
-          )
-          setFormResponse(response.data)
-        } catch (error) {
-          console.error(error)
-        }
-      }
+    });
+  };
+  
+      
   return (
     <>
       <div className={styles.contact} id="Contact">
@@ -42,18 +48,17 @@ export const Contact = () => {
           </div>
           <div className={styles.right}>
             <form
-              action="https://api.staticforms.xyz/submit"
-              method="post"
-              onSubmit={handleSubmit}
+              onSubmit={(e) => handleSubmit(e)}
             >
               <div>
                 <label htmlFor="name">氏名 or 社名</label>
                 <input
                   type="text"
                   name="name"
-                  onChange={handleInputChange}
                   id="name"
-                  value={formData.name}
+                  ref={nameRef}
+                  required
+                  // value={name}
                 />
               </div>
               <div>
@@ -64,9 +69,8 @@ export const Contact = () => {
                   type="text"
                   name="phone"
                   id="phone"
-                  onChange={handleInputChange}
-                  value={formData.phone}
-                  
+                  ref={phoneRef}  
+                  required                
                 />
               </div>
               <div>
@@ -77,18 +81,18 @@ export const Contact = () => {
                   type="text"
                   name="email"
                   id="email"
-                  onChange={handleInputChange}
-                  value={formData.email}
+                  ref={emailRef}
                 />
               </div>
               <div>
                 <label htmlFor="message">お問い合わせ内容</label>
-                <textarea name="message" id="message" onChange={handleInputChange}/>
+                <textarea name="message" id="message" ref={messageRef} required />
               </div>
               <div className={styles.submitBtn}>
                 <button type="submit">送信</button>
               </div>
             </form>
+            {/* {status && <p>{status}</p>} */}
           </div>
         </div>
       </div>
