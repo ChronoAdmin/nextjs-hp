@@ -44,7 +44,7 @@ export const Contact = () => {
         <div className={styles.card}>
           <div className={styles.left}>
             <p>Welcome,</p>
-            <p>Contact us for more information</p>
+            <p>Contact us for more information.</p>
           </div>
           <div className={styles.right}>
             <form
