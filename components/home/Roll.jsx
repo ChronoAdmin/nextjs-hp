@@ -124,6 +124,11 @@ export const Roll = () => {
               <div className={styles.contact}>contact</div>
             </div>
           </ul>
+          <div className={styles.hum}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
         <div className={styles.widthBack}>
           <p>町を作り、未来を作る</p>
