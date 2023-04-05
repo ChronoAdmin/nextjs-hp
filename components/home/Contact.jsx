@@ -1,6 +1,5 @@
-import axios from "axios";
 import styles from "../../src/styles/Contact.module.css";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
 
 export const Contact = () => {
@@ -20,7 +19,7 @@ export const Contact = () => {
       message: messageRef.current.value,
     };
   
-    await fetch("api/contact", {
+    await fetch("/api/contact", {
       method: "POST",
       headers: {
         Accept: "application/json, text/plain",
