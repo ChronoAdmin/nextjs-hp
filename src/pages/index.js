@@ -179,7 +179,6 @@ export default function Home({ articles, categoryUrls }) {
                 <button type="submit">送信</button>
               </div>
             </form>
-            {/* {status && <p>{status}</p>} */}
           </div>
         </div>
       </div>
