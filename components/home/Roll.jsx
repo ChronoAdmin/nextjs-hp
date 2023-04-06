@@ -11,6 +11,8 @@ export const Roll = () => {
   // gsap
   const textRef = useRef(null);
   const corporateRef = useRef(null)
+  const boxRef1 = useRef(null)
+  const boxRef2 = useRef(null)
 
   useEffect(() => {
     // textRef
@@ -19,13 +21,13 @@ export const Roll = () => {
       y: "-50px",
     });
     gsap.to(textRef.current, {
-      y: "0px",
+      y: "15px",
       opacity: 1,
       duration: 2,
       ease: "power4.out",
       scrollTrigger: {
         trigger: "#Roll",
-        start: "top 10%",
+        start: "top center",
         end: "bottom center",
         // toggleActions: "play reverse play reverse",
         // scrub: true,
@@ -42,7 +44,41 @@ export const Roll = () => {
       ease: "power4.out",
       scrollTrigger: {
         trigger: "#Corporate",
-        start: "top 10%",
+        start: "top center",
+        end: "bottom center",
+        // toggleActions: "play reverse play reverse",
+        // scrub: true,
+      },
+    });
+    gsap.set(boxRef1.current, { opacity: 0 });
+    gsap.from(boxRef1.current, {
+      y: "-50px",
+    });
+    gsap.to(boxRef1.current, {
+      y: "0px",
+      opacity: 1,
+      duration: 2,
+      ease: "power4.out",
+      scrollTrigger: {
+        trigger: "#Roll",
+        start: "top center",
+        end: "bottom center",
+        // toggleActions: "play reverse play reverse",
+        // scrub: true,
+      },
+    });
+    gsap.set(boxRef2.current, { opacity: 0 });
+    gsap.from(boxRef2.current, {
+      y: "-50px",
+    });
+    gsap.to(boxRef2.current, {
+      y: "0px",
+      opacity: 1,
+      duration: 2,
+      ease: "power4.out",
+      scrollTrigger: {
+        trigger: "#Corporate",
+        start: "top center",
         end: "bottom center",
         // toggleActions: "play reverse play reverse",
         // scrub: true,
@@ -52,7 +88,7 @@ export const Roll = () => {
 
   return (
     <>
-      <div className={styles.Roll} id="Roll">
+      <div className={styles.Roll} id="Roll" ref={boxRef1}>
         <video
           src="/images/roll.mp4"
           autoPlay
@@ -97,7 +133,7 @@ export const Roll = () => {
         </div>
         <h2 ref={textRef}>High Quality Site</h2>
       </div>
-      <div className={styles.corporate} id="Corporate">
+      <div className={styles.corporate} ref={boxRef2} id="Corporate">
       <h2 ref={corporateRef}>Corporate Site</h2>
         <Image
           className={styles.back}
