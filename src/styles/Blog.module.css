@@ -74,13 +74,19 @@
   display: flex;
   justify-content: space-between;
   padding: 0 10%;
+  gap: 20px;
+  overflow: hidden;
 }
 
 .blogs > li > a  {
-  display: inline-block;
-  width: 40%;
+  display: block;
   min-width: 200px;
   transition: all .3s ease-in-out;
+width: 100%;
+padding-left: 5%;
+white-space: nowrap;
+overflow: hidden; /* Add this line */
+text-overflow: ellipsis; /* Add this line */
 }
 .blogs > li > a:hover  {
   color: #acacac;
@@ -126,12 +132,14 @@
     margin: 0 auto;
   }
   .data {
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     color: #6cc;
+    font-size: 1ß6px;
   }
   .blogs > li {
     display: flex;
     flex-flow: column;
+    padding: 0 5%;
   }
   .blogs > li > a  {
     display: inline-block;
