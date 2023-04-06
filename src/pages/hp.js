@@ -157,7 +157,7 @@ export default function Hp() {
           <div className={styles.right}>
             <h2>次世代の制作方法</h2>
           </div>
-          <div className={styles.left} ref={blogLeftRef}><Image src="/images/blog.jpg" height={800} width={1280} alt="nextjsとは"/><p>Wthat's Nextjs</p></div>
+          <div className={styles.left} ref={blogLeftRef}><Image src="/images/blog.jpg" height={800} width={1280} alt="nextjsとは"/><p>Wthat’s Nextjs</p></div>
           </div>
         </section>
       </div>
