@@ -19,7 +19,6 @@ export default function Hp() {
   const titleRef = useRef(null);
   const titleBlogRef = useRef(null)
   const blogLeftRef = useRef(null)
-  const blogRightRef = useRef(null)
   useEffect(() => {
     if (!loading) {
       // 英語
@@ -110,24 +109,6 @@ export default function Hp() {
           end: "bottom center",
         },
       });
-
-      //   タイトル(Blog)
-      gsap.set(blogRightRef.current, { opacity: 0 });
-      gsap.from(blogRightRef.current, {
-        x: "50px",
-      });
-      gsap.to(blogRightRef.current, {
-        x: "0px",
-        opacity: 1,
-        duration: 2,
-        delay: 1.5,
-        ease: "power4.out",
-        scrollTrigger: {
-          trigger: "#blog",
-          start: "top center",
-          end: "bottom center",
-        },
-      });
     }
   }, [loading]);
 
@@ -176,7 +157,7 @@ export default function Hp() {
           <div className={styles.right}>
             <h2>次世代の制作方法</h2>
           </div>
-          <div className={styles.left} ref={blogLeftRef}><Image src="/images/blog.jpg" height={800} width={1280} /><p>Wthat's Nextjs</p></div>
+          <div className={styles.left} ref={blogLeftRef}><Image src="/images/blog.jpg" height={800} width={1280} alt="nextjsとは"/><p>Wthat's Nextjs</p></div>
           </div>
         </section>
       </div>
