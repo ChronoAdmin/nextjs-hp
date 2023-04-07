@@ -17,8 +17,8 @@ export default function Hp() {
   const textJaRef = useRef(null);
   const lineRef = useRef(null);
   const titleRef = useRef(null);
-  const titleBlogRef = useRef(null)
-  const blogLeftRef = useRef(null)
+  const titleBlogRef = useRef(null);
+  const blogLeftRef = useRef(null);
   useEffect(() => {
     if (!loading) {
       // 英語
@@ -88,7 +88,6 @@ export default function Hp() {
         scrollTrigger: {
           trigger: "#blog",
           start: "top center",
-          end: "bottom center",
         },
       });
 
@@ -106,7 +105,6 @@ export default function Hp() {
         scrollTrigger: {
           trigger: "#blog",
           start: "top center",
-          end: "bottom center",
         },
       });
     }
@@ -153,21 +151,77 @@ export default function Hp() {
             </div>
           </div>
           <div className={styles.blogBox}>
-
-          <div className={styles.right}>
-            <h2>次世代の制作方法</h2>
-          </div>
-          <div className={styles.left} ref={blogLeftRef}><Image src="/images/blog.jpg" height={800} width={1280} alt="nextjsとは"/><p>Wthat’s Nextjs</p></div>
+            <div className={styles.right}>
+              <h2>Next.jsとは</h2>
+              <p>
+                Next.jsは、ReactをベースにしたオープンソースのJavaScriptフレームワークで、高速なWebアプリケーション開発やSEO対策に優れており、開発効率を向上させるための多くの便利な機能を提供しています。
+              </p>
+              <p>世界中で有名なサイトが使用しています。</p>
+              <div className={styles.brands}>
+                <Image
+                  src="/brandLogo/image.webp"
+                  width={200}
+                  height={200}
+                  alt="hulu-logo"
+                />
+                <Image
+                  src="/brandLogo/image-3.webp"
+                  width={200}
+                  height={200}
+                  alt="tiktok-logo"
+                />
+                <Image
+                  src="/brandLogo/image-2.webp"
+                  width={200}
+                  height={200}
+                  alt="nike-logo"
+                />
+              </div>
+              <h2 className={styles.why}>なぜNextjsなのか</h2>
+              <table className={styles.comparisonTable}>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Next.js製ホームページ （点数）</th>
+                    <th>素のHTML製ホームページ （点数）</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>パフォーマンス</td>
+                    <td>高速（SSR/SSGによるプリレンダリング） （10）</td>
+                    <td>通常（ブラウザのレンダリング速度に依存） （5）</td>
+                  </tr>
+                  <tr>
+                    <td>SEO 対策</td>
+                    <td>しやすい（サーバーサイドレンダリングにより、メタ情報やタイトルなどを柔軟に設定できる）（9）</td>
+                    <td>難しい（クライアントサイドレンダリングでは、検索エンジンがサイトの内容を把握しづらい場合がある）（6）</td>
+                  </tr>
+                  <tr>
+                    <td>ユーザーエクスペリエンス</td>
+                    <td>高い（サーバーサイドレンダリングにより、初回表示以降の画面遷移がスムーズになる）（10）</td>
+                    <td>低い（クライアントサイドレンダリングでは、初回表示以降の画面遷移が遅くなる場合がある）（5）</td>
+                  </tr>
+                  <tr>
+                    <td>ページの機能性</td>
+                    <td>高い（Next.js は豊富な機能があり、サーバーサイドレンダリングにより、様々な機能を実装できる）（8）</td>
+                    <td>低い（素の HTML では、JavaScript を使わない限り、動的な機能を実装することができない）（4）</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className={styles.left} ref={blogLeftRef}>
+              <Image
+                src="/images/blog.jpg"
+                height={800}
+                width={1280}
+                alt="nextjsとは"
+              />
+              <p>Wthat’s Nextjs</p>
+            </div>
           </div>
         </section>
       </div>
     </div>
   );
 }
-
-
-
-
-
-
-
