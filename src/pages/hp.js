@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import { Roll } from "../../components/home/Roll";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
+import { Loading } from "../../components/Loading";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Hp() {
@@ -112,14 +113,8 @@ export default function Hp() {
 
   return (
     <div>
-      {loading && (
-        <div className={styles.loaderContainer}>
-          <h1>Create New Hp</h1>
-          <div className={styles.loader}>
-            <div></div>
-          </div>
-        </div>
-      )}
+      {loading && <Loading title="Create New Hp"/>}
+
       <div className={`${styles.content} ${!loading ? styles.visible : ""}`}>
         <div className={styles.mv}>
           <div className={styles.line} ref={lineRef}></div>
@@ -194,18 +189,32 @@ export default function Hp() {
                   </tr>
                   <tr>
                     <td>SEO 対策</td>
-                    <td>しやすい（サーバーサイドレンダリングにより、メタ情報やタイトルなどを柔軟に設定できる）（9）</td>
-                    <td>難しい（クライアントサイドレンダリングでは、検索エンジンがサイトの内容を把握しづらい場合がある）（6）</td>
+                    <td>
+                      しやすい（サーバーサイドレンダリングにより、メタ情報やタイトルなどを柔軟に設定できる）（9）
+                    </td>
+                    <td>
+                      難しい（クライアントサイドレンダリングでは、検索エンジンがサイトの内容を把握しづらい場合がある）（6）
+                    </td>
                   </tr>
                   <tr>
                     <td>ユーザーエクスペリエンス</td>
-                    <td>高い（サーバーサイドレンダリングにより、初回表示以降の画面遷移がスムーズになる）（10）</td>
-                    <td>低い（クライアントサイドレンダリングでは、初回表示以降の画面遷移が遅くなる場合がある）（5）</td>
+                    <td>
+                      高い（サーバーサイドレンダリングにより、初回表示以降の画面遷移がスムーズになる）（10）
+                    </td>
+                    <td>
+                      低い（クライアントサイドレンダリングでは、初回表示以降の画面遷移が遅くなる場合がある）（5）
+                    </td>
                   </tr>
                   <tr>
                     <td>ページの機能性</td>
-                    <td>高い（Next.js は豊富な機能があり、サーバーサイドレンダリングにより、様々な機能を実装できる）（8）</td>
-                    <td>低い（素の HTML では、JavaScript を使わない限り、動的な機能を実装することができない）（4）</td>
+                    <td>
+                      高い（Next.js
+                      は豊富な機能があり、サーバーサイドレンダリングにより、様々な機能を実装できる）（8）
+                    </td>
+                    <td>
+                      低い（素の HTML では、JavaScript
+                      を使わない限り、動的な機能を実装することができない）（4）
+                    </td>
                   </tr>
                 </tbody>
               </table>
