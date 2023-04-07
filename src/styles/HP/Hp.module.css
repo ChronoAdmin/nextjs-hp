@@ -93,8 +93,6 @@
 .service {
     background-color: #ffffff;
     position: relative;
-    background-image: linear-gradient(#fff);
-    background-attachment: fixed;
 }
 
 .title {
@@ -117,20 +115,9 @@
 
 .blogBox {
     width: 100%;
-    height: 800px;
     position: relative;
 }
 
-.blog .right {
-    position: absolute;
-    height: 1500px;
-    width: 100%;
-    min-width: 300px;
-    background-color: #f4f4f4;
-    position: absolute;
-    right: 0;
-    top: 10%;
-}
 .blog .left {
     position: absolute;
     height: 70vh;
@@ -153,3 +140,64 @@
     color: #000;
     font-size: 100px;
 }
+
+.blog .right {
+    width: 100%;
+    min-width: 300px;
+    background-color: #f4f4f4;
+    position: relative;
+    right: 0;
+    top: 50px;
+}
+
+.right h2 {
+    margin-left: 40px;
+    text-align: left;
+    color: #000;
+    font-size: 40px;
+}
+.right h2:nth-child(1) {
+    padding-top: 100vh;
+}
+.right .why {
+    margin-top: 40px;
+}
+
+.right p {
+    color: #000;
+    width: 60%;
+    min-width: 350px;
+    margin-left: 50px;
+}
+
+.brands {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.comparisonTable {
+    font-family: "Shippori Mincho", serif;
+
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    text-align: center;
+    color: #000;
+  }
+  
+  .comparisonTable th,
+  .comparisonTable td {
+    border: 1px solid #333;
+    padding: 18px;
+  }
+  
+  .comparisonTable th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .comparisonTable tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+  }
+  
