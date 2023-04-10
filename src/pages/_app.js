@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import Head from "next/head";
+import Layout from "../../components/Layout";
 
 export default function App({ Component, pageProps }) {
   return (
@@ -21,7 +22,10 @@ export default function App({ Component, pageProps }) {
           content="群馬県、高崎市、Web制作、HP業者、ホームページ、Next.js、低単価、SEO対策、デザイン、ホームページ業者"
         />
       </Head>
+      <Layout>
+
       <Component {...pageProps} />
+      </Layout>
       <Analytics />
     </>
   );

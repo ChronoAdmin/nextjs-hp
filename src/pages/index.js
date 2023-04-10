@@ -5,11 +5,9 @@ import { Service } from "../../components/home/Service";
 import { Blog } from "../../components/Blog";
 import { Flow } from "../../components/home/Flow";
 import { Stack } from "../../components/home/Stack";
-import { Footer } from "../../components/Footer";
-import { Navigation } from "../../components/Navigation";
-import { Roll } from "../../components/home/Roll";
 import { Ec } from "../../components/home/Ec";
 import { Contact } from "../../components/home/Contact";
+import { useRouter } from "next/router";
 // import { useEffect } from "react";
 // import { fetchDataFromApi } from "../../libs/api";
 
@@ -18,7 +16,7 @@ import { Contact } from "../../components/home/Contact";
 
 // SSG
 export const getStaticProps = async () => {
-  // 記事情報
+  // 記事情報A
   const data = await client.get({ endpoint: "blog" });
   const articles = data.contents.map((article) => {
     const date = new Date(article.publishedAt);
@@ -34,6 +32,8 @@ export const getStaticProps = async () => {
   articles.sort((a, b) => {
     return new Date(b.publishedAt) - new Date(a.publishedAt);
   });
+
+  
 
   // let categoryUrls = await fetchDataFromApi("/api/categories?populate=*");
 
@@ -67,6 +67,13 @@ export const getStaticProps = async () => {
 };
 
 export default function Home({ articles, categoryUrls }) {
+  const router = useRouter();
+
+
+  const handleFormSubmitSuccess = () => {
+    router.push("/thanks");
+  };
+  
   // useEffect(() => {
   //   getCategories()
   // },[])
@@ -75,7 +82,6 @@ export default function Home({ articles, categoryUrls }) {
   // }
   return (
     <>
-      <Navigation />
       <Mv />
       <div className="wrap">
         <div className="inner">
@@ -88,10 +94,8 @@ export default function Home({ articles, categoryUrls }) {
         </div>
         <Stack />
       </div>
-      <Roll />
       <Ec />
-      <Contact />
-      <Footer />
+      <Contact onFormSubmitSuccess={handleFormSubmitSuccess}/>
       {/* <div className="category-urls">
         {categoryUrls.map((obj, index) => (
           <div key={index} className="category-url">

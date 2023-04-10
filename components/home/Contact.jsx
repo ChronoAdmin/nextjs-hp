@@ -1,9 +1,12 @@
-import axios from "axios";
 import styles from "../../src/styles/Contact.module.css";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
 
-export const Contact = () => {
+
+export const Contact = ({ onFormSubmitSuccess }) => {
+
+
+
   const nameRef = useRef(null)
   const phoneRef = useRef(null)
   const emailRef = useRef(null)
@@ -20,7 +23,7 @@ export const Contact = () => {
       message: messageRef.current.value,
     };
   
-    await fetch("api/contact", {
+    await fetch("/api/contact", {
       method: "POST",
       headers: {
         Accept: "application/json, text/plain",
@@ -31,6 +34,7 @@ export const Contact = () => {
       if (res.status === 200) {
         console.log("送信成功");
         res.text().then((text) => console.log(text));
+        onFormSubmitSuccess();
       } else {
         res.text().then((text) => console.error(`Error: ${text}`));
       }

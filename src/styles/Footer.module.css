@@ -23,9 +23,8 @@
   align-items: center;
 }
 .left img {
-  width: 100%;
+  width: auto;
   height: auto;
-  object-fit: cover; 
 }
 .right {
   width: 50%;
