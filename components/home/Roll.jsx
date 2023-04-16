@@ -148,6 +148,8 @@ export const Roll = () => {
               src="/HatchfulExport-All/logo_transparent.png"
               width={200}
               height={200}
+              alt="corporate img"
+
             />
           </div>
           <ul className={styles.navi}>

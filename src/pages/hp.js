@@ -154,27 +154,27 @@ export default function Hp() {
             {/* <Roll /> */}
             <div className={styles.hps} ref={linksRef}>
               <Link href="/">
-                <Image src="images/hp_svg/homepage.svg" width={500} height={500} />
+                <Image src="images/hp_svg/homepage.svg" width={500} height={500} alt="クオリティー画像"/>
                 <p>高クオリティサイト</p>
               </Link>
               <Link href="/">
-              <Image src="images/hp_svg/corporate.svg" width={500} height={500} />
+              <Image src="images/hp_svg/corporate.svg" width={500} height={500} alt="コーポレート画像"/>
                 <p>コーポレートサイト</p>
               </Link>
               <Link href="/">
-              <Image src="images/hp_svg/ec.svg" width={500} height={500} />
+              <Image src="images/hp_svg/ec.svg" width={500} height={500} alt="決済機能付き画像"/>
               <p>決済機能付きサイト</p>
               </Link>
               <Link href="/">
-              <Image src="images/hp_svg/lp.svg" width={500} height={500} />
+              <Image src="images/hp_svg/lp.svg" width={500} height={500} alt="ランディングページ画像"/>
               <p>ランディングページ</p>
               </Link>
               <Link href="/">
-              <Image src="images/hp_svg/info.svg" width={500} height={500} />
+              <Image src="images/hp_svg/info.svg" width={500} height={500} alt="採用サイト画像"/>
               <p>採用サイト</p>
               </Link>
               <Link href="/">
-              <Image src="images/hp_svg/blog.svg" width={500} height={500} />
+              <Image src="images/hp_svg/blog.svg" width={500} height={500} alt="ブログ画像"/>
               <p>ブログ</p>
               </Link>
             </div>
