@@ -1,4 +1,4 @@
-import { IsPlayingContext } from "@/pages/context/IsPlayingContext";
+import { IsPlayingContext } from "../libs/context/IsPlayingContext";
 import { OrbitControls, useAnimations, useGLTF } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { useContext, useEffect, useRef } from "react";
@@ -47,10 +47,11 @@ const Head = () => {
   );
 };
 
-
 export const ChatBotCanvas = () => {
   return (
-    <Canvas camera={{ position: [0, 0, 15]}} style={{ width: "100vw", height: "50vh" }}
+    <Canvas
+      camera={{ position: [0, 0, 15] }}
+      style={{ width: "100vw", height: "50vh" }}
     >
       <OrbitControls
         enableZoom={false}

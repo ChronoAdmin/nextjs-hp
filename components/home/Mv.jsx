@@ -2,9 +2,7 @@ import Link from "next/link";
 import styles from "../../src/styles/home/mv.module.css";
 import Image from "next/image";
 import { useEffect, useState, useRef, useContext } from "react";
-import {
-  IsPlayingProvider,
-} from "@/pages/context/IsPlayingContext";
+import { IsPlayingProvider } from "../../libs/context/IsPlayingContext";
 import { ChatBotCanvas } from "../ChatBotCanvas";
 import { TextToSpeech } from "../TextToSpeech";
 
