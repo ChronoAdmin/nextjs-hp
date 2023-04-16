@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600&display=swap');
 
+
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
+
+
 
 ::selection {
   color: rgb(0, 0, 0);
@@ -43,12 +47,12 @@ img {
 .wrap {
   width: 100%;
   margin: 0 auto;
-  background-color: #154647;
+  background-color: #000000;
 }
 
 .bgChange {
   width: 100%;
-  background: linear-gradient(to bottom, #154647 0% ,rgb(16, 4, 70) 100%);
+  background: linear-gradient(to bottom, #000000 0% ,rgb(16, 4, 70) 100%);
 }
 .bgChange2 {
   width: 100%;
@@ -155,3 +159,5 @@ img {
   z-index: -1;
   backdrop-filter: blur(10px);
  }
+
+

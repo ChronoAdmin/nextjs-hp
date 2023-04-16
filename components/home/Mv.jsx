@@ -1,38 +1,14 @@
 import Link from "next/link";
 import styles from "../../src/styles/home/mv.module.css";
 import Image from "next/image";
-import { useEffect, useState, useRef } from "react";
-import { gsap } from "gsap";
+import { useEffect, useState, useRef, useContext } from "react";
+import {
+  IsPlayingProvider,
+} from "@/pages/context/IsPlayingContext";
+import { ChatBotCanvas } from "../ChatBotCanvas";
+import { TextToSpeech } from "../TextToSpeech";
 
 export const Mv = () => {
-  const listRef = useRef(null);
-
-  // navi
-  const handleItemClick = (event) => {
-    const currentItem = event.currentTarget;
-    const items = Array.from(listRef.current.children);
-    items.forEach((item) => item.classList.remove(styles.active));
-    currentItem.classList.add(styles.active);
-  };
-
-  // gsap
-  const textRef = useRef(null);
-  const buttonRef = useRef(null);
-
-  useEffect(() => {
-    // textRef
-    gsap.set(textRef.current, { opacity: 0 });
-    gsap.from(textRef.current, {
-      y: "-50px",
-    });
-    gsap.to(textRef.current, {
-      y: "0px",
-      opacity: 1,
-      duration: 2,
-      ease: "power4.out",
-    });
-  }, []);
-
   // タイピング
   const [typedText, setTypedText] = useState("");
   const [isFirstTextCompleted, setIsFirstTextCompleted] = useState(false);
@@ -65,35 +41,12 @@ export const Mv = () => {
 
   return (
     <div className={styles.mv} id="mv">
-      <Image
-        src="/images/mv.webp"
-        width={1920}
-        height={1080}
-        className={styles.bg}
-        alt="MVの画像(1920*1080)"
-        priority
-      />
-      <div className={styles.txtBox} ref={textRef}>
-        <p className={textClass}>{typedText}</p>
+      <div className="h-screen">
+        <IsPlayingProvider className={styles.jcc}>
+          <ChatBotCanvas />
+          <TextToSpeech />
+        </IsPlayingProvider>
       </div>
-      <div className="scroll">
-        <svg className="arrows">
-          <path className="a1" d="M0 0 L30 32 L60 0"></path>
-          <path className="a2" d="M0 20 L30 52 L60 20"></path>
-          <path className="a3" d="M0 40 L30 72 L60 40"></path>
-        </svg>
-      </div>
-
-      <style jsx>{`
-        .japanese {
-          font-family: "Shippori Mincho", serif;
-        }
-
-        .english {
-          font-family: Oswald, sans-serif;
-        }
-      `}</style>
-      
     </div>
   );
 };

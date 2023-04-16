@@ -1,78 +1,17 @@
+
+
 .mv {
-  width: 100%;
+  /* height: 100vh; */
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  overflow: hidden;
-  min-height: 0; /* 追加 */
-  padding-bottom: 51.25%; /* 1.7778を100で割り、100を掛けた値 */
-}
-
-.mv::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  display: block;
-  background: linear-gradient(165deg, #f0f0f000 20%, #fffffff6);
-  z-index: 3;
+  background-color: #000000;
 }
 
-.mv .bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-}
-
-.txtBox {
-  position: absolute;
-  top: 50%;
-  left: 5%;
-  right: 0;
-  height: 100px; /* 適切な高さに変更 */
-  z-index: 4;
-  width: 800px;
-  min-width: 600px;
-}
-
-.txtBox p {
-  margin: 0;
-  color: #535353;
-  font-size: 3.5rem;
-  text-shadow: 10px -5px 10px #0000008c;
-}
-
-@media screen and (max-width: 1180px) {
-  .txtBox {
-    width: 600px;
-    min-width: 600px;
-  }
-  .txtBox p {
-    font-size: 2.5rem;
-  }
-}
-@media screen and (max-width: 860px) {
-  .txtBox {
-    width: 400px;
-    min-width: 400px;
-  }
-  .txtBox p {
-    font-size: 2rem;
-  }
-}
-@media screen and (max-width: 520px) {
-  .txtBox {
-    width: 250px;
-    min-width: 250px;
-  }
-  .txtBox p {
-    font-size: 1rem;
-  }
-}
-
-.japanese {
-  font-family: "Shippori Mincho", serif;
+.jcc{
+  display: flex;
+  justify-content: center;
 }

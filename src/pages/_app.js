@@ -3,6 +3,7 @@ import { Analytics } from "@vercel/analytics/react";
 import Head from "next/head";
 import Layout from "../../components/Layout";
 
+
 export default function App({ Component, pageProps }) {
   return (
     <>
@@ -23,8 +24,8 @@ export default function App({ Component, pageProps }) {
         />
       </Head>
       <Layout>
-
-      <Component {...pageProps} />
+          <Component {...pageProps} />
+≈
       </Layout>
       <Analytics />
     </>

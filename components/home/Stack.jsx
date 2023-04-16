@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export const Stack = () => {
   const textRef = useRef(null);
+  const text2Ref = useRef(null);
 
   useEffect(() => {
     gsap.set(textRef.current, { opacity: 0 });
@@ -26,13 +27,30 @@ export const Stack = () => {
         // scrub: true,
       },
     });
+    gsap.set(text2Ref.current, { opacity: 0 });
+    gsap.from(text2Ref.current, {
+      y: "-50px",
+    });
+    gsap.to(text2Ref.current, {
+      y: "0px",
+      opacity: 1,
+      duration: 2,
+      ease: "power4.out",
+      scrollTrigger: {
+        trigger: "#imgs",
+        start: "top 30%",
+        end: "center center",
+        // toggleActions: "play reverse play reverse",
+        // scrub: true,
+      },
+    });
   }, []);
 
   return (
     <>
-      <div className={styles.contact} id="contact" ref={textRef}>
+      <div className={styles.contact} id="contact">
         <h1>技術スタック</h1>
-        <div className={styles.imgs}>
+        <div className={styles.imgs} ref={textRef} id="imgs">
           <div className={styles.nextImg}>
             <Image
               src="/images/stack/nextjs-1024x512.webp"
@@ -52,7 +70,7 @@ export const Stack = () => {
             />
           </div>
         </div>
-        <div className={styles.container}>
+        <div className={styles.container} ref={text2Ref}>
           {/* <div className={styles.next_container}>
             <div className={styles.img_container}>
               <div className={styles.next_img}>

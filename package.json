@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/drei": "^9.65.3",
+    "@react-three/fiber": "^8.12.1",
     "@reduxjs/toolkit": "1.9.3",
     "@stripe/react-stripe-js": "1.16.5",
     "@stripe/stripe-js": "1.48.0",
@@ -20,6 +22,7 @@
     "microcms-js-sdk": "^2.3.2",
     "next": "13.2.4",
     "nodemailer": "^6.9.1",
+    "openai": "^3.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
@@ -29,5 +32,12 @@
     "react-responsive-carousel": "3.2.23",
     "react-toastify": "9.1.2",
     "swr": "2.1.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "init": "^0.1.2",
+    "npx": "^10.2.2",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.3.1"
   }
 }
