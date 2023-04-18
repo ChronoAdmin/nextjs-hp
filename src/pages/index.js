@@ -8,6 +8,8 @@ import { Stack } from "../../components/home/Stack";
 import { Ec } from "../../components/home/Ec";
 import { Contact } from "../../components/home/Contact";
 import { useRouter } from "next/router";
+import { Loading } from "../../components/Loading";
+import { useEffect, useState } from "react";
 // import { useEffect } from "react";
 // import { fetchDataFromApi } from "../../libs/api";
 
@@ -32,8 +34,6 @@ export const getStaticProps = async () => {
   articles.sort((a, b) => {
     return new Date(b.publishedAt) - new Date(a.publishedAt);
   });
-
-  
 
   // let categoryUrls = await fetchDataFromApi("/api/categories?populate=*");
 
@@ -68,12 +68,16 @@ export const getStaticProps = async () => {
 
 export default function Home({ articles, categoryUrls }) {
   const router = useRouter();
-
-
   const handleFormSubmitSuccess = () => {
     router.push("/thanks");
   };
-  
+
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
   // useEffect(() => {
   //   getCategories()
   // },[])
@@ -82,6 +86,8 @@ export default function Home({ articles, categoryUrls }) {
   // }
   return (
     <>
+      {loading && <Loading title="Chrono Office" />}
+
       <Mv />
       <div className="wrap">
         <div className="inner">
@@ -95,7 +101,7 @@ export default function Home({ articles, categoryUrls }) {
         <Stack />
       </div>
       <Ec />
-      <Contact onFormSubmitSuccess={handleFormSubmitSuccess}/>
+      <Contact onFormSubmitSuccess={handleFormSubmitSuccess} />
       {/* <div className="category-urls">
         {categoryUrls.map((obj, index) => (
           <div key={index} className="category-url">
