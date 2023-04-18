@@ -8,7 +8,6 @@ import { Stack } from "../../components/home/Stack";
 import { Ec } from "../../components/home/Ec";
 import { Contact } from "../../components/home/Contact";
 import { useRouter } from "next/router";
-import { Eff } from "../../components/home/eff";
 // import { useEffect } from "react";
 // import { fetchDataFromApi } from "../../libs/api";
 
