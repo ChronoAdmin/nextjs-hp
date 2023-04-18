@@ -50,17 +50,24 @@ const Head = () => {
 export const ChatBotCanvas = () => {
   return (
     <Canvas
-      camera={{ position: [0, 0, 15] }}
-      style={{ width: "100vw", height: "50vh" }}
-    >
-      <OrbitControls
-        enableZoom={false}
-        enableDamping
-        maxPolarAngle={2}
-        minAzimuthAngle={-Math.PI * 0.5}
-        maxAzimuthAngle={Math.PI * 0.5}
-      />
-      <Head />
-    </Canvas>
+    camera={{ position: [0, 0, 15] }}
+    style={{
+      width: "100vw",
+      height: "50vh",
+      position: "absolute",
+      left: "50%",
+      top: "50%",
+      transform: "translate(-50%,-50%)",
+    }}
+  >
+        <OrbitControls
+          enableZoom={false}
+          enableDamping
+          maxPolarAngle={2}
+          minAzimuthAngle={-Math.PI * 0.5}
+          maxAzimuthAngle={Math.PI * 0.5}
+        />
+        <Head />
+      </Canvas>
   );
 };

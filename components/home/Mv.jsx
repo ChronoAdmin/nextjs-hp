@@ -7,6 +7,22 @@ import { ChatBotCanvas } from "../ChatBotCanvas";
 import { TextToSpeech } from "../TextToSpeech";
 
 export const Mv = () => {
+  const [aiResponse, setAiResponse] = useState("");
+  const [showBubble, setShowBubble] = useState(false);
+
+  const handleAiResponse = (response) => {
+    setAiResponse(response);
+    setShowBubble(true);
+  };
+
+  useEffect(() => {
+    if (aiResponse) {
+      setTimeout(() => {
+        setShowBubble(false);
+      }, 300000);
+    }
+  }, [aiResponse]);
+
   // タイピング
   const [typedText, setTypedText] = useState("");
   const [isFirstTextCompleted, setIsFirstTextCompleted] = useState(false);
@@ -41,8 +57,13 @@ export const Mv = () => {
     <div className={styles.mv} id="mv">
       <div className="h-screen">
         <IsPlayingProvider className={styles.jcc}>
-          <ChatBotCanvas />
-          <TextToSpeech />
+          <ChatBotCanvas aiResponse={aiResponse} showBubble={showBubble} />
+          <TextToSpeech onAiResponse={handleAiResponse} />
+          {showBubble && (
+            <div className={styles.bubble}>
+              <p className={styles.aiResponseText}>{aiResponse}</p>
+            </div>
+          )}
         </IsPlayingProvider>
       </div>
     </div>

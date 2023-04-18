@@ -10,8 +10,6 @@ export default async function handler(req, res) {
     // GET メソッドの場合の処理をここに記述します。
   } else if (req.method === "POST") {
     const { userText } = req.body;
-    console.log("User text:", userText);
-    console.log("API Key:", process.env.OPENAI_APIKEY);
 
     try {
       // OpenAI API へのリクエストを実装します

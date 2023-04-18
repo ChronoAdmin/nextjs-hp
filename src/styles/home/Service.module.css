@@ -107,7 +107,7 @@
     left: -50%;
     width: 380px;
     height: 420px;
-    background: linear-gradient(0deg,transparent,transparent,#8ce0d5,#8ce0d5,#8ce0d5);
+    background: linear-gradient(0deg,transparent,transparent,#ffffff,#ffffff,#ffffff);
     z-index: 1;
     transform-origin: bottom right;
     animation: anim 12s linear infinite;
@@ -121,7 +121,7 @@
     left: -50%;
     width: 380px;
     height: 420px;
-    background: linear-gradient(0deg,transparent,transparent,#8ce0d5,#8ce0d5,#8ce0d5);
+    background: linear-gradient(0deg,transparent,transparent,#ffffff,#ffffff,#ffffff);
     z-index: 1;
     transform-origin: bottom right;
     animation: anim 12s linear infinite;
@@ -153,7 +153,7 @@
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: #9e6262;
+    background-color: #6f4d4d;
     border-radius: 4px;
 } 
 
@@ -162,7 +162,7 @@
     width: 100%;
     border-radius: 4px;
     aspect-ratio: 1 / 1;
-    background: #d9d9d9;
+    background: #7e7e7e;
 }
 
 .imgBox img {
