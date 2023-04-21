@@ -41,9 +41,9 @@ export const TakasakiBlog = ({titleJa,titleEn,blogs}) => {
         </ul>
       </div>
       <div className={styles.more}>
-        <a href="/">
+        <Link href="/">
           <span>他の記事</span>
-        </a>
+        </Link>
       </div>
     </div>
   )
