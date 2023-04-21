@@ -1,0 +1,75 @@
+.box {
+    color: black;
+    background-color: #fff;
+    margin: 0 auto;
+    width: 80%;
+    height: auto;
+    padding: 50px;
+    font-family: dnp-shuei-gothic-gin-std, YuGothic, Yu Gothic, Hiragino Sans, Hiragino Kaku Gothic ProN, Meiryo, sans-serif;
+}
+
+.title {
+    text-align: center;
+}
+
+.titleJa {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.titleEn {
+    font-size: 16px;
+    color: #6f6f6f;
+    letter-spacing: 3px;
+}
+
+.box ul {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.box li {
+    position: relative;
+}
+
+.box a {
+    display: block;
+
+}
+
+.catImg {
+    background-color: #000000;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    color: #fff;
+}
+
+
+.catImg img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all .5s ease-in-out;
+}
+
+.categoryName {
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 20px;
+    font-weight: 600;
+    transition: all .5s ease-in-out;
+}
+
+.box a:hover img{
+    transform: scale(1.05);
+    opacity: 0.3;
+}
+

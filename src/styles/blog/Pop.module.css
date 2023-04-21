@@ -1,0 +1,43 @@
+.pop {
+}
+
+.pop a {
+  width: 700px;
+  height: 400px;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  box-shadow: 0 0 10px #757575;
+}
+
+.pop a img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  transition: all 0.2s;
+}
+
+.pop a:hover img {
+  opacity: 0.8;
+}
+.pop a:hover .ps {
+  color: #a12323;
+}
+
+.pop a .ps {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 35px;
+  color: rgb(255, 255, 255);
+  z-index: 2;
+  letter-spacing: 2px;
+  transition: all .2s;
+}

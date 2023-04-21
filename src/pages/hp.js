@@ -8,6 +8,8 @@ import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
+
+
 export default function Hp() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
