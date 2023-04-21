@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "@/styles/blog/Category.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 export const Category = ({ categories }) => {
   console.log("このデータがカテゴリーズだよーーーー：", categories);
@@ -21,7 +22,7 @@ export const Category = ({ categories }) => {
           <li key={categorie.id}>
             <Link href={`blog/categories/${categorie.id}`}>
               <div className={styles.catImg}>
-                <img src={imgArrayCategory[index % imgArrayCategory.length]} alt="" />
+                <Image src={imgArrayCategory[index % imgArrayCategory.length]} alt="a" width={1920} height={1080} />
               </div>
               <div className={styles.categoryName}>{categorie.name}</div>
             </Link>

@@ -68,9 +68,9 @@ function allblog({ articles }) {
       <div className={styles.main}>
         {articles.map((article) => (
         //   <div>{article.title}</div>
-          <div className={styles.blogImg}>
+          <div key={articles.id} className={styles.blogImg}>
              {articles.thumbnail ? (
-              <img src={articles.thumbnail.url} alt={articles.title} />
+              <Image src={articles.thumbnail.url} alt={articles.title} width={300} height={300} />
                ) : (
               <div className={styles.noImage}>No Image...</div>
              )}
