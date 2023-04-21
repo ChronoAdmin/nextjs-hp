@@ -1,10 +1,10 @@
+// @ts-check
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-}
-module.exports = {
   images: {
-    formats: ['image/avif', 'image/webp'],
+    formats: ["image/avif", "image/webp"],
+    domains: ["images.microcms-assets.io"],
   },
   webpack(config) {
     config.module.rules.push({
@@ -16,4 +16,4 @@ module.exports = {
   },
 };
 
-module.exports = nextConfig
+module.exports = nextConfig;

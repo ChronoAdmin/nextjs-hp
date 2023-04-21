@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from "@/styles/blog/TakasakiBlog.module.css";
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const TakasakiBlog = ({titleJa,titleEn,blogs}) => {
   return (
@@ -17,7 +18,7 @@ export const TakasakiBlog = ({titleJa,titleEn,blogs}) => {
                 <Link href={`blog/${blog.id}`}>
                   <div className={styles.blogImg}>
                     {blog.thumbnail ? (
-                      <img src={blog.thumbnail.url} alt={blog.title} />
+                      <Image src={blog.thumbnail.url} alt={blog.title} width={1920} height={1080} />
                     ) : (
                       <div className={styles.noImage}>No Image...</div>
                     )}

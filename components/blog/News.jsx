@@ -21,7 +21,7 @@ export const News = ({ titleJa, titleEn, blogs,more }) => {
                 <Link href={`blog/${blog.id}`}>
                   <div className={styles.blogImg}>
                     {blog.thumbnail ? (
-                      <img src={blog.thumbnail.url} alt={blog.title} />
+                      <Image src={blog.thumbnail.url} alt={blog.title} width={1920} height={1080}/>
                     ) : (
                       <div className={styles.noImage}>No Image...</div>
                     )}
