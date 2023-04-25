@@ -13,6 +13,8 @@
     top: 0px;
     left: 0px;
     font-size: 70px;
+    font-family:  'Oswald', sans-serif;;
+
 }
 
 .title > h1 {
@@ -121,22 +123,13 @@
     left: -50%;
     width: 380px;
     height: 420px;
-    background: linear-gradient(0deg,transparent,transparent,#ffffff,#ffffff,#ffffff);
+    background: linear-gradient(0deg,transparent,transparent,#0f7791,#0f7791,#0f7791);
     z-index: 1;
     transform-origin: bottom right;
     animation: anim 12s linear infinite;
     animation-delay: -9s;
 }
 
-@keyframes anim 
-{
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
-}
 
 
 .inner {
@@ -153,7 +146,7 @@
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: #6f4d4d;
+    background-color: #ffffff;
     border-radius: 4px;
 } 
 
@@ -162,7 +155,7 @@
     width: 100%;
     border-radius: 4px;
     aspect-ratio: 1 / 1;
-    background: #7e7e7e;
+    background: #000000;
 }
 
 .imgBox img {
@@ -178,11 +171,11 @@
 
 .text > h2 {
     margin-top: 20px;
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 1px solid #000000;
     width: fit-content;
     margin: 20px auto;
     padding: 3px 8px;
-    color: #ffffff;
+    color: #000000;
     border-radius: 4px;
 }
 .text > p {
@@ -190,7 +183,7 @@
     margin-top: 20px;
     font-size: 18px;
     letter-spacing: 1.7px;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 
 .blue {
@@ -213,7 +206,7 @@
     display: block;
     width: 100%;
     height: 100%;
-    background-color: #9e6262;
+    background-color: #0f7791;
     display: flex;
     align-items: center;
     justify-content: center;

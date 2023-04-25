@@ -43,7 +43,7 @@ export const getStaticProps = async () => {
   // カテゴリー情報を取得
     const categoriesData = await client.get({ endpoint: "categories" });
     const categories = categoriesData.contents;
-    console.log(categories)
+    // console.log(categories)
 
   return {
     props: {

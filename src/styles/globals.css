@@ -22,7 +22,7 @@ body {
   overflow-x: hidden;
   color: #fff;
  font-family:  'Oswald', sans-serif;;
- background-color: #000000;
+ background-color: #081420;
 
   /* font-family: 'Shippori Mincho', serif;  */
 }
@@ -47,29 +47,20 @@ img {
 }
 
 .wrap {
+  position: relative;
   width: 100%;
   margin: 0 auto;
-  background-color: #000000;
+  background-color: #081420;
+  z-index: 2;
+  margin-top: 70vh;
 }
 
-.bgChange {
-  width: 100%;
-  background: linear-gradient(to bottom, #000000 0% ,rgb(16, 4, 70) 100%);
-}
-.bgChange2 {
-  width: 100%;
-  background: linear-gradient(to bottom, rgb(16, 4, 70) 0%,#000 100% );
-}
-.bgChange3 {
-  width: 100%;
-  height: 100vh;
-  background: #707070;
-}
 
 .inner {
   width: 80%;
   min-width: 300px;
   margin: 0 auto;
+  padding-bottom: 100px;
 }
 
 @media screen and (max-width: 1575px) {

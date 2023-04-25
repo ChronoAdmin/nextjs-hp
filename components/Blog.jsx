@@ -49,9 +49,11 @@ export const Blog = ({ articles }) => {
                 </Link>
               </li>
             ))}
-            <Link href="/" className={styles.btn}>
-              More
-            </Link>
+            <div className={styles.more}>
+              <Link href="/" className={styles.btn}>
+                More Blog
+              </Link>
+            </div>
           </div>
         </div>
       </section>

@@ -1,10 +1,11 @@
 .flow {
   position: relative;
-  margin-top: 100px;
+  /* margin-top: 100px; */
   font-family: "Shippori Mincho", serif;
   height: 250px;
   display: flex;
   gap: 20px;
+  /* padding: 50px 0; */
 }
 
 .flowArea {

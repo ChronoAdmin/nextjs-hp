@@ -5,11 +5,12 @@ import { Service } from "../../components/home/Service";
 import { Blog } from "../../components/Blog";
 import { Flow } from "../../components/home/Flow";
 import { Stack } from "../../components/home/Stack";
-import { Ec } from "../../components/home/Ec";
+// import { Ec } from "../../components/home/Ec";
 import { Contact } from "../../components/home/Contact";
 import { useRouter } from "next/router";
 import { Loading } from "../../components/Loading";
 import { useEffect, useState } from "react";
+import { Mv2 } from "../../components/home/Mv2";
 // import { useEffect } from "react";
 // import { fetchDataFromApi } from "../../libs/api";
 
@@ -87,20 +88,16 @@ export default function Home({ articles, categoryUrls }) {
   return (
     <>
       {loading && <Loading title="Chrono Office" />}
-
-      <Mv />
+      <Mv2 />
       <div className="wrap">
         <div className="inner">
           <About />
           <Service />
           <Blog articles={articles} />
-        </div>
-        <div className="inner">
+          <Stack />
           <Flow />
         </div>
-        <Stack />
       </div>
-      <Ec />
       <Contact onFormSubmitSuccess={handleFormSubmitSuccess} />
       {/* <div className="category-urls">
         {categoryUrls.map((obj, index) => (
