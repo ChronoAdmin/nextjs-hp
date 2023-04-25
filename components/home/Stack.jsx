@@ -27,34 +27,19 @@ export const Stack = () => {
         // scrub: true,
       },
     });
-    gsap.set(text2Ref.current, { opacity: 0 });
-    gsap.from(text2Ref.current, {
-      y: "-50px",
-    });
-    gsap.to(text2Ref.current, {
-      y: "0px",
-      opacity: 1,
-      duration: 2,
-      ease: "power4.out",
-      scrollTrigger: {
-        trigger: "#imgs",
-        start: "top 30%",
-        end: "center center",
-        // toggleActions: "play reverse play reverse",
-        // scrub: true,
-      },
-    });
+    
   }, []);
 
   return (
     <>
       <div className={styles.contact} id="contact">
-      <div className={styles.title}>
+        <div className={styles.title}>
           <h1>Tech Stack</h1>
           <div className={styles.c_scrollleft}>
             <div className={styles.c_line}></div>
           </div>
-        </div>        <div className={styles.imgs} ref={textRef} id="imgs">
+        </div>
+        <div className={styles.imgs} ref={textRef} id="imgs">
           <div className={styles.nextImg}>
             <Image
               src="/images/stack/nextjs-1024x512.webp"
@@ -74,7 +59,6 @@ export const Stack = () => {
             />
           </div>
         </div>
-
       </div>
     </>
   );
