@@ -124,7 +124,7 @@ export default function Hp() {
               id="card"
               ref={mvRef}
               style={{ height: "50vmax" }}
-            ></div>
+            ><h2>NextJs</h2></div>
             <div
               className={styles.imgCard1}
               id="card"
