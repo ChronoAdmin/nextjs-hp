@@ -215,14 +215,42 @@
 }
 
 .imgCard1 h2 {
+  font-size: 6vw;
+  color: rgb(255, 255, 255);
+}
+
+
+.imgText {
   position: absolute;
   top: 20%;
   left: 5%;
   z-index: 10;
-  font-size: 50px;
-  color: rgb(255, 255, 255);
+  width: 100%;
 }
 
+.links {
+  position: absolute;
+  right: 20%;
+  bottom: -20%;
+}
+
+.links a {
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 15px;
+  transition: all .3s;
+}
+.links a:hover {
+  color: #000000;
+  background-color: #ffffffca;
+  border: 1px solid #ffffff;
+  padding: 10px 15px;
+}
+.links a {
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 15px;
+}
 
 
 .textCard1__inner{

@@ -115,11 +115,22 @@ export default function Hp() {
           <div className={styles.cards}>
             <div className={styles.textCard1} id="card">
               <div className={styles.textCard1__inner}>
-                <div className={styles.link}><Link href="/">hp制作のお問い合わせ</Link></div>
+                <div className={styles.link}>
+                  <Link href="/">hp制作のお問い合わせ</Link>
+                </div>
                 <h2>Create Home Page With Next.Js</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quod!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quod!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quod!</p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Recusandae, quod!
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Recusandae, quod!
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Recusandae, quod!
+                </p>
               </div>
             </div>
             <div
@@ -127,7 +138,18 @@ export default function Hp() {
               id="card"
               ref={mvRef}
               style={{ height: "50vmax" }}
-            ><h2>NextJs</h2></div>
+            >
+              <div className={styles.imgText}>
+                <h2>
+                  New HP <br />
+                  With NextJs
+                </h2>
+                <div className={styles.links}>
+                  <Link href="/">＜</Link>
+                  <Link href="/">＞</Link>
+                </div>
+              </div>
+            </div>
             <div
               className={styles.imgCard1}
               id="card"
