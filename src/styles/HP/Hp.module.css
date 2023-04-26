@@ -35,7 +35,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(2px);
+  background-color: #ffffff43;
   z-index: 20;
 }
 
@@ -47,7 +48,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 10vw;
-  background-image: url(/images/blog/blogBg.jpg);
+  background-image: url(/images/hp_imgs/img7.webp);
   -webkit-background-clip: text;
   color: transparent;
   z-index: 30;
@@ -59,7 +60,7 @@
     background-position: center center;
   }
   100% {
-    background-position: 10% center;
+    background-position: center 10%;
   }
 }
 
@@ -217,21 +218,25 @@
 .imgCard1 h2 {
   font-size: 6vw;
   color: rgb(255, 255, 255);
+  position: absolute;
+  top: 20%;
+  left: 5%;
 }
 
 
 .imgText {
   position: absolute;
-  top: 20%;
-  left: 5%;
+  top: 0%;
+  left: 0%;
   z-index: 10;
   width: 100%;
+  height: 100%;
 }
 
 .links {
   position: absolute;
   right: 20%;
-  bottom: -20%;
+  bottom: 10%;
 }
 
 .links a {
@@ -305,5 +310,29 @@
   @media screen and (max-width: 748px) { 
     .cards {
       grid-template-columns: 1fr;
+    }    
+    
+    .textCard1__inner h2 {
+      margin-bottom: 5%;
+      font-size: 5vw;
+    }
+    
+    .textCard1__inner p {
+      margin-bottom: 10px;
+      font-size: 3vw;
+    }
+    .link {
+      font-size: 16px;
+      font-family: 'Shippori Mincho', serif; 
+      margin-bottom: 5%;
+    }
+    .imgCard1 h2 {
+      font-size: 10vw;
+    }
+    .cards .textCard1{
+      order: 1;
+    }
+    .cards .imgCard1 {
+      order: 2;
     }
   }
