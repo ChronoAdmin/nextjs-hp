@@ -117,6 +117,9 @@ export default function Hp() {
               <div className={styles.textCard1__inner}>
                 <div className={styles.link}><Link href="/">hp制作のお問い合わせ</Link></div>
                 <h2>Create Home Page With Next.Js</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quod!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quod!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quod!</p>
               </div>
             </div>
             <div

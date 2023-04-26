@@ -224,9 +224,19 @@
 }
 
 
+
 .textCard1__inner{
   width: 100%;
   height: 100%;
+  font-size: 2vw;
+}
+
+.textCard1__inner h2 {
+  margin-bottom: 10%;
+}
+
+.textCard1__inner p {
+  margin-bottom: 10px;
   font-size: 2vw;
 }
 
