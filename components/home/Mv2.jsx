@@ -36,8 +36,8 @@ export const Mv2 = () => {
       new hoverEffect({
         parent: mvRef.current,
         intensity: 0.3,
-        image1: "images/mv2.png",
-        image2: "images/blog/blogPop.jpg",
+        image1: "images/mv2.webp",
+        image2: "images/blog/blogPop.webp",
         displacementImage: "images/map.png",
       });
     }
