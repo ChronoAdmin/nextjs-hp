@@ -7,7 +7,7 @@ import { gsap } from "gsap";
 export const Mv2 = () => {
     const [loading, setLoading] = useState(true);
     useEffect(() => {
-      const timer = setTimeout(() => setLoading(false), 3000);
+      const timer = setTimeout(() => setLoading(false), 1500);
       return () => clearTimeout(timer);
     }, []);
     const textRef = useRef(null);

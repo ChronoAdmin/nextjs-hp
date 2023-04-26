@@ -1,35 +1,36 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "../../src/styles/home/About.module.css";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
 
 export const About = () => {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1500);
+    return () => clearTimeout(timer);
+  }, []);
   const textRef = useRef(null);
 
   useEffect(() => {
-    gsap.set(textRef.current, { opacity: 0 });
-    gsap.from(textRef.current, {
-      y: "-50px",
-    });
-    gsap.to(textRef.current, {
-      y: "0px",
-      opacity: 1,
-      duration: 2,
-      ease: "power4.out",
-      scrollTrigger: {
-        trigger: "#about",
-        start: "top center",
-        end: "center center",
-        // toggleActions: "play reverse play reverse",
-        // scrub: true,
-      },
-    });
-  }, []);
+      if (!loading) {
+        // title
+        gsap.set(textRef.current, { opacity: 0 });
+        gsap.from(textRef.current, {
+          y: "50px",
+        });
+        gsap.to(textRef.current, {
+          y: "0px",
+          opacity: 1,
+          duration: 2,
+          delay: 2,
+          ease: "power4.out",
+        });
+      }
+    }, [loading]);
+
   return (
     <>
       <Head>

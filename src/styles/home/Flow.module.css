@@ -2,7 +2,7 @@
   position: relative;
   /* margin-top: 100px; */
   font-family: "Shippori Mincho", serif;
-  height: 250px;
+  /* height: 250px;６ */
   display: flex;
   gap: 20px;
   /* padding: 50px 0; */
@@ -12,7 +12,7 @@
   position: relative;
   height: 100%;
   width: 50%;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(147, 128, 128);
   transition: width 0.3s, color 0.7s; /* ここを変更 */
   font-size: 120px;
   display: flex;
