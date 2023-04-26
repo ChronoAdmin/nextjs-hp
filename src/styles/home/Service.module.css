@@ -278,7 +278,7 @@
         width: fit-content;
         margin: 10px auto;
         padding: 3px 8px;
-        color: #fafafa;
+        color: #000000;
         border-radius: 4px;
     }
     .text > p {
@@ -286,7 +286,7 @@
         margin-top: 0px;
         font-size: 18px;
         letter-spacing: 1.7px;
-        color: rgb(247, 235, 213);
+        color: rgb(0, 0, 0);
     }
 }
 

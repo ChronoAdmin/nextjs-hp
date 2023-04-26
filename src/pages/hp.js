@@ -1,14 +1,13 @@
-import { use, useEffect, useRef, useState } from "react";
+import React, { use, useEffect, useRef, useState } from "react";
 import styles from "../../src/styles/HP/Hp.module.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
 import { Loading } from "../../components/Loading";
 import Link from "next/link";
+import hoverEffect from "hover-effect";
 
 gsap.registerPlugin(ScrollTrigger);
-
-
 
 export default function Hp() {
   const [loading, setLoading] = useState(true);
@@ -16,54 +15,57 @@ export default function Hp() {
     const timer = setTimeout(() => setLoading(false), 3000);
     return () => clearTimeout(timer);
   }, []);
+  const imagePairs = [
+    { image1: "images/hp_imgs/img1.webp", image2: "images/blog/blogPop_1.jpg" },
+    { image1: "images/hp_imgs/img2.webp", image2: "images/blog/blogPop_2.jpg" },
+    { image1: "images/hp_imgs/img3.webp", image2: "images/blog/blogPop_3.jpg" },
+    { image1: "images/hp_imgs/img4.webp", image2: "images/blog/blogPop_4.jpg" },
+  ];
 
-  const textEnRef = useRef(null);
-  const textJaRef = useRef(null);
-  const lineRef = useRef(null);
   const titleRef = useRef(null);
   const titleBlogRef = useRef(null);
   const blogLeftRef = useRef(null);
   const linksRef = useRef(null);
+  const mvRef = useRef(null);
+  const mv2Ref = useRef(null);
+  const mv3Ref = useRef(null);
+
+  useEffect(() => {
+    if (mvRef.current) {
+      new hoverEffect({
+        parent: mvRef.current,
+        intensity: 0.3,
+        image1: "images/hp_imgs/img1.webp",
+        image2: "images/hp_imgs/img1_re.webp",
+        displacementImage: "images/map.png",
+      });
+    }
+  }, [mvRef]);
+  useEffect(() => {
+    if (mv2Ref.current) {
+      new hoverEffect({
+        parent: mv2Ref.current,
+        intensity: 0.3,
+        image1: "images/hp_imgs/img2.webp",
+        image2: "images/hp_imgs/img3_re.webp",
+        displacementImage: "images/map.png",
+      });
+    }
+  }, [mv2Ref]);
+  useEffect(() => {
+    if (mv3Ref.current) {
+      new hoverEffect({
+        parent: mv3Ref.current,
+        intensity: 0.3,
+        image1: "images/hp_imgs/img3.webp",
+        image2: "images/hp_imgs/img2_re.webp",
+        displacementImage: "images/map.png",
+      });
+    }
+  }, [mv3Ref]);
 
   useEffect(() => {
     if (!loading) {
-      // 英語
-      gsap.set(textEnRef.current, { opacity: 0 });
-      gsap.from(textEnRef.current, {
-        y: "50px",
-      });
-      gsap.to(textEnRef.current, {
-        y: "0px",
-        opacity: 1,
-        duration: 2,
-        ease: "power4.out",
-      });
-
-      // 日本語
-      gsap.set(textJaRef.current, { opacity: 0 });
-      gsap.from(textJaRef.current, {
-        y: "50px",
-      });
-      gsap.to(textJaRef.current, {
-        y: "0px",
-        opacity: 1,
-        duration: 2,
-        delay: 2,
-        ease: "power4.out",
-      });
-
-      // line
-      gsap.from(lineRef.current, {
-        height: "0%",
-      });
-      gsap.to(lineRef.current, {
-        height: "120%",
-        opacity: 1,
-        duration: 2,
-        delay: 2,
-        ease: "power4.out",
-      });
-
       //   タイトル(Service)
       gsap.set(titleRef.current, { opacity: 0 });
       gsap.from(titleRef.current, {
@@ -80,53 +82,6 @@ export default function Hp() {
           end: "bottom center",
         },
       });
-
-      //   タイトル(Blog)
-      gsap.set(titleBlogRef.current, { opacity: 0 });
-      gsap.from(titleBlogRef.current, {
-        y: "50px",
-      });
-      gsap.to(titleBlogRef.current, {
-        y: "0px",
-        opacity: 1,
-        duration: 2,
-        ease: "power4.out",
-        scrollTrigger: {
-          trigger: "#blog",
-          start: "top center",
-        },
-      });
-
-      //   BLOG LEFT
-      gsap.set(blogLeftRef.current, { opacity: 0 });
-      gsap.from(blogLeftRef.current, {
-        x: "-80px",
-      });
-      gsap.to(blogLeftRef.current, {
-        x: "0",
-        opacity: 1,
-        duration: 2.5,
-        delay: 1,
-        ease: "power4.out",
-        scrollTrigger: {
-          trigger: "#blog",
-          start: "top center",
-        },
-      });
-
-      // links
-      gsap.set(linksRef.current.children, { opacity: 0, y: 50 });
-      gsap.to(linksRef.current.children, {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        stagger: 0.3,
-        ease: "power4.out",
-        scrollTrigger: {
-          trigger: "#service",
-          start: "top center",
-        },
-      });
     }
   }, [loading]);
 
@@ -134,98 +89,68 @@ export default function Hp() {
     <div>
       {loading && <Loading title="Create New Hp" />}
 
-      <div className={`${styles.content} ${!loading ? styles.visible : ""}`}>
-        <div className={styles.mv}>
-          <div className={styles.line} ref={lineRef}></div>
-          <div className={styles.en}>
-            <h2 ref={textEnRef}>
-              Experience digital with our sleek and sophisticated solutions
-            </h2>
-            <p>produce By Chrono</p>
-          </div>
-          <h3 ref={textJaRef}>
-            洗練されたソリューションで、デジタルの卓越性を体感
-          </h3>
-        </div>
+      <div className={styles.bgImg}>
+        <Image
+          src="/images/blog/blogBg.jpg"
+          height={1080}
+          width={1920}
+          alt="blogページの背景画像"
+          priority
+        />
+        <h1>Create HomePage</h1>
+      </div>
+      <div className={styles.wrap}>
         <section id="service" className={styles.service}>
           <div className={styles.inner}>
             <div className={styles.title} ref={titleRef}>
               <h2>Create HomePage</h2>
               <h3>新しくHPを作成</h3>
             </div>
-            {/* <Roll /> */}
             <div className={styles.hps} ref={linksRef}>
-              <Link href="/">
-                <Image src="images/hp_svg/homepage.svg" width={500} height={500} alt="クオリティー画像"/>
-                <p>高クオリティサイト</p>
-              </Link>
-              <Link href="/">
-              <Image src="images/hp_svg/corporate.svg" width={500} height={500} alt="コーポレート画像"/>
-                <p>コーポレートサイト</p>
-              </Link>
-              <Link href="/">
-              <Image src="images/hp_svg/ec.svg" width={500} height={500} alt="決済機能付き画像"/>
-              <p>決済機能付きサイト</p>
-              </Link>
-              <Link href="/">
-              <Image src="images/hp_svg/lp.svg" width={500} height={500} alt="ランディングページ画像"/>
-              <p>ランディングページ</p>
-              </Link>
-              <Link href="/">
-              <Image src="images/hp_svg/info.svg" width={500} height={500} alt="採用サイト画像"/>
-              <p>採用サイト</p>
-              </Link>
-              <Link href="/">
-              <Image src="images/hp_svg/blog.svg" width={500} height={500} alt="ブログ画像"/>
-              <p>ブログ</p>
-              </Link>
+              {/* Links for services here */}
             </div>
           </div>
         </section>
-        <section id="blog" className={styles.blog}>
-          <div className={styles.inner}>
-            <div className={styles.title} ref={titleBlogRef}>
-              <h2>With Nextjs</h2>
-              <h3>高速なHP</h3>
-            </div>
-          </div>
-          <div className={styles.blogBox}>
-            <div className={styles.right}>
-              <h2>Next.jsとは</h2>
-              <p>
-                Next.jsは、ReactをベースにしたオープンソースのJavaScriptフレームワークで、高速なWebアプリケーション開発やSEO対策に優れており、開発効率を向上させるための多くの便利な機能を提供しています。
-              </p>
-              <p>世界中で有名なサイトが使用しています。</p>
-              <div className={styles.brands}>
-                <Image
-                  src="/brandLogo/image.webp"
-                  width={200}
-                  height={200}
-                  alt="hulu-logo"
-                />
-                <Image
-                  src="/brandLogo/image-3.webp"
-                  width={200}
-                  height={200}
-                  alt="tiktok-logo"
-                />
-                <Image
-                  src="/brandLogo/image-2.webp"
-                  width={200}
-                  height={200}
-                  alt="nike-logo"
-                />
+        <section id="service-card">
+          <div className={styles.cards}>
+            <div className={styles.textCard1} id="card">
+              <div className={styles.textCard1__inner}>
+                <div className={styles.link}><Link href="/">hp制作のお問い合わせ</Link></div>
+                <h2>Create Home Page With Next.Js</h2>
               </div>
             </div>
-            <div className={styles.left} ref={blogLeftRef}>
-              <Image
-                src="/images/blog.jpg"
-                height={800}
-                width={1280}
-                alt="nextjsとは"
-              />
-              <p>Wthat’s Nextjs</p>
+            <div
+              className={styles.imgCard1}
+              id="card"
+              ref={mvRef}
+              style={{ height: "50vmax" }}
+            ></div>
+            <div
+              className={styles.imgCard1}
+              id="card"
+              ref={mv2Ref}
+              style={{ height: "50vmax" }}
+            ></div>
+            <div
+              className={styles.textCard1}
+              id="card"
+              style={{ background: "#12161e" }}
+            >
+              <div className={styles.textCard1__inner}>Text Content</div>
             </div>
+            <div
+              className={styles.textCard1}
+              id="card"
+              style={{ background: "rgb(255, 213, 0)" }}
+            >
+              <div className={styles.textCard1__inner}>Text Content</div>
+            </div>
+            <div
+              className={styles.imgCard1}
+              id="card"
+              ref={mv3Ref}
+              style={{ height: "50vmax" }}
+            ></div>
           </div>
         </section>
       </div>

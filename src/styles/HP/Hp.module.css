@@ -11,6 +11,58 @@
   z-index: 9999;
 }
 
+.bgImg {
+  width: 100%;
+  height: 70vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: black;
+}
+.bgImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 10;
+}
+
+.bgImg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  z-index: 20;
+}
+
+.bgImg h1 {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10vw;
+  background-image: url(/images/blog/blogBg.jpg);
+  -webkit-background-clip: text;
+  color: transparent;
+  z-index: 30;
+  animation: anim 35s infinite;
+}
+
+@keyframes anim {
+  0% {
+    background-position: center center;
+  }
+  100% {
+    background-position: 10% center;
+  }
+}
+
 .loaderContainer h1 {
   font-size: 100px;
   color: black;
@@ -44,54 +96,20 @@
   width: 90%;
   margin: 0 auto;
   padding: 5% 0;
-}
-
-.mv {
-  height: 100vh;
-  background-color: #000;
   position: relative;
-  overflow: hidden;
 }
 
-.mv .en {
-  position: absolute;
-  top: 50%;
-  left: 5%;
-  transform: translateY(-50%);
-  width: 70%;
-  min-width: 800px;
-}
-
-.mv .en h2 {
-  font-size: 80px;
-  font-style: italic;
-}
-.mv .en p {
-  font-size: 20px;
-  font-style: italic;
-}
-
-.mv h3 {
-  position: absolute;
-  bottom: 10%;
-  left: 5%;
-  font-size: 40px;
-  font-family: "Shippori Mincho", serif;
-}
-
-.line {
-  position: absolute;
-  top: -10%;
-  right: 10%;
-  height: 120%;
-  width: 1px;
-  background-color: aqua;
-  transform: rotate(15deg);
+.wrap {
+  position: relative;
+  z-index: 100;
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
 }
 
 .service {
-  background-color: #ffffff;
   position: relative;
+  margin-top: 70vh;
 }
 
 .title {
@@ -147,11 +165,11 @@
 .hps a p {
   background-color: #1d6386c1;
   position: relative;
-    z-index: 2;
-    padding: 10px;
-    width: 100%;
-    text-align: center;
-    backdrop-filter: blur(10px);
+  z-index: 2;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  backdrop-filter: blur(10px);
 }
 
 @media screen and (max-width: 1065px) {
@@ -168,89 +186,70 @@
     width: 100%;
   }
 }
-
-.blog {
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 50vmax);
+  margin: 0 auto;
   height: auto;
-  background-color: #ffffff;
+  align-items: center;
+  max-width: 1920px;
 }
 
-.blogBox {
-  width: 100%;
+.textCard1 {
+  background-color: #d22851;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 5vw;
+
+}
+
+
+
+.imgCard1 {
   position: relative;
+  overflow: hidden;
+  height: 100%;
 }
 
-.blog .left {
-  position: absolute;
-  height: 70vh;
-  width: 80%;
-  min-width: 400px;
-  left: 0;
-  top: 0;
-}
 
-.blog .left img {
+.textCard1__inner{
   width: 100%;
   height: 100%;
-  filter: blur(0.3px) saturate(120%);
+  font-size: 2vw;
 }
 
-.blog .left p {
-  position: absolute;
-  bottom: 0;
-  right: -20%;
-  color: #000;
-  font-size: 100px;
+.link {
+  font-size: 16px;
+  font-family: 'Shippori Mincho', serif; 
+  margin-bottom: 10%;
 }
 
-@media screen and (max-width: 650px) {
-  .blog .left p {
-    position: absolute;
-    bottom: 0;
-    right: -20%;
-    color: #000;
-    font-size: 80px;
-  }
-}
-@media screen and (max-width: 500px) {
-  .blog .left p {
-    position: absolute;
-    bottom: 0;
-    right: -10%;
-    color: #000;
-    font-size: 50px;
-  }
-}
-
-.blog .right {
-  width: 100%;
-  min-width: 300px;
-  background-color: #f4f4f4;
+.link a {
   position: relative;
-  right: 0;
-  top: 50px;
-  padding-top: 70vh;
 }
 
-.right h2 {
-  margin-left: 40px;
-  text-align: left;
-  color: #000;
-  font-size: 40px;
-}
 
-.right .why {
-  margin-top: 40px;
-}
+.link a::after {
+  position: absolute;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #ffffff;
+  bottom: -3px;               /*アンダーラインがaタグの下端から現れる*/
+  transform: scale(0, 1);     /*アンダーラインの縮尺比率。ホバー前はx方向に0*/
+  transform-origin: left top; /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の左端*/
+  transition: transform 0.3s; /*変形の時間*/
+  }
+  
+  .link a:hover::after {
+  transform: scale(1, 1); 
+  background: #000;    /*ホバー後、x軸方向に1（相対値）伸長*/
+  }
 
-.right p {
-  color: #000;
-  width: 60%;
-  min-width: 350px;
-  margin-left: 50px;
-}
-
-.brands {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 40px;
-}
+  .link a:hover{
+    color: #000;
+  }
