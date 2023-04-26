@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import styles from "@/styles/hp/CustomSlider.module.css";
+import styles from '@/styles/hp/CustomSlider.module.css';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { motion, AnimatePresence } from "framer-motion";
 
