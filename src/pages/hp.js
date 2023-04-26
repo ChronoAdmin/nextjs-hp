@@ -87,7 +87,7 @@ export default function Hp() {
 
       <div className={styles.bgImg}>
         <Image
-          src="/images/hp_imgs/img7.webp"
+          src="/images/hp_imgs/img8.webp"
           height={1080}
           width={1920}
           alt="blogページの背景画像"
@@ -136,13 +136,13 @@ export default function Hp() {
               style={{ height: "50vmax" }}
             >
               <div className={styles.imgText}>
+                <span>Lorem, ipsum dolor.</span>
                 <h2>
                   New HP <br />
                   With NextJs
                 </h2>
                 <div className={styles.links}>
-                  <Link href="/">＜</Link>
-                  <Link href="/">＞</Link>
+                  <Link href="/">More</Link>
                 </div>
               </div>
             </div>
@@ -153,13 +153,14 @@ export default function Hp() {
               style={{ height: "50vmax" }}
             >
               <div className={styles.imgText}>
+              <span style={{ color: "#b95409" }}>Lorem, ipsum dolor.</span>
+
                 <h2>
                   New HP <br />
                   With NextJs
                 </h2>
                 <div className={styles.links}>
-                  <Link href="/">＜</Link>
-                  <Link href="/">＞</Link>
+                  <Link href="/">More</Link>
                 </div>
               </div>
             </div>
@@ -218,13 +219,14 @@ export default function Hp() {
               style={{ height: "50vmax" }}
             >
               <div className={styles.imgText}>
+                <span style={{ color: "yellow" }}>Lorem, ipsum dolor.</span>
+
                 <h2>
                   New HP <br />
                   With NextJs
                 </h2>
                 <div className={styles.links}>
-                  <Link href="/">＜</Link>
-                  <Link href="/">＞</Link>
+                  <Link href="/">More</Link>
                 </div>
               </div>
             </div>
@@ -238,7 +240,6 @@ export default function Hp() {
           ]}
           interval={3000}
           texts={["HP", "SEO", "BLOG"]}
-
         />
       </div>
     </div>
