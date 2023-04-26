@@ -232,7 +232,7 @@ export default function Hp() {
             </div>
           </div>
         </section>
-        <CustomSlider
+        {/* <CustomSlider
           images={[
             "images/hp_imgs/img1.webp",
             "images/hp_imgs/img2.webp",
@@ -240,7 +240,7 @@ export default function Hp() {
           ]}
           interval={3000}
           texts={["HP", "SEO", "BLOG"]}
-        />
+        /> */}
       </div>
     </div>
   );
