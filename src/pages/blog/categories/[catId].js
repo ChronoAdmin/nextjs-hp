@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { client } from "../../../../libs/client";
 import { Posts } from "../../../../components/blog/allblog/Posts";
-import styles from "@/styles/blog/allblog/Category.module.css";
+import styles from "@/styles/blog/allblog/Categories.module.css";
 import { Sidebar } from "../../../../components/blog/allblog/Sidebar";
 import Image from "next/image";
 import { Category } from "../../../../components/blog/Category";
@@ -74,13 +74,12 @@ export const getStaticPaths = async () => {
 
 export default function BlogId({
   articles,
-  categoryData,
-  categories,
   categoriesAllRe,
 }) {
 
   return (
     <>
+    
       <div className={styles.bgImg}>
         <Image
           src="/images/blog/blogBg.jpg"
@@ -97,7 +96,7 @@ export default function BlogId({
             <Posts allBlogData={articles} />
           </div>
           <div className={styles.side}>
-            <Sidebar />
+            {/* <Sidebar /> */}
           </div>
         </div>
       <Category categories={categoriesAllRe} />

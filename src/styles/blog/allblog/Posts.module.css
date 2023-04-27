@@ -8,6 +8,14 @@
   width: 100%;
   overflow: hidden;
   margin-bottom: 50px;
+  padding: 10px;
+
+  box-shadow: 0 0 10px #838383;
+  transition: all .3s;
+}
+
+.postList li:hover {
+  box-shadow: 0 0 20px #838383;
 }
 
 .postList li a {

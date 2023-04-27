@@ -59,7 +59,7 @@
       position: relative;
       width: 100%;
       background-color: #f9f9f9;
-      z-index: 2;
+      z-index: 5;
       margin-top: 70vh;
       padding: 50px 0;
       color: #000;
@@ -70,12 +70,10 @@
 .posts {
 }
 
-.side {
+.side{
   background-color: aqua;
-  position: sticky;
-  top: 100px;
+  height: 70vh;
   padding: 20px;
-  height: 50vh;
 }
 
 

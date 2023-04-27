@@ -65,14 +65,14 @@ function allblog({ articles }) {
           alt="blogページの背景画像"
           priority
         />
-        <h1>Chrono Blog</h1>
+        <h1>ALL Post</h1>
       </div>
       <div className={styles.main}>
         <div className={styles.posts}>
           <Posts allBlogData={articles} />
         </div>
         <div className={styles.side}>
-          <Sidebar />
+          {/* <Sidebar /> */}
         </div>
       </div>
     </>
