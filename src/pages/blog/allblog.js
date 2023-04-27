@@ -2,6 +2,8 @@ import React from "react";
 import { client } from "../../../libs/client";
 import Image from "next/image";
 import styles from "@/styles/blog/allblog/allblog.module.css";
+import { Posts } from "../../../components/blog/allblog/Posts";
+import { Sidebar } from "../../../components/blog/allblog/Sidebar";
 
 export const getStaticProps = async () => {
   // 記事情報
@@ -66,22 +68,15 @@ function allblog({ articles }) {
         <h1>Chrono Blog</h1>
       </div>
       <div className={styles.main}>
-        {articles.map((article) => (
-        //   <div>{article.title}</div>
-          <div key={articles.id} className={styles.blogImg}>
-             {articles.thumbnail ? (
-              <Image src={articles.thumbnail.url} alt={articles.title} width={300} height={300} />
-               ) : (
-              <div className={styles.noImage}>No Image...</div>
-             )}
-          </div>
-        ))}
-        <div className={styles.sidebr}>sidebar</div>
+        <div className={styles.posts}>
+          <Posts allBlogData={articles} />
+        </div>
+        <div className={styles.side}>
+          <Sidebar />
+        </div>
       </div>
     </>
   );
 }
 
 export default allblog;
-
-

@@ -4,7 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const Category = ({ categories }) => {
-  console.log("このデータがカテゴリーズだよーーーー：", categories);
   const imgArrayCategory = [
     "/images/blog/event_category.jpg",
     "/images/blog/blog_category.jpg",
@@ -20,7 +19,7 @@ export const Category = ({ categories }) => {
       <ul>
         {categories.map((categorie, index) => (
           <li key={categorie.id}>
-            <Link href={`blog/categories/${categorie.id}`}>
+            <Link href={`/blog/categories/${categorie.id}`}>
               <div className={styles.catImg}>
                 <Image src={imgArrayCategory[index % imgArrayCategory.length]} alt="a" width={1920} height={1080} />
               </div>

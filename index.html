@@ -1,22 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+	<style>
+		.wrap {
+			display: grid;
+			grid-template-columns: 3fr 1fr;
+            height: 100vh;
+		}
+		.main_content {
+			background: #e0efff;
+		}
+		.side {
+			background: #e0ffe0;
+		}
+		.side_content {
+			position: sticky;
+			top: 50px;
+			background: #ffe0ff;
+		}
+	</style>
 </head>
 <body>
-    <div class="box">
-        <span style="--i:1;"><img src="public/images/corporate.webp" alt=""></span>
-        <span style="--i:2;"><img src="public/images/corporate.webp" alt=""></span>
-        <span style="--i:3;"><img src="public/images/corporate.webp"></span>
-        <span style="--i:4;"><img src="public/images/corporate.webp" alt=""></span>
-        <span style="--i:5;"><img src="public/images/corporate.webp" alt=""></span>
-        <span style="--i:6;"><img src="public/images/corporate.webp" alt=""></span>
-        <span style="--i:7;"><img src="public/images/corporate.webp" alt=""></span>
-        <span style="--i:8;"><img src="public/images/corporate.webp" alt=""></span>
-    </div>
+	<header>
+		<p>header</p>
+	</header>
+	<div class="wrap">
+		<div class="main">
+			<div class="main_content">
+				<h2>main</h2>
+				<p>xxxxxx</p>
+				<p>xxxxxx</p>
+				<p>xxxxxx</p>
+				<p>xxxxxx</p>
+				<p>xxxxxx</p>
+				<p>xxxxxx</p>
+				<p>xxxxxx</p>
+				<p>xxxxxx</p>
+				<p>xxxxxx</p>
+				<p>xxxxxx</p>
+				<p>xxxxxx</p>
+				<p>xxxxxx</p>
+				<p>xxxxxx</p>
+				<p>xxxxxx</p>
+			</div>
+		</div>
+		<div class="side">
+			<div class="side_content">
+				<h2>side</h2>
+				<p>xxxxxx</p>
+				<p>xxxxxx</p>
+				<p>xxxxxx</p>
+				<p>xxxxxx</p>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<p>footer</p>
+	</footer>
 </body>
-</html>
