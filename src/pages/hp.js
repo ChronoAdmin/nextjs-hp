@@ -19,11 +19,7 @@ export default function Hp() {
     "images/hp_imgs/img3.webp",
     "images/hp_imgs/img2_re.webp",
   ];
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1500);
-    return () => clearTimeout(timer);
-  }, []);
+
 
   const titleRef = useRef(null);
   const linksRef = useRef(null);
@@ -66,7 +62,7 @@ export default function Hp() {
   }, [mv3Ref]);
 
   useEffect(() => {
-    if (!loading) {
+
       //   タイトル(Service)
       gsap.set(titleRef.current, { opacity: 0 });
       gsap.from(titleRef.current, {
@@ -79,11 +75,11 @@ export default function Hp() {
         ease: "power4.out",
       });
     }
-  }, [loading]);
+  );
 
   return (
     <div>
-      {loading && <Loading title="Create New Hp" />}
+      {/* {loading && <Loading title="Create New Hp" />} */}
 
       <div className={styles.bgImg}>
         <Image

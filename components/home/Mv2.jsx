@@ -15,21 +15,19 @@ export const Mv2 = () => {
   }, []);
 
   useEffect(() => {
-    if (!loading) {
-      // title
-      gsap.set(textRef.current, { opacity: 0 });
-      gsap.from(textRef.current, {
-        y: "50px",
-      });
-      gsap.to(textRef.current, {
-        y: "0px",
-        opacity: 1,
-        duration: 2,
-        delay: 2,
-        ease: "power4.out",
-      });
-    }
-  }, [loading]);
+    // title
+    gsap.set(textRef.current, { opacity: 0 });
+    gsap.from(textRef.current, {
+      y: "50px",
+    });
+    gsap.to(textRef.current, {
+      y: "0px",
+      opacity: 1,
+      duration: 2,
+      delay: 2,
+      ease: "power4.out",
+    });
+  });
 
   useEffect(() => {
     if (mvRef.current) {
@@ -53,7 +51,7 @@ export const Mv2 = () => {
           alt="blogページの背景画像"
           priority
         /> */}
-        <h1 ref={textRef}>Chrono Office</h1>
+        <h1 >Chrono Office</h1>
       </div>
     </>
   );

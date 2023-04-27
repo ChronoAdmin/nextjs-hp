@@ -73,12 +73,6 @@ export default function Home({ articles, categoryUrls }) {
     router.push("/thanks");
   };
 
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 3000);
-    return () => clearTimeout(timer);
-  }, []);
-
   // useEffect(() => {
   //   getCategories()
   // },[])
@@ -87,7 +81,7 @@ export default function Home({ articles, categoryUrls }) {
   // }
   return (
     <>
-      {loading && <Loading title="Chrono Office" />}
+      {/* {loading && <Loading title="Chrono Office" />} */}
       <Mv2 />
       <div className="wrap">
         <div className="inner">

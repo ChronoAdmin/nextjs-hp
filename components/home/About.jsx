@@ -7,15 +7,10 @@ import { gsap } from "gsap";
 
 
 export const About = () => {
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1500);
-    return () => clearTimeout(timer);
-  }, []);
+
   const textRef = useRef(null);
 
   useEffect(() => {
-      if (!loading) {
         // title
         gsap.set(textRef.current, { opacity: 0 });
         gsap.from(textRef.current, {
@@ -29,7 +24,7 @@ export const About = () => {
           ease: "power4.out",
         });
       }
-    }, [loading]);
+);
 
   return (
     <>
