@@ -14,6 +14,10 @@ const nextConfig = {
 
     return config;
   },
+  env:{
+    BASE_URL:"http://localhost:3000",
+    MONGODB_URL:"mongodb+srv://reiji:rsvdpalseUtTLB7F@cluster0.2gryf3a.mongodb.net/nextjs_ec_chrono?retryWrites=true&w=majority"
+  }
 };
 
 module.exports = nextConfig;
