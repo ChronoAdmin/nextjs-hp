@@ -2,10 +2,10 @@ import React, { Children } from 'react'
 import { Navigation } from './Navigation'
 import { Footer } from './Footer'
 
-const Layout = ({children}) => {
+const Layout = ({children, navPosition}) => {
   return (
     <>
-        <Navigation />
+        <Navigation position={navPosition}  />
         {children}
         <Footer />
     </>

@@ -7,7 +7,7 @@ import { BsBagCheck } from "react-icons/bs";
 import { TfiWrite } from "react-icons/tfi";
 
 import { useRouter } from "next/router"; // 1. useRouter をインポート
-export const Navigation = () => {
+export const Navigation = ({position}) => {
   const listRef = useRef(null);
   const router = useRouter(); // 2. 現在のルートを取得
 
@@ -20,7 +20,7 @@ export const Navigation = () => {
   };
   return (
     <>
-      <div className={styles.navigation}>
+      <div className={`${styles.navigation} ${position === "none" ? styles.none : ""}`}>
         <ul ref={listRef}>
           <li
             className={`${styles.list} ${

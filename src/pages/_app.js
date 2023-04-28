@@ -3,13 +3,12 @@ import { Analytics } from "@vercel/analytics/react";
 import Head from "next/head";
 import Layout from "../../components/Layout";
 
-
 export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
+
         <title>群馬県高崎市のNext.jsを用いたHP制作業者 | Chrono-Office</title>
         <meta
           name="google-site-verification"
@@ -24,8 +23,8 @@ export default function App({ Component, pageProps }) {
           content="群馬県、高崎市、Web制作、HP業者、ホームページ、Next.js、低単価、SEO対策、デザイン、ホームページ業者"
         />
       </Head>
-      <Layout>
-          <Component {...pageProps} />
+      <Layout navPosition={pageProps.navPosition}>
+        <Component {...pageProps} />
       </Layout>
       <Analytics />
     </>
