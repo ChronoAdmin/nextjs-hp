@@ -78,6 +78,6 @@ export default function Register() {
 }
 
 // getInitialPropsを使用してnavPositionを指定
-register.getInitialProps = async () => {
+Register.getInitialProps = async () => {
   return { navPosition: "none" };
 };

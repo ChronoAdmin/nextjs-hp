@@ -37,6 +37,6 @@ export default function Signin() {
 }
 
 // getInitialPropsを使用してnavPositionを指定
-signin.getInitialProps = async () => {
+Signin.getInitialProps = async () => {
   return { navPosition: "none" };
 };

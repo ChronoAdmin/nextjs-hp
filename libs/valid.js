@@ -1,4 +1,4 @@
-export default valid = (name, email, password, cf_password) => {
+const valid = (name, email, password, cf_password) => {
   if (!name || !email || !password) {
     return "Please add all fields";
   }
@@ -15,3 +15,4 @@ const validateEmail = (email) => {
   );
 };
 
+export default valid;
