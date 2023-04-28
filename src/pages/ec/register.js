@@ -6,7 +6,7 @@ import Link from "next/link";
 import valid from "../../../libs/valid";
 
 
-export default function register() {
+export default function Register() {
 
     const initState = {name: "", email:"", password: "", cf_password: "",}
     const [userData, setUserData] = useState(initState)

@@ -4,7 +4,7 @@ import styles from "@/styles/ec/signin.module.css";
 import Header from "../../../components/ec/Header";
 import Link from "next/link";
 
-export default function signin() {
+export default function Signin() {
   return (
     <>
       <Head>

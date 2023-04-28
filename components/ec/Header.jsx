@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import styles from "@/styles/ec/Header.module.css";
 import { AiOutlineShoppingCart, AiOutlineUser } from "react-icons/ai";
+import Image from "next/image";
 
 
 export default function Header() {
@@ -42,9 +43,11 @@ export default function Header() {
         <header className={`${styles.header} ${hidden ? "" : styles.hidden}`}>
           <h2 className={styles.logo}>
             <Link href="/">
-              <img
+              <Image
                 src="/HatchfulExport-All/logo_transparent.png"
                 alt="Stayful Logo"
+                width={500}
+                height={500}
               />
             </Link>
           </h2>

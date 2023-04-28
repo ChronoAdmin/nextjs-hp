@@ -1,4 +1,4 @@
-const valid = (name, email, password, cf_password) => {
+export default valid = (name, email, password, cf_password) => {
   if (!name || !email || !password) {
     return "Please add all fields";
   }
@@ -6,7 +6,7 @@ const valid = (name, email, password, cf_password) => {
 
   if (password.length < 6) return "パスワードは６文字以上で設定してください";
 
-  if(password !== cf_password) return "パスワードが一致しません"
+  if(password !== cf_password) return ""
 };
 
 const validateEmail = (email) => {
@@ -15,4 +15,3 @@ const validateEmail = (email) => {
   );
 };
 
-export default valid;
