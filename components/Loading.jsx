@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from "../src/styles/Hp/Hp.module.css";
+import styles from "../src/styles/HP/Hp.module.css";
 
 
 export const Loading = ({title}) => {
