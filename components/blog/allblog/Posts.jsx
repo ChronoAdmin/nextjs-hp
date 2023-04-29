@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const Posts = ({ allBlogData }) => {
-  console.log(allBlogData);
   return (
     <>
       <ul className={styles.postList}>

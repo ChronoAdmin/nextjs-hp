@@ -5,7 +5,6 @@ import Link from "next/link";
 
 
 export const News = ({ titleJa, titleEn, blogs,more }) => {
-  // console.log(blogs);
 
   return (
     <div className={styles.box}>

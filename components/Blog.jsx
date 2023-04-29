@@ -15,7 +15,6 @@ export const Blog = ({ articles }) => {
   useEffect(() => {
     gsap.set(Array.from(boxesRef.current.children), { opacity: 0, y: 50 });
     if (boxesRef.current) {
-      console.log("true");
       gsap.to(Array.from(boxesRef.current.children), {
         y: 0,
         opacity: 1,
@@ -32,11 +31,9 @@ export const Blog = ({ articles }) => {
         },
       });
     } else {
-      console.log("false");
     }
   }, []);
 
-  console.log(latestArticles);
 
   return (
     <>

@@ -231,6 +231,7 @@ height: 100%;
   width: 100%;
   position: relative; /* 絶対配置を使って、親要素のサイズに合わせます */
   font-size: 1vw;
+  height: 100%;
 }
 
 .img {
@@ -247,6 +248,23 @@ height: 100%;
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.noImage {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #acacac;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.post {
+  text-align: center;
+  padding-top: 10px;
 }
 
 /* その他の既存のスタイル */
@@ -281,5 +299,8 @@ height: 100%;
     width: 100%;
     overflow: hidden;
     position: relative;
+  }
+  .post {
+    font-size: 14px;
   }
 }

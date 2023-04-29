@@ -44,7 +44,6 @@ export const TextToSpeech = ({ onAiResponse }) => {
       setTimeout(() => {
         setShowBubble(false);
       }, 3000);
-      console.log("OnEnd");
     };
     utterance.onerror = () => {
       setTimeout(() => {
@@ -63,7 +62,6 @@ export const TextToSpeech = ({ onAiResponse }) => {
     } catch (err) {
       let message = "";
       if (err) message = err.message;
-      console.log(message);
     } finally {
       setIsLoading(false);
       setUserText("");

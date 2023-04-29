@@ -134,4 +134,9 @@ height: 100%;
         font-size: 16px;
         font-family: 'Shippori Mincho', serif; 
     }
+    .widthArea .text {
+
+        min-width: 330px;
+
+    }
 }

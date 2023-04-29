@@ -26,7 +26,6 @@ const Head = () => {
   const { isPlaying, setIsPlaying } = useContext(IsPlayingContext);
 
   useEffect(() => {
-    console.log("isPlaying:", isPlaying); // Add this line
 
     if (isPlaying) {
       action.play();

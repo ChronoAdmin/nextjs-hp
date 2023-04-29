@@ -26,7 +26,6 @@ export const Service = () => {
 
     gsap.set(Array.from(boxesRef.current.children), { opacity: 0, x: 200 });
     if (boxesRef.current) {
-      console.log("true");
       gsap.to(Array.from(boxesRef.current.children), {
         x: 0,
         opacity: 1,

@@ -57,7 +57,7 @@ export const Mv2 = () => {
           <TopLoading /> {/* <-- TopLoadingコンポーネントをdivで囲む */}
         </div>
         <div className={styles.videoArea}>
-          <video src="/images/roll.mp4" autoPlay loop muted></video>
+          <video src="/images/roll.mp4" autoPlay loop muted playsInline={true}></video>
           {/* <Image src="/images/"/> */}
         </div>
         <div className={styles.svgs}>
