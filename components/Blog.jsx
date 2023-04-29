@@ -1,38 +1,46 @@
 import styles from "@/styles/Blog.module.css";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export const Blog = ({ articles }) => {
-  const latestArticles = articles.slice(0, 4);
+  const latestArticles = articles.slice(0, 5);
   const textRef = useRef(null);
+  const boxesRef = useRef(null);
 
   useEffect(() => {
-    gsap.set(textRef.current, { opacity: 0 });
-    gsap.from(textRef.current, {
-      y: "-50px",
-    });
-    gsap.to(textRef.current, {
-      y: "0px",
-      opacity: 1,
-      duration: 2,
-      ease: "power4.out",
-      scrollTrigger: {
-        trigger: "#Light",
-        start: "top center",
-        end: "center center",
-        // toggleActions: "play reverse play reverse",
-        // scrub: true,
-      },
-    });
+    gsap.set(Array.from(boxesRef.current.children), { opacity: 0, y: 50 });
+    if (boxesRef.current) {
+      console.log("true");
+      gsap.to(Array.from(boxesRef.current.children), {
+        y: 0,
+        opacity: 1,
+        duration: 5,
+        stagger: {
+          each: 0.3,
+          from: "random",
+        },
+        ease: "power4.out",
+        scrollTrigger: {
+          trigger: "#wrap",
+          start: "top 30%",
+          // toggleActions: "play reverse play reverse",
+        },
+      });
+    } else {
+      console.log("false");
+    }
   }, []);
+
+  console.log(latestArticles);
 
   return (
     <>
-      <section className={styles.Light} id="Light" ref={textRef}>
+      {/* <section className={styles.Light} id="Light" ref={textRef}>
         <div className={styles.title}>
           <h1>Blog</h1>
           <div className={styles.c_scrollleft}>
@@ -56,7 +64,44 @@ export const Blog = ({ articles }) => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+      <div className={styles.wrap} id="wrap">
+        <div className={styles.title}>
+          <h1>Blog</h1>
+          <div className={styles.c_scrollleft}>
+            <div className={styles.c_line}></div>
+          </div>
+        </div>
+
+        <div className={styles.postAreaWrap}>
+          <ul className={styles.postArea} ref={boxesRef}>
+            {latestArticles.map((article, index) => (
+              <li
+                key={article.id}
+                className={`${styles.postList} ${
+                  styles[`postList${index + 1}`]
+                }`}
+              >
+                <a href="">
+                  <div className={styles.img}>
+                    {article.thumbnail ? (
+                      <Image
+                        src={article.thumbnail.url}
+                        alt={article.title}
+                        width={1920}
+                        height={1080}
+                      />
+                    ) : (
+                      <div className={styles.noImage}>No Image...</div>
+                    )}
+                  </div>
+                  <div className={styles.post}>{article.title}</div>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </>
   );
 };
