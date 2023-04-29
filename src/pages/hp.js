@@ -20,7 +20,6 @@ export default function Hp() {
     "images/hp_imgs/img2_re.webp",
   ];
 
-
   const titleRef = useRef(null);
   const linksRef = useRef(null);
   const mvRef = useRef(null);
@@ -62,20 +61,18 @@ export default function Hp() {
   }, [mv3Ref]);
 
   useEffect(() => {
-
-      //   タイトル(Service)
-      gsap.set(titleRef.current, { opacity: 0 });
-      gsap.from(titleRef.current, {
-        y: "50px",
-      });
-      gsap.to(titleRef.current, {
-        y: "0px",
-        opacity: 1,
-        duration: 2,
-        ease: "power4.out",
-      });
-    }
-  );
+    //   タイトル(Service)
+    gsap.set(titleRef.current, { opacity: 0 });
+    gsap.from(titleRef.current, {
+      y: "50px",
+    });
+    gsap.to(titleRef.current, {
+      y: "0px",
+      opacity: 1,
+      duration: 2,
+      ease: "power4.out",
+    });
+  });
 
   return (
     <div>
@@ -105,56 +102,66 @@ export default function Hp() {
         </section>
         <section id="service-card">
           <div className={styles.cards}>
-            <div className={styles.textCard1} id="card">
+            <div className={styles.textCard1} id="nextcard_text">
               <div className={styles.textCard1__inner}>
                 <div className={styles.link}>
-                  <Link href="/">hp制作のお問い合わせ</Link>
+                  <Link href="/">Next.jsの利用</Link>
                 </div>
-                <h2>Create Home Page With Next.Js</h2>
+                <h2>Modern Websites with Next.js</h2>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Recusandae, quod!
+                  他社を凌駕するNext.jsを活用したウェブサイト制作。スピードとデザイン性を兼ね備え、ビジネスに最適なソリューションを提供します。詳細を知りたい方は、お気軽にお問い合わせください。
                 </p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Recusandae, quod!
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Recusandae, quod!
-                </p>
+                <div className={styles.links}>
+                  <Link href="/">More</Link>
+                </div>
               </div>
             </div>
             <div
               className={styles.imgCard1}
-              id="card"
+              id="nextcard_img"
               ref={mvRef}
               style={{ height: "50vmax" }}
             >
               <div className={styles.imgText}>
-                <span>Lorem, ipsum dolor.</span>
+                <span>NextJs.</span>
                 <h2>
-                  New HP <br />
-                  With NextJs
+                  Speed & Flexibility <br />
+                  Outperform Your Competitors
                 </h2>
-                <div className={styles.links}>
-                  <Link href="/">More</Link>
-                </div>
               </div>
             </div>
             <div
               className={styles.imgCard1}
-              id="card"
+              id="seocard_img"
               ref={mv2Ref}
               style={{ height: "50vmax" }}
             >
               <div className={styles.imgText}>
-              <span style={{ color: "#b95409" }}>Lorem, ipsum dolor.</span>
+                <span style={{ color: "#b95409" }}>SEO.</span>
 
                 <h2>
-                  New HP <br />
-                  With NextJs
+                  Maximize Visibility
+                  <br />
+                  Rise Above the Competition
                 </h2>
+              </div>
+            </div>
+            <div
+              className={styles.textCard1}
+              id="seocard_text"
+              style={{ background: "#12161e" }}
+            >
+              <div
+                className={styles.textCard1__inner}
+                style={{ textAlign: "right" }}
+              >
+                <div className={styles.link}>
+                  <Link href="/">SEO対策</Link>
+                </div>
+                <h2>Effective SEO for Increased Traffic</h2>
+                <p style={{ textAlign: "left" }}>
+                  独自のSEO対策で競合他社に差をつけます。集客力を高め、ビジネスチャンスを拡大する最適なプランを提案します。SEO対策について相談したい方は、お問い合わせください。
+                </p>
                 <div className={styles.links}>
                   <Link href="/">More</Link>
                 </div>
@@ -162,68 +169,36 @@ export default function Hp() {
             </div>
             <div
               className={styles.textCard1}
-              id="card"
-              style={{ background: "#12161e" }}
-            >
-              <div className={styles.textCard1__inner}>
-                <div className={styles.link}>
-                  <Link href="/">hp制作のお問い合わせ</Link>
-                </div>
-                <h2>Create Home Page With Next.Js</h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Recusandae, quod!
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Recusandae, quod!
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Recusandae, quod!
-                </p>
-              </div>
-            </div>
-            <div
-              className={styles.textCard1}
-              id="card"
+              id="blogcard_text"
               style={{ background: "rgb(255, 213, 0)" }}
             >
               <div className={styles.textCard1__inner}>
                 <div className={styles.link}>
-                  <Link href="/">hp制作のお問い合わせ</Link>
+                  <Link href="/">Blog構築</Link>
                 </div>
-                <h2>Create Home Page With Next.Js</h2>
+                <h2>High-Speed Blogging with microCMS</h2>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Recusandae, quod!
+                  microCMSを活用した効率的なブログ構築で、他社との差別化を実現。情報発信力を強化し、競合他社に勝つためのプラットフォームを提供します。詳しくはお問い合わせください。
                 </p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Recusandae, quod!
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Recusandae, quod!
-                </p>
+                <div className={styles.links}>
+                  <Link href="/">More</Link>
+                </div>
               </div>
             </div>
             <div
               className={styles.imgCard1}
-              id="card"
+              id="blogard_img"
               ref={mv3Ref}
               style={{ height: "50vmax" }}
             >
               <div className={styles.imgText}>
-                <span style={{ color: "yellow" }}>Lorem, ipsum dolor.</span>
+                <span style={{ color: "yellow" }}>BLOG.</span>
 
                 <h2>
-                  New HP <br />
-                  With NextJs
+                  Empower Your Content
+                  <br />
+                  Stay Ahead in the Game
                 </h2>
-                <div className={styles.links}>
-                  <Link href="/">More</Link>
-                </div>
               </div>
             </div>
           </div>

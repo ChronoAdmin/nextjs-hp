@@ -4,27 +4,34 @@ import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import styles from "../../src/styles/home/About.module.css";
 import { gsap } from "gsap";
-
+import Vivus from "vivus";
+import SvgFile1 from "../../public/images/svg1.svg"; // <-- SVGファイルをインポート
 
 export const About = () => {
-
   const textRef = useRef(null);
+  const svgRef = useRef(null); // <-- 追加: SVG要素用のref
 
   useEffect(() => {
-        // title
-        gsap.set(textRef.current, { opacity: 0 });
-        gsap.from(textRef.current, {
-          y: "50px",
-        });
-        gsap.to(textRef.current, {
-          y: "0px",
-          opacity: 1,
-          duration: 2,
-          delay: 2,
-          ease: "power4.out",
-        });
-      }
-);
+    // title
+    gsap.set(textRef.current, { opacity: 0 });
+    gsap.from(textRef.current, {
+      y: "50px",
+    });
+    gsap.to(textRef.current, {
+      y: "0px",
+      opacity: 1,
+      duration: 2,
+      // delay: 2,
+      ease: "power4.out",
+    });
+    if (svgRef.current) {
+      // 追加: Vivusアニメーション
+      new Vivus("animated-svg", {
+        type: "oneByOne",
+        duration: 200,
+      });
+    }
+  }, []);
 
   return (
     <>
@@ -60,6 +67,22 @@ export const About = () => {
             </div>
           </div>
         </div>
+        {/* <div className={styles.wrap}>
+          <div className={styles.inner}>
+            <div className={styles.video}>
+              <video src="/images/roll.mp4" loop muted autoPlay></video>
+            </div>
+            <div className={styles.text}>
+              <div className={styles.subTitle}>
+              <p>
+                  私たちは関東エリアを中心にHP制作事業を営んでいる企業です。創業以来、クライアントのニーズに合わせた高品質なウェブサイトの制作に取り組んできました。私たちのチームには、豊富な経験と専門知識を持つデザイナーや開発者がいます。
+                </p>
+                <p className={styles.none}>
+                  私たちは常に最新技術にも目を向け、常にクライアントにとって最適なソリューションを提供することに注力しています。私たちの使命は、ビジネスの成長を支援するウェブサイトの制作に貢献することです。
+                </p>              </div>
+            </div>
+          </div>
+        </div> */}
       </section>
     </>
   );

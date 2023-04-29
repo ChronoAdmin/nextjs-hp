@@ -92,7 +92,7 @@ export default function Home({ articles, categoryUrls }) {
           <Flow />
         </div>
       </div>
-      <Contact onFormSubmitSuccess={handleFormSubmitSuccess} />
+      {/* <Contact onFormSubmitSuccess={handleFormSubmitSuccess} /> */}
       {/* <div className="category-urls">
         {categoryUrls.map((obj, index) => (
           <div key={index} className="category-url">

@@ -2,7 +2,7 @@
 .about {
     position: relative;
     width: 100%;
-    padding-top: 50px;
+    padding-top: 20px;
     font-family: 'Shippori Mincho', serif; 
 }
 
@@ -62,6 +62,8 @@
     justify-items: center;
     transition: all .3s;
     margin: 0 auto;
+    width: 80%;
+    min-width: 320px;
 }
 
 .card {
@@ -136,7 +138,7 @@
 @media screen and (max-width: 1207px) {
     .card {
         grid-template-columns: 1fr;
-        min-width: 350px;
+        min-width: 320px;
     }
     .imgBx {
         width: 250px;
@@ -190,4 +192,61 @@
         right: 20px;
         overflow: hidden;
       }
+}
+
+.wrap {
+    height: 70vh;
+    padding: 2%;
+}
+.inner {
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.video {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: auto;
+    max-height: 500px;
+    min-height: 300px;
+    width: 60%;
+    transform: translateY(-50%);
+}
+
+.video video {
+    height: auto;
+    width: 100%;
+    vertical-align: top;
+    object-fit: cover;
+}
+
+.text {
+    position: absolute;
+    right: 20%;
+    bottom: 0;
+    height: 300px;
+    max-height: 300px;
+    width: 40%;
+    min-width: 300px;
+    padding: 2%;
+    background-color: #081420;
+     background-color: #9e6262;
+     font-size: 16px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+}
+
+.text p {
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1000px) { 
+    .text {
+        height: 200px;
+    }
 }

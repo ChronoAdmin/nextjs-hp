@@ -39,6 +39,10 @@ export default function Home() {
         <Header />
         <main className={styles.main}>
           <Items />
+          <div>
+            <h1>リニューアル中です...</h1>
+            <h2>技術担当が頑張ってくれています...</h2>
+          </div>
         </main>
       </div>
     </>

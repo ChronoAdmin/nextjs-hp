@@ -54,7 +54,6 @@
 
 .blog_list {
   width: 100%;
-  padding: 3%;
 } 
 
 .blog_list_title {
@@ -163,6 +162,20 @@ text-overflow: ellipsis; /* Add this line */
     font-size: 55px;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .blogs {
+    width: 80%;
+    min-width: 320px;
+    margin: 0 auto;
+  }
+  .more {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 100%;
+    min-width: 320px;
+  }
+ }
 
 @media screen and (max-width: 375px) {
   .Light {

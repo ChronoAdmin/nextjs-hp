@@ -1,4 +1,4 @@
-import styles from "../src/styles/Blog.module.css";
+import styles from "@/styles/Blog.module.css";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";

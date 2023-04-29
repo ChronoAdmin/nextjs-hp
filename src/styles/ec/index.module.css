@@ -230,9 +230,14 @@ display: none;
 
 
 .main {
-    height: 200vh;
     background-color: rgb(229, 229, 229);
-    padding-top: 160px;
+}
+
+.main div {
+  height: 50vh;
+  width: 100%;
+  text-align: center;
+  color: #333;
 }
 
 .wrap {
