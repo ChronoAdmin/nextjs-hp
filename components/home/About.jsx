@@ -6,31 +6,75 @@ import styles from "../../src/styles/home/About.module.css";
 import { gsap } from "gsap";
 import Vivus from "vivus";
 import SvgFile1 from "../../public/images/svg1.svg"; // <-- SVGファイルをインポート
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+
 
 export const About = () => {
-  const textRef = useRef(null);
-  const svgRef = useRef(null); // <-- 追加: SVG要素用のref
+  const titleRef = useRef(null);
+  const subtitleRef = useRef(null);
+  const contentsRef = useRef(null);
 
   useEffect(() => {
     // title
-    gsap.set(textRef.current, { opacity: 0 });
-    gsap.from(textRef.current, {
-      y: "50px",
+    gsap.set(titleRef.current, { opacity: 0 });
+    gsap.from(titleRef.current, {
+      y: "-50px",
     });
-    gsap.to(textRef.current, {
-      y: "0px",
+    gsap.to(titleRef.current, {
+      y: "0",
       opacity: 1,
       duration: 2,
-      // delay: 2,
       ease: "power4.out",
+      scrollTrigger: {
+        trigger: "#title",
+        start: "top 80%",
+        end: "bottom center",
+        // toggleActions: "play reverse play reverse",
+        // scrub: true,
+      },
     });
-    if (svgRef.current) {
-      // 追加: Vivusアニメーション
-      new Vivus("animated-svg", {
-        type: "oneByOne",
-        duration: 200,
-      });
-    }
+
+    // subtitle
+    gsap.set(subtitleRef.current, { opacity: 0 });
+    gsap.from(subtitleRef.current, {
+      x: "-50px",
+    });
+    gsap.to(subtitleRef.current, {
+      x: "0",
+      opacity: 1,
+      duration: 2,
+      ease: "power4.out",
+      scrollTrigger: {
+        trigger: "#subtitle",
+        start: "top 80%",
+        end: "bottom center",
+        // toggleActions: "play reverse play reverse",
+        // scrub: true,
+      },
+    });
+
+    // コンテンツ
+    gsap.set(contentsRef.current, { opacity: 0 });
+    gsap.from(contentsRef.current, {
+      y: "50px",
+    });
+    gsap.to(contentsRef.current, {
+      y: "0",
+      opacity: 1,
+      duration: 2,
+      ease: "power4.out",
+      scrollTrigger: {
+        trigger: "#contents",
+        start: "top 80%",
+        end: "bottom center",
+        // toggleActions: "play reverse play reverse",
+        // scrub: true,
+      },
+    });
+    
   }, []);
 
   return (
@@ -38,8 +82,8 @@ export const About = () => {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <section className={styles.about} id="about" ref={textRef}>
-        <div className={styles.title}>
+      <section className={styles.about} id="about" >
+        <div className={styles.title} ref={titleRef} id="title">
           <h2>About</h2>
           <div className={styles.c_scrolldown}>
             <div className={styles.c_line}></div>
@@ -68,10 +112,10 @@ export const About = () => {
           </div>
         </div> */}
         <div className={styles.container}>
-          <h3 className={styles.about_sub_title}>
+          <h3 className={styles.about_sub_title} ref={subtitleRef} id="subtitle">
             <span style={{color:"#b50c45"}}>C</span>hrono-Office / クロノオフィス
           </h3>
-          <div className={styles.wrap}>
+          <div className={styles.wrap} ref={contentsRef} id="contents">
             <div className={styles.text_inner}>
               <ul>
                 <li>

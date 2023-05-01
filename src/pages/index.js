@@ -14,6 +14,13 @@ import { Mv2 } from "../../components/home/Mv2";
 import styles from "@/styles/home/index.module.css";
 import Image from "next/image";
 import hoverEffect from "hover-effect";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
+
+
+
 // import { useEffect } from "react";
 // import { fetchDataFromApi } from "../../libs/api";
 
@@ -71,6 +78,9 @@ export const getStaticProps = async () => {
 };
 
 export default function Home({ articles, categoryUrls }) {
+  const textRef = useRef(null);
+
+
   const router = useRouter();
   const handleFormSubmitSuccess = () => {
     router.push("/thanks");
@@ -97,6 +107,26 @@ export default function Home({ articles, categoryUrls }) {
     }
   }, [mvRef]);
 
+  useEffect(() => {
+    gsap.set(textRef.current, { opacity: 0 });
+    gsap.from(textRef.current, {
+      y: "50px",
+    });
+    gsap.to(textRef.current, {
+      y: "0px",
+      opacity: 1,
+      duration: 2,
+      ease: "power4.out",
+      scrollTrigger: {
+        trigger: "#width",
+        start: "top 80%",
+        end: "center center",
+        // toggleActions: "play reverse play reverse",
+        // scrub: true,
+      },
+    });
+  }, []);
+
   return (
     <>
       {/* {loading && <Loading title="Chrono Office" />} */}
@@ -105,7 +135,7 @@ export default function Home({ articles, categoryUrls }) {
         <div className="inner">
           <About />
           <Service />
-          <div className={styles.widthArea}>
+          <div className={styles.widthArea} >
             <div className={styles.img}>
               <div ref={mvRef} className={styles.imgref}></div>
               <div className={styles.imgText}>
@@ -125,7 +155,7 @@ export default function Home({ articles, categoryUrls }) {
                 </p>
               </div>
             </div>
-            <div className={styles.text}>
+            <div className={styles.text} id="width" ref={textRef}>
               <div className={styles.logo}>
                 <Image
                   src="/HatchfulExport-All/logo_transparent.png"
