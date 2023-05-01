@@ -232,6 +232,10 @@ height: 100%;
   position: relative; /* 絶対配置を使って、親要素のサイズに合わせます */
   font-size: 1vw;
   height: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+
 }
 
 .img {
@@ -302,5 +306,11 @@ height: 100%;
   }
   .post {
     font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 450px) { 
+  .post {
+    font-size: 12px;
   }
 }

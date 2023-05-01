@@ -40,12 +40,12 @@ export const About = () => {
       </Head>
       <section className={styles.about} id="about" ref={textRef}>
         <div className={styles.title}>
-          <h1>About</h1>
+          <h2>About</h2>
           <div className={styles.c_scrolldown}>
             <div className={styles.c_line}></div>
           </div>
         </div>
-        <div className={styles.container}>
+        {/* <div className={styles.container}>
           <div className={styles.card}>
             <div className={styles.imgBx}>
             <Image src="/HatchfulExport-All/logo.png" width={600} height={600} alt="Chrono-Officeのlogo画像"/>
@@ -53,7 +53,7 @@ export const About = () => {
             </div>
             <div className={styles.contentBx}>
               <div className={styles.content}>
-                <h2>Chrono Office</h2>
+                <h1>Chrono Office <br />高速でSEOに強いホームページを</h1>
                 <p>
                   私たちは関東エリアを中心にHP制作事業を営んでいる企業です。創業以来、クライアントのニーズに合わせた高品質なウェブサイトの制作に取り組んできました。私たちのチームには、豊富な経験と専門知識を持つデザイナーや開発者がいます。
                 </p>
@@ -66,23 +66,39 @@ export const About = () => {
               </div>
             </div>
           </div>
-        </div>
-        {/* <div className={styles.wrap}>
-          <div className={styles.inner}>
-            <div className={styles.video}>
-              <video src="/images/roll.mp4" loop muted autoPlay></video>
+        </div> */}
+        <div className={styles.container}>
+          <h3 className={styles.about_sub_title}>
+            <span style={{color:"#b50c45"}}>C</span>hrono-Office / クロノオフィス
+          </h3>
+          <div className={styles.wrap}>
+            <div className={styles.text_inner}>
+              <ul>
+                <li>
+                  <a href="">
+                    <span>lorem ffca</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span>lorem hcsah</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span>lorem iicsac</span>
+                  </a>
+                </li>
+              </ul>
+              <div className={styles.button}>
+                <a href="">more</a>
+              </div>
             </div>
-            <div className={styles.text}>
-              <div className={styles.subTitle}>
-              <p>
-                  私たちは関東エリアを中心にHP制作事業を営んでいる企業です。創業以来、クライアントのニーズに合わせた高品質なウェブサイトの制作に取り組んできました。私たちのチームには、豊富な経験と専門知識を持つデザイナーや開発者がいます。
-                </p>
-                <p className={styles.none}>
-                  私たちは常に最新技術にも目を向け、常にクライアントにとって最適なソリューションを提供することに注力しています。私たちの使命は、ビジネスの成長を支援するウェブサイトの制作に貢献することです。
-                </p>              </div>
+            <div className={styles.img_inner}>
+              <img src="HatchfulExport-All/linkedin_banner_image_2.png" alt="" />
             </div>
           </div>
-        </div> */}
+        </div>
       </section>
     </>
   );

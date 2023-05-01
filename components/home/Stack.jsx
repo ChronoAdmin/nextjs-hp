@@ -27,19 +27,18 @@ export const Stack = () => {
         // scrub: true,
       },
     });
-    
   }, []);
 
   return (
     <>
       <div className={styles.contact} id="contact">
         <div className={styles.title}>
-          <h1>Tech Stack</h1>
+          <h2>Case Study</h2>
           <div className={styles.c_scrollleft}>
             <div className={styles.c_line}></div>
           </div>
         </div>
-        <div className={styles.imgs} ref={textRef} id="imgs">
+        {/* <div className={styles.imgs} ref={textRef} id="imgs">
           <div className={styles.nextImg}>
             <Image
               src="/images/stack/nextjs-1024x512.webp"
@@ -58,6 +57,121 @@ export const Stack = () => {
               priority
             />
           </div>
+        </div> */}
+
+        <div className={styles.case}>
+          {/* firstCase */}
+          <ul className={styles.firstCase}>
+            <li>
+              <Link href="/">
+                <div className={styles.text}>
+                  <h3 className={styles.caseTitle}>Case.01</h3>
+                  <p>
+                    ブランディングを強化し、現代的なデザインで企業イメージを鮮明にしたい。{" "}
+                  </p>
+                </div>
+              </Link>
+            </li>
+
+            <li>
+              <Link href="/">
+                <div className={styles.text}>
+                  <h3 className={styles.caseTitle}>Case.02</h3>
+                  <p>
+                    ウェブサイトの使いやすさを向上させ、訪問者が快適に利用できるようにし、成果を上げたい。
+                  </p>
+                </div>
+              </Link>
+            </li>
+
+            <li>
+              <Link href="/">
+                <div className={styles.text}>
+                  <h3 className={styles.caseTitle}>Case.03</h3>
+                  <p>
+                    ターゲット層に合わせたカスタマイズされた情報を提供し、お客様が繰り返し利用したくなるサイトを作りたい。
+                  </p>
+                </div>
+              </Link>
+            </li>
+
+            <li>
+              <Link href="/">
+                <div className={styles.text}>
+                  <h3 className={styles.caseTitle}>Case.04</h3>
+                  <p>
+                    検索エンジンで上位に表示されるようになり、集客力を高めたい。
+                  </p>
+                </div>
+              </Link>
+            </li>
+          </ul>
+          {/* secondCase */}
+          <ul className={styles.secondCase}>
+            <li>
+              <Link href="/">
+                <div className={styles.text}>
+                  <h3 className={styles.caseTitle}>Case.05</h3>
+                  <p>
+                    ソーシャルメディアと連携し、SNSでの拡散力をアップさせ、知名度を上げたい。
+                  </p>
+                </div>
+              </Link>
+            </li>
+
+            <li>
+              <Link href="/">
+                <div className={styles.text}>
+                  <h3 className={styles.caseTitle}>Case.06</h3>
+                  <p>魅力的なブログや記事で集客力を高め、売上につなげたい。</p>
+                </div>
+              </Link>
+            </li>
+          </ul>
+          {/* thirdCase */}
+          <ul className={styles.thirdCase}>
+            <li>
+              <Link href="/">
+                <div className={styles.text}>
+                  <h3 className={styles.caseTitle}>Case.07</h3>
+                  <p>誰もがストレスなく利用できるウェブサイトを作りたい。</p>
+                </div>
+              </Link>
+            </li>
+
+            <li>
+              <Link href="/">
+                <div className={styles.text}>
+                  <h3 className={styles.caseTitle}>Case.08</h3>
+                  <p>
+                    お客様の意見を活用し、ウェブサイトの改善点を見つけ、継続的にクオリティを向上させたい。
+                  </p>
+                </div>
+              </Link>
+            </li>
+
+            <li>
+              <Link href="/">
+                <div className={styles.text}>
+                  <h3 className={styles.caseTitle}>Case.09</h3>
+                  <p>
+                    海外の訪問者にもアクセスしやすい、マルチ言語対応のサイトを提供したい。
+                  </p>
+                </div>
+              </Link>
+            </li>
+
+            <li>
+              <Link href="/">
+                <div className={styles.text}>
+                  <h3 className={styles.caseTitle}>Case.10</h3>
+                  <p>
+                    ウェブサイトの運営を効率化し、運営コストを削減し、利益率を向上させたい。
+                  </p>
+                </div>
+              </Link>
+            </li>
+          </ul>
         </div>
       </div>
     </>

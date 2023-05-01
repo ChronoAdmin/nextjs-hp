@@ -46,7 +46,7 @@ export const Service = () => {
     <>
       <section className={styles.service} id="service">
         <div className={styles.title} ref={titleRef}>
-          <h1>Service</h1>
+          <h2>Service</h2>
           <div className={styles.c_scrollleft}>
             <div className={styles.c_line}></div>
           </div>

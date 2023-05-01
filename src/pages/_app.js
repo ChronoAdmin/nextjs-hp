@@ -3,6 +3,7 @@ import { Analytics } from "@vercel/analytics/react";
 import Head from "next/head";
 import Layout from "../../components/Layout";
 import { useEffect } from "react";
+import MouseFollower from "../../components/MouseFollower";
 
 export default function App({ Component, pageProps }) {
   // useEffect(() => {
@@ -46,6 +47,7 @@ export default function App({ Component, pageProps }) {
       </Head>
       <Layout navPosition={pageProps.navPosition}>
         <Component {...pageProps} />
+        <MouseFollower />
       </Layout>
       <Analytics />
     </>

@@ -64,7 +64,7 @@ export const Blog = ({ articles }) => {
       </section> */}
       <div className={styles.wrap} id="wrap">
         <div className={styles.title}>
-          <h1>Blog</h1>
+          <h2>Blog</h2>
           <div className={styles.c_scrollleft}>
             <div className={styles.c_line}></div>
           </div>
@@ -92,7 +92,7 @@ export const Blog = ({ articles }) => {
                       <div className={styles.noImage}>No Image...</div>
                     )}
                   </div>
-                  <div className={styles.post}>{article.title}</div>
+                  <div className={styles.post}><p>{article.title}</p></div>
                 </a>
               </li>
             ))}

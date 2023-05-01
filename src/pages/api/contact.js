@@ -11,8 +11,11 @@ export default function handler(req, res) {
     },
   });
 
+  const userEmail = req.body.email || "未入力";
+
+
   const toHostMailData = {
-    from: req.body.email,
+    from: userEmail,
     to: process.env.GMAIL_USER,
     subject: `${req.body.name}様(${req.body.phone})`,
     text: `${req.body.message} Send From ${req.body.email}`,
@@ -24,7 +27,7 @@ export default function handler(req, res) {
     <p>${req.body.phone}</p>
     <span>--------------------------------</span>
     <p>【email】</p>
-    <p>${req.body.email}</p>
+    <p>${userEmail}</p>
     <span>--------------------------------</span>
     <p>【内容】</p>
     <p>${req.body.message}</p>
