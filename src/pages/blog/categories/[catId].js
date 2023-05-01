@@ -75,7 +75,13 @@ export const getStaticPaths = async () => {
 export default function BlogId({
   articles,
   categoriesAllRe,
-}) {
+})
+{
+
+  const categoryName =
+  articles.length > 0 && articles[0].category
+    ? articles[0].category.name
+    : "No Category";
 
   return (
     <>
@@ -88,7 +94,7 @@ export default function BlogId({
           alt="blogページの背景画像"
           priority
         />
-        <h1>{articles[0].category.name}</h1>
+        <h1>{categoryName}</h1>
       </div>
       <div className={styles.wrap}>
         <div className={styles.main}>

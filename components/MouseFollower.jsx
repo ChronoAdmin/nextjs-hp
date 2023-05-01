@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 
 const MouseFollower = () => {
-  const [scale, setScale] = useState(1);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [factor, setFactor] = useState(0.05); // この値を変更することで緩急を調整できます（0から1の範囲）
   const targetPosition = useRef({ x: 0, y: 0 });
@@ -14,7 +13,7 @@ const MouseFollower = () => {
     targetPosition.current = { x: event.clientX, y: event.clientY };
   };
 
-  const updatePosition = () => {
+  const updatePosition = useCallback(() => {
     setPosition((prevPosition) => {
       const newX = lerp(prevPosition.x, targetPosition.current.x, factor);
       const newY = lerp(prevPosition.y, targetPosition.current.y, factor);
@@ -22,9 +21,8 @@ const MouseFollower = () => {
     });
 
     requestAnimationFrame(updatePosition);
-  };
+  }, [factor]); // updatePositionがfactorに依存するように設定
 
-  // ホバー
   useEffect(() => {
     window.addEventListener("mousemove", handleMouseMove);
     requestAnimationFrame(updatePosition);
@@ -32,7 +30,7 @@ const MouseFollower = () => {
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
-  }, [factor]); // useEffectの依存配列にfactorを追加
+  }, [updatePosition]); // factorが変更されるとupdatePositionが再生成される
 
   const [isHovering, setIsHovering] = useState(false);
 
@@ -44,7 +42,7 @@ const MouseFollower = () => {
     setIsHovering(false);
   };
 
-  const setupEventListeners = () => {
+  const setupEventListeners = useCallback(() => {
     const clickableElements = document.querySelectorAll(
       'button, a, input[type="submit"], input[type="button"]'
     );
@@ -55,8 +53,7 @@ const MouseFollower = () => {
       element.addEventListener("mouseover", handleMouseOver);
       element.addEventListener("mouseout", handleMouseOut);
     });
-  };
-
+  }, []); // setupEventListenersの依存関係がない場合は空の配列を渡す
 
   useEffect(() => {
     setupEventListeners();
@@ -71,7 +68,7 @@ const MouseFollower = () => {
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }, [setupEventListeners]);
 
 
   return (
