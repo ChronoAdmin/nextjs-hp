@@ -52,6 +52,7 @@ export const Footer = ({ onFormSubmitSuccess }) => {
             loop
             muted
             playsInline={true}
+            loading="lazy"
           ></video>
         </div>
         <div className={styles.container}>
