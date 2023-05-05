@@ -132,9 +132,9 @@ export const Service = () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
               enim nisi ullam odio perferendis laudantium.
             </p>
-            <a href="/">
+            <Link href="/">
               more<span>→</span>
-            </a>
+            </Link>
           </div>
           <div className={styles.img_card}>
             <div className={styles.back}></div>
@@ -147,7 +147,7 @@ export const Service = () => {
                 </p>
               </div>
               <div className={styles.img_box}>
-                <img src="/images/nextjs.webp" alt="" />
+                <Image src="/images/nextjs.webp" alt="" />
               </div>
             </div>
           </div>
@@ -160,9 +160,9 @@ export const Service = () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
               enim nisi ullam odio perferendis laudantium.
             </p>
-            <a href="/">
+            <Link href="/">
               more<span>→</span>
-            </a>
+            </Link>
           </div>
           <div className={styles.img_card}>
             <div></div>
@@ -176,7 +176,7 @@ export const Service = () => {
               </div>
               <div className={styles.img_box}>
                 <Ripples color="rgba(255, 255, 255, 0.3)">
-                <img src="/images/hp_imgs/img3_re.webp" alt="" />
+                <Image src="/images/hp_imgs/img3_re.webp" alt="" />
 
                 </Ripples>
               </div>
@@ -191,9 +191,9 @@ export const Service = () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
               enim nisi ullam odio perferendis laudantium.
             </p>
-            <a href="/">
+            <Link href="/">
               more<span>→</span>{" "}
-            </a>
+            </Link>
           </div>
           <div className={styles.img_card}>
             <div></div>
@@ -206,7 +206,7 @@ export const Service = () => {
                 </p>
               </div>
               <div className={styles.img_box}>
-                <img src="" alt="" />
+                <Image src="" alt="" />
               </div>
             </div>
           </div>
