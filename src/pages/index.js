@@ -134,7 +134,6 @@ export default function Home({ articles, categoryUrls }) {
       <div className="wrap">
         <div className="inner">
           <About />
-          <Service />
           <div className={styles.widthArea} >
             <div className={styles.img}>
               <div ref={mvRef} className={styles.imgref}></div>
@@ -174,6 +173,8 @@ export default function Home({ articles, categoryUrls }) {
           </div>
           <Blog articles={articles} />
           <Stack />
+          <Service />
+
           {/* <Flow /> */}
         </div>
       </div>

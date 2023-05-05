@@ -182,3 +182,19 @@
         max-width: 200px;
     }
   }
+
+  @media screen and (max-width: 748px) { 
+    .box {
+        margin: 0;
+        padding:20px 20px;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+  }
+
+  @media screen and (max-width: 500px) { 
+    .blogs ul li a {
+        display: block;
+        margin-bottom: 25px;
+    }
+  }
