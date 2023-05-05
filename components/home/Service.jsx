@@ -147,7 +147,7 @@ export const Service = () => {
                 </p>
               </div>
               <div className={styles.img_box}>
-                <Image src="/images/nextjs.webp" alt="" />
+                <Image src="/images/nextjs.webp" alt="HP作成について" width={1920} height={1080} />
               </div>
             </div>
           </div>
@@ -176,7 +176,7 @@ export const Service = () => {
               </div>
               <div className={styles.img_box}>
                 <Ripples color="rgba(255, 255, 255, 0.3)">
-                <Image src="/images/hp_imgs/img3_re.webp" alt="" />
+                <Image src="/images/hp_imgs/img3_re.webp" alt="SEOについて" width={1920} height={1080} />
 
                 </Ripples>
               </div>
@@ -206,7 +206,7 @@ export const Service = () => {
                 </p>
               </div>
               <div className={styles.img_box}>
-                <Image src="" alt="" />
+                <Image src="" alt="リニューアルについて" width={1920} height={1080} />
               </div>
             </div>
           </div>
