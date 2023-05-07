@@ -71,7 +71,7 @@
     height: 400px;
     width: 70%;
     min-width: 200px;
-    background-color: #081420;
+    background-color: #191921;
     /* background-color: azure; */
     display: flex;
     padding: 1%;
@@ -96,6 +96,8 @@ height: 100%;
     flex-direction: column;
     gap: 15px;
 }
+
+
 
 @media screen and (max-width: 800px) { 
     .widthArea {

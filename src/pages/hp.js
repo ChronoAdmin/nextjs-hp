@@ -203,6 +203,7 @@ export default function Hp() {
             </div>
           </div>
         </section>
+        <div className={styles.inner}></div>
         {/* <CustomSlider
           images={[
             "images/hp_imgs/img1.webp",

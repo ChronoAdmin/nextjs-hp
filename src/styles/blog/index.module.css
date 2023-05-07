@@ -48,12 +48,37 @@
   }
 }
 
+.nextPage {
+  height: 100%;
+  background-color: #f9f9f9;
+  padding-bottom: 100px;
+  margin-top: 70vh;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+
 .main {
     position: relative;
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
+
     background-color: #f9f9f9;
     z-index: 2;
     margin-top: 70vh;
     height: auto;
     padding: 50px 0;
+
+    display: grid;
+    gap: 3%;
+    grid-template-columns: 73.5% 23.5%;
+    color: #3a3a3a;
+}
+
+@media screen and (max-width: 1024px) {
+  .main {
+      min-width: 0;
+      width: 94%;
+      display: contents;
+  }
 }

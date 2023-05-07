@@ -48,33 +48,59 @@
     }
   }
 
-  .wrap {
-    z-index: 30;
-    position: relative;
+
+  .nextPage {
+    height: 100%;
     background-color: #f9f9f9;
-
-  }
-  
-  .main {
-      position: relative;
-      width: 100%;
-      background-color: #f9f9f9;
-      z-index: 5;
-      margin-top: 70vh;
-      padding: 50px 0;
-      color: #000;
-      display: grid;
-      grid-template-columns: 70% 30%;
-  }
-
-.posts {
+    padding-bottom: 100px;
+    margin-top: 70vh;
+    position: relative;
+    width: 100%;
+    z-index: 2;
 }
 
-.side{
-  background-color: aqua;
-  height: 70vh;
-  padding: 20px;
+.main {
+    min-width: 1024px;
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    gap: 3%;
+    grid-template-columns: 68.5% 28.5%;
+    color: #3a3a3a;
+    position: relative;
+    z-index: 2;
 }
+
+@media screen and (max-width: 1024px) {
+    .main {
+        min-width: 0;
+        width: 94%;
+        display: contents;
+    }
+ }
+
+ .contents {
+    width: 94%;
+    margin: 0 auto;
+    height: 100vh;
+    background-color: red;
+}
+
+.pageTitle {
+    text-align: center;
+    margin: 0 30px;
+    font-size: 2rem;
+    padding: 20px 0 50px 0;
+    color: #3a3a3a;
+    letter-spacing: 3px;
+}
+
+
+
+
+
+
+
 
 
 

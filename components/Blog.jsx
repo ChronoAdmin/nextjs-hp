@@ -34,7 +34,6 @@ export const Blog = ({ articles }) => {
     }
   }, []);
 
-
   return (
     <>
       {/* <section className={styles.Light} id="Light" ref={textRef}>
@@ -81,18 +80,20 @@ export const Blog = ({ articles }) => {
               >
                 <a href="">
                   <div className={styles.img}>
-                    {article.thumbnail ? (
-                      <Image
-                        src={article.thumbnail.url}
-                        alt={article.title}
-                        width={1920}
-                        height={1080}
-                      />
-                    ) : (
-                      <div className={styles.noImage}>No Image...</div>
-                    )}
+                    <Image
+                      src={
+                        article.thumbnail
+                          ? article.thumbnail.url
+                          : "/images/mv2.webp"
+                      }
+                      alt={article.title}
+                      width={1920}
+                      height={1080}
+                    />
                   </div>
-                  <div className={styles.post}><p>{article.title}</p></div>
+                  <div className={styles.post}>
+                    <p>{article.title}</p>
+                  </div>
                 </a>
               </li>
             ))}

@@ -1,9 +1,10 @@
 .pop {
 }
 
-.pop a {
-  width: 700px;
+.pop a {  
+  width: 675px;
   height: 400px;
+  object-fit: cover;
   display: block;
   position: relative;
   margin: 0 auto;
@@ -40,4 +41,18 @@
   z-index: 2;
   letter-spacing: 2px;
   transition: all .2s;
+}
+
+@media screen and (max-width: 700px) {
+  .pop a {  
+    width: 500px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .pop a {  
+    width: 300px;
+    height: 180px;
+  }
 }

@@ -3,7 +3,7 @@ import styles from "@/styles/blog/TakasakiBlog.module.css";
 import Link from 'next/link';
 import Image from 'next/image';
 
-export const TakasakiBlog = ({titleJa,titleEn,blogs}) => {
+export const TakasakiBlog = ({titleJa,titleEn,blogs,more}) => {
   return (
     <div className={styles.box}>
       <div className={styles.title}>
@@ -23,6 +23,7 @@ export const TakasakiBlog = ({titleJa,titleEn,blogs}) => {
                       <div className={styles.noImage}>No Image...</div>
                     )}
                   </div>
+                  <div>
                   <span>{blog.publishedAt}</span>
                   {blog.category && (
                     <span className={styles.category}>
@@ -35,13 +36,14 @@ export const TakasakiBlog = ({titleJa,titleEn,blogs}) => {
                     </span>
                   )}
                   <p className={styles.blogTitle}>{blog.title}</p>
+                  </div>
                 </Link>
               </li>
             ))}
         </ul>
       </div>
       <div className={styles.more}>
-        <Link href="/">
+        <Link href={more}>
           <span>他の記事</span>
         </Link>
       </div>

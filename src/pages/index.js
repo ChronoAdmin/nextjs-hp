@@ -16,6 +16,8 @@ import Image from "next/image";
 import hoverEffect from "hover-effect";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { Hero } from "../../components/home/Hero";
+import { BlogSlider } from "../../components/home/BlogSlider";
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -127,10 +129,16 @@ export default function Home({ articles, categoryUrls }) {
     });
   }, []);
 
+  const images = [
+    '/images/mv2.webp',
+    '/images/mv2.webp',
+    '/images/mv2.webp',
+  ]
   return (
     <>
       {/* {loading && <Loading title="Chrono Office" />} */}
-      <Mv2 />
+      {/* <Mv2 /> */}
+      <Hero />
       <div className="wrap">
         <div className="inner">
           <About />
@@ -172,8 +180,9 @@ export default function Home({ articles, categoryUrls }) {
             </div>
           </div>
           <Blog articles={articles} />
+          {/* <BlogSlider images={images} /> */}
           <Stack />
-          <Service />
+          {/* <Service /> */}
 
           {/* <Flow /> */}
         </div>
