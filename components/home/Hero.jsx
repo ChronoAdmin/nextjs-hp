@@ -30,7 +30,6 @@ export const Hero = () => {
       width: "50%",
       delay: 0.8,
       duration: 2,
-
       ease: "power4.out",
     });
     gsap.to(rightRef.current, {
@@ -52,7 +51,7 @@ export const Hero = () => {
     });
     gsap.from(Array.from(navRef.current.children), { x: 1000 });
     gsap.to(navRef.current.children, {
-      delay: 1.5,
+      delay: 2,
       x: 0,
       duration: 2,
       ease: "power4.out",
@@ -61,6 +60,8 @@ export const Hero = () => {
     gsap.from(infoRef.current, {
       opacity: 0,
       y: 100,
+      delay: 1.5,
+      duration: 2,
       ease: "power4.out",
     });
     gsap.to(infoRef.current, {
