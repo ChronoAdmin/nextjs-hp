@@ -1,6 +1,5 @@
 import React, { useEffect, useLayoutEffect, useRef } from "react";
 import styles from "@/styles/home/Hero.module.css";
-
 import { Power2, Power3, gsap } from "gsap";
 
 export const Hero = () => {

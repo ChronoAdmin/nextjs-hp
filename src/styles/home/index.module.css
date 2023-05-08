@@ -1,11 +1,11 @@
 .widthArea {
-    height: 1000px;
     width: 100%;
     width: 100vw;
     margin: 0 calc(50% - 50vw);
     position: relative;
     margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 200px;
+    
 }
 
 .img {
@@ -65,7 +65,7 @@
 
 .widthArea .text {
     position: absolute;
-    bottom: 0;
+    bottom: -20%;
     left: 50%;
     transform: translateX(-50%);
     height: 400px;
@@ -101,7 +101,6 @@ height: 100%;
 
 @media screen and (max-width: 800px) { 
     .widthArea {
-        height: 1200px;
     }
     .widthArea .text {
         display: block;
