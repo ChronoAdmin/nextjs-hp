@@ -2,6 +2,6 @@ import { createClient } from "microcms-js-sdk";
 
 export const client = createClient({
   serviceDomain: "blog-nextjs-chrono",
-  apiKey: process.env.API_KEY,
+  apiKey: "F0uxuvvP2kjmeZrUvvnWl0V0Nhif1EaU0Kop"
 });
 
