@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "typeRoots": ["./typings", "./node_modules/@types"],
+
+  }
+}

@@ -1,0 +1,59 @@
+.slider {
+  height: 50vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+.enter {
+  opacity: 0;
+  transform: scale(1.1);
+}
+
+.enterActive {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 1000ms, transform 1000ms;
+}
+
+.exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.exitActive {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 1000ms, transform 1000ms;
+}
+
+
+.card {
+  font-family: 'Shippori Mincho', serif; 
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.327);
+  padding: 50px 100px;
+  border-radius: 2px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 80%;
+  max-width: 400px;
+  backdrop-filter: blur(10px);
+}
+
+.card h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+}

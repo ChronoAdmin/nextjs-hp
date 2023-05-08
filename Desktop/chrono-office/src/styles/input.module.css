@@ -1,0 +1,77 @@
+.formBox {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 300px;
+}
+
+.textInput {
+  background-color: transparent;
+  width: 520px;
+  border: #ffffff 1px solid;
+  outline: none;
+  border-radius: 10px;
+  color: #ffffff;
+  padding: 10px;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.textInput::placeholder {
+  color: #656565;
+  font-size: 14px;
+}
+
+.ask {
+  color: #b00c3f;
+  border: #b00c3f 1px solid;
+  border-radius: 10px;
+  transition-duration: 0.3s;
+  transition: all;
+  padding: 10px;
+  font-size: 18px;
+  background-color: transparent;
+}
+
+.ask:hover {
+  color: black;
+  transform: scale(1.1);
+  background-color: #b00c3f;
+}
+
+
+@media screen and (max-width: 700px) { 
+  .textInput {
+    background-color: transparent;
+    width: 420px;
+    border: #ffffff 1px solid;
+    outline: none;
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 18px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) { 
+  .textInput {
+    background-color: transparent;
+    width: 330px;
+    border: #ffffff 1px solid;
+    outline: none;
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 18px;
+    margin-right: 10px;
+    margin: 0 auto;
+  }
+  .ask {
+    display: block;
+    width: 30%;
+    margin: 0px auto;
+    margin-top: 10px;
+    padding: 5px;
+  }
+}
