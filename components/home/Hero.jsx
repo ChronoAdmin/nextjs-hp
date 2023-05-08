@@ -23,7 +23,8 @@ export const Hero = () => {
   const infoRef = useRef(null);
   useEffect(() => {
 
-    animateChrono();
+    if (typeof window !== "undefined") {
+      animateChrono();
 
 
     gsap.to(leftRef.current, {
@@ -55,7 +56,7 @@ export const Hero = () => {
       x: 0,
       duration: 2,
       ease: "power4.out",
-      stagger: 0.2,
+      stagger: 0.5,
     });
     gsap.from(infoRef.current, {
       opacity: 0,
@@ -82,6 +83,7 @@ export const Hero = () => {
   return () => {
     window.removeEventListener("resize", handleResize);
   };
+}
 
   }, []);
   return (
