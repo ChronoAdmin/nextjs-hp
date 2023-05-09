@@ -40,8 +40,8 @@ export const Sidebar = ({ posts, categories }) => {
             ))}
           </ul>
         </div>
-        <div className={styles.cm}>広告</div>
-        <div className={styles.profile}></div>
+        {/* <div className={styles.cm}>広告</div>
+        <div className={styles.profile}></div> */}
       </div>
     </>
   );

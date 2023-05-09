@@ -181,7 +181,7 @@ export default function Home({ articles, categoryUrls }) {
           </div>
           <Blog articles={articles} />
           {/* <BlogSlider images={images} /> */}
-          <Stack />
+          {/* <Stack /> */}
           {/* <Service /> */}
 
           {/* <Flow /> */}

@@ -46,7 +46,6 @@ font-size: 24px;
 
 .posts li a {
     display: block;
-    /* background-color: rgb(46, 88, 124); */
 }
 
 .posts li a .post_img {
@@ -123,4 +122,19 @@ margin-bottom: 5px;
     .post_title {
         text-align: center;
     }
+
+.posts li a .post_img {
+    display: flex;
+    justify-content: center;
+    }
+    .category li a{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10px;
+        padding: 10px;
+        border-bottom: 1px solid #7e7e7e ;
+        width: 80%;
+    }
+    
 }

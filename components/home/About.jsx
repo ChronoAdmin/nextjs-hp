@@ -119,23 +119,23 @@ export const About = () => {
             <div className={styles.text_inner}>
               <ul>
                 <li>
-                  <a href="">
-                    <span>lorem ffca</span>
-                  </a>
+                  <Link href="/hp/#nextcard_text">
+                    <span>HP制作について</span>
+                  </Link>
                 </li>
                 <li>
-                  <a href="">
-                    <span>lorem hcsah</span>
-                  </a>
+                  <Link href="/hp/#seo">
+                    <span>SEO対策</span>
+                  </Link>
                 </li>
                 <li>
-                  <a href="">
-                    <span>lorem iicsac</span>
-                  </a>
+                  <Link href="/hp/#blogcard_text">
+                    <span>blog構築</span>
+                  </Link>
                 </li>
               </ul>
               <div className={styles.button}>
-                <a href="">more</a>
+                <a href="/hp">more</a>
               </div>
             </div>
             <div className={styles.img_inner}>

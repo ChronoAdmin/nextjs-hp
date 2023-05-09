@@ -136,7 +136,7 @@ export default function Hp() {
               ref={mv2Ref}
               style={{ height: "50vmax" }}
             >
-              <div className={styles.imgText}>
+              <div className={styles.imgText} id="seo">
                 <span style={{ color: "#b95409" }}>SEO.</span>
 
                 <h2>
