@@ -139,7 +139,7 @@ export const About = () => {
               </div>
             </div>
             <div className={styles.img_inner}>
-              <Image src="HatchfulExport-All/linkedin_banner_image_2.png" alt="chrono-officeのロゴ" height={auto} width={auto} />
+              <Image src="HatchfulExport-All/linkedin_banner_image_2.png" alt="chrono-officeのロゴ" height={"500"} width={"1000"} />
             </div>
           </div>
         </div>
