@@ -22,7 +22,7 @@ export const NextCP = ({ data,posts,categories }) => {
                     height={540}
                   />
                 ) : (
-                  <Image src="/images/mv2.webp" height={300} width={1000} />
+                  <Image src="/images/mv2.webp" height={300} width={1000} alt="仮サムネ" />
                 )}
               </div>
               <div className={styles.title}>{data.title}</div>

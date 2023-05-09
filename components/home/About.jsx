@@ -135,11 +135,11 @@ export const About = () => {
                 </li>
               </ul>
               <div className={styles.button}>
-                <a href="/hp">more</a>
+                <Link href="/hp">more</Link>
               </div>
             </div>
             <div className={styles.img_inner}>
-              <img src="HatchfulExport-All/linkedin_banner_image_2.png" alt="" />
+              <Image src="HatchfulExport-All/linkedin_banner_image_2.png" alt="chrono-officeのロゴ" height={auto} width={auto} />
             </div>
           </div>
         </div>

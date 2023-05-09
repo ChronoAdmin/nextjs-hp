@@ -16,7 +16,7 @@ export const Sidebar = ({ posts, categories }) => {
               <li key={i.id}>
                 <a href={`/blog/${i.id}`}>
                   <div className={styles.post_img}>
-                    <Image src={i.thumbnail.url} height={500} width={500} />
+                    <Image src={i.thumbnail.url} height={500} width={500} alt="人気記事のサムネイル" />
                   </div>
                   <p className={styles.post_title}>{i.title}</p>
                 </a>
