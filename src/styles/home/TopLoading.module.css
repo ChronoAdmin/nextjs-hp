@@ -5,6 +5,7 @@
     z-index: 9999;
     position: fixed;
     transition: all .3s ease-in-out;
+    opacity: 1;
 }
 
 .loading {

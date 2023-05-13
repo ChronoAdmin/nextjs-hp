@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "@/styles/home/TopLoading.module.css";
 
-export const TopLoading = () => {
+export const TopLoading = ({opacity}) => {
   return (
     <>
       <div className={styles.wrap}>

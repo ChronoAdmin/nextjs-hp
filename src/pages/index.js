@@ -80,19 +80,26 @@ export default function Home({ articles, categoryUrls }) {
     });
   }, []);
   const [loading, setLoading] = useState(true);
-
+  const [opacity, setOpacity] = useState(1);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setLoading(false);
-    }, 5000); // 5秒後にloadingをfalseに設定
+      setOpacity(0);
+    }, 5000); // 5秒後にフェードアウト開始
 
-    return () => clearTimeout(timer); // コンポーネントがアンマウントされたときにタイマーをクリア
+    const opacityTimer = setTimeout(() => {
+      setLoading(false);
+    }, 6000); // フェードアウト後に非表示にする
+
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(opacityTimer);
+    };
   }, []);
 
   return (
     <>
-    {loading ? <TopLoading /> : null}
+    {loading ? <TopLoading opacity={opacity} /> : null}
 
     <Circle />
     {!loading ? <Hero /> : null}

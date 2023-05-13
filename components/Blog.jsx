@@ -9,8 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export const Blog = ({ articles }) => {
   const latestArticles = articles.slice(0, 5);
-  const textRef = useRef(null);
-  const boxesRef = useRef(null);
+
   const rightRef = useRef(null);
 
   useEffect(() => {
@@ -28,75 +27,8 @@ export const Blog = ({ articles }) => {
       },
     });
   }, []);
-
-  console.log(latestArticles);
-
   return (
     <>
-      {/* <section className={styles.Light} id="Light" ref={textRef}>
-        <div className={styles.title}>
-          <h1>Blog</h1>
-          <div className={styles.c_scrollleft}>
-            <div className={styles.c_line}></div>
-          </div>
-        </div>
-        <div className={styles.blog_list}>
-          <div className={styles.blogs}>
-            {latestArticles.map((article) => (
-              <li key={article.id}>
-                <div className={styles.data}>{article.publishedAt}</div>
-                <Link href={`blog/${article.id}`} className={styles.main_li}>
-                  {article.title}
-                </Link>
-              </li>
-            ))}
-            <div className={styles.more}>
-              <Link href="/" className={styles.btn}>
-                More Blog
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section> */}
-      {/* <div className={styles.wrap} id="wrap">
-        <div className={styles.title}>
-          <h2>Blog</h2>
-          <div className={styles.c_scrollleft}>
-            <div className={styles.c_line}></div>
-          </div>
-        </div>
-
-        <div className={styles.postAreaWrap}>
-          <ul className={styles.postArea} ref={boxesRef}>
-            {latestArticles.map((article, index) => (
-              <li
-                key={article.id}
-                className={`${styles.postList} ${
-                  styles[`postList${index + 1}`]
-                }`}
-              >
-                <a href="">
-                  <div className={styles.img}>
-                    <Image
-                      src={
-                        article.thumbnail
-                          ? article.thumbnail.url
-                          : "/images/mv2.webp"
-                      }
-                      alt={article.title}
-                      width={1920}
-                      height={1080}
-                    />
-                  </div>
-                  <div className={styles.post}>
-                    <p>{article.title}</p>
-                  </div>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div> */}
       <div className={styles.wrap} id="blog">
         <div className={styles.inner}>
           <div className={styles.left}>
@@ -118,9 +50,7 @@ export const Blog = ({ articles }) => {
                         <div className={styles.data}>
                           {latestArticle.publishedAt}
                         </div>
-                        <div className={styles.txt}>
-                          {latestArticle.title}
-                        </div>
+                        <div className={styles.txt} id="txt">{latestArticle.title}</div>
                       </div>
                       <div className={styles.bb}>
                         <div className={styles.bb_hover}></div>
@@ -131,9 +61,9 @@ export const Blog = ({ articles }) => {
               </div>
             </div>
 
-            <a href="">
+            <Link href="" className={styles.more}>
               <span>more</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

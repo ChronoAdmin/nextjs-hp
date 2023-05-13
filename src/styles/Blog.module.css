@@ -1,285 +1,10 @@
 .Light {
-    width: 100%;
-    position: relative;
-    padding-top: 10vw;
-    font-family: 'Shippori Mincho', serif; 
-    margin-top: 100px;
-}
-
-.title {
-    position: absolute;
-    top: 0px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 70px;
-    font-family: "Oswald", sans-serif;
-
-}
-
-.title > h1 {
-    padding-left: 0px;
-}
-
-.c_scrollleft {
-    width: 1px;
-    height: 100px;
-    overflow: hidden;
-    position: absolute;
-    right: -20%;
-    top: 50%;
-  }
-
- .c_line {
-    width: 100%;
-    height: 100%;
-    display: block;
-    background: linear-gradient(to bottom, rgb(255, 0, 85)50%, rgba(255, 255, 255, 0) 50%);
-    background-position: 0 -100px ;
-    background-size: 100% 200%;
-    animation: scrolldown 2.2s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
-  }
-
-  @keyframes scrolldown {
-    0% {
-      background-position: 0 -100px ;
-    }
-    75% {
-      background-position: 0 0;
-    }
-    100% {
-      background-position: 0 100px ;
-    }
-  }
-
-
-.blog_list {
   width: 100%;
-} 
-
-.blog_list_title {
-  text-align: center;
-  font-size: 30px;
-  letter-spacing: 5px;
-}
-
-.blogs {
-  width: 70%;
-  min-width: 400px;
-  margin: 0 auto;
-}
-
-.blogs > li {
-  font-size: 20px;
-  margin: 50px 0;
-  border-bottom: 1px solid #fff;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 10%;
-  gap: 20px;
-  overflow: hidden;
-}
-
-.blogs > li > a  {
-  display: block;
-  min-width: 200px;
-  transition: all .3s ease-in-out;
-width: 100%;
-padding-left: 5%;
-white-space: nowrap;
-overflow: hidden; 
-text-overflow: ellipsis;
-}
-.blogs > li > a:hover  {
-  color: #acacac;
-}
-
-.more {
-  margin: 0 auto;
-  margin-top: 100px;
-  height: 50px;
-  width: 150px;
-  border-radius: 5px;
-  transition: .3s;
-}
-
-.more:hover {
-  opacity: 0.7;
-}
-
-.more a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-color: #0f7791;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-
-
-.red {
-  background-color: rgb(0, 0, 0);
-  width: 100%;
-  height: 100vh;
-}
-.blue {
-  background-color: rgb(6, 6, 54);
-  width: 100%;
-  height: 100vh;
-}
-.data {
-  color: #6cc;
-}
-
-@media screen and (max-width: 800px) { 
-  .Light {
-    padding-top: 100px;
-}
-  .blogs {
-    width: 80%;
-    min-width: 300px;
-    margin: 0 auto;
-  }
-  .data {
-    margin-bottom: 0px;
-    color: #6cc;
-    font-size: 1ß6px;
-  }
-  .blogs > li {
-    display: flex;
-    flex-flow: column;
-    padding: 0 5%;
-  }
-  .blogs > li > a  {
-    display: inline-block;
-    width: 100%;
-    min-width: none;
-    transition: all .3s ease-in-out;
-  }
-  .title {
-    font-size: 55px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .blogs {
-    width: 80%;
-    min-width: 320px;
-    margin: 0 auto;
-  }
-  .more {
-    margin: 0 auto;
-    margin-top: 50px;
-    width: 100%;
-    min-width: 320px;
-  }
- }
-
-@media screen and (max-width: 375px) {
-  .Light {
-    margin-top: 50px;
-  }
-  .blogs > li {
-    padding: 0;
-  }
-  .blogs > li > a  {
-    display: inline-block;
-    width: 100%;
-    transition: all .3s ease-in-out;
-    font-size: 16px;
-  }
- }
-
-
-
- .wrap {
   position: relative;
   padding-top: 10vw;
- }
-
-
-
-
-
-
-.postArea {
-  margin-top: 40px;
-display: grid;
-grid-template-columns: repeat(5,1fr);
-grid-auto-rows: 30vw;
-gap: 5px;
-height: 100%;
-justify-content: center;
+  font-family: "Shippori Mincho", serif;
+  margin-top: 100px;
 }
-
-
-
-.postList  {
-  background-color: #2f2f2f;
-  padding: 4px;
-  height: 90%;
-  justify-self: center;
-  justify-items: center;
-  min-width: 100%;
-}
-
-.postList:nth-child(2),
-.postList:nth-child(4)
-{
-  margin-top: 50px;
-}
-
-.postList a {
-  display: block;
-  width: 100%;
-  position: relative;
-  font-size: 1vw;
-  height: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-
-
-}
-
-.img {
-  height: 50%;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
-.img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-
-
-
-
-
-@media screen and (max-width: 1000px) { 
-  .postArea {
-    grid-template-columns: repeat(2,1fr);
-  }
-}
-
-@media screen and (max-width: 600px) { 
-  .postArea {
-    grid-template-columns: repeat(2,1fr);
-    gap: 25px;
-    grid-auto-rows: 50vw;
-  }
-}
-
-
-
 
 .wrap {
   width: 100vw;
@@ -290,9 +15,9 @@ justify-content: center;
 }
 
 .inner {
-width: 100%;
-height: 100%;
-display: flex;
+  width: 100%;
+  height: 100%;
+  display: flex;
 }
 
 .left {
@@ -302,17 +27,17 @@ display: flex;
 
 .left h2 {
   width: auto;
-    max-width: none;
-    color: #fff;
-    text-align: right;
-    text-transform: uppercase;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-family: Roboto, sans-serif;
-    font-size: 87px;
-    font-weight: 400;
-    line-height: 1em;
-    position: relative;
+  max-width: none;
+  color: #fff;
+  text-align: right;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 87px;
+  font-weight: 400;
+  line-height: 1em;
+  position: relative;
 }
 
 .right {
@@ -331,10 +56,10 @@ display: flex;
 
 .list a {
   flex-direction: column;
-    margin-top: 0;
-    padding-top: 24px;
-    display: flex;
-    position: relative;
+  margin-top: 0;
+  padding-top: 24px;
+  display: flex;
+  position: relative;
 }
 
 .post {
@@ -347,12 +72,12 @@ display: flex;
 .data {
   order: 1;
   width: auto;
-    color: #fff;
-    letter-spacing: .1em;
-    margin-left: 64px;
-    font-family: Roboto, sans-serif;
-    font-size: 14px;
-    line-height: 1.5;
+  color: #fff;
+  letter-spacing: 0.1em;
+  margin-left: 64px;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .txt {
@@ -360,11 +85,12 @@ display: flex;
   color: #fff;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: Noto Sans JP, sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5em;
   position: relative;
+  font-family: "Shippori Mincho", serif;
+  font-weight: bold;
 }
 
 .bb {
@@ -377,10 +103,24 @@ display: flex;
   width: 0%;
   height: 1px;
   background-color: #fff;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .list a:hover .bb_hover {
   width: 100%;
 }
 
+.right .more {
+  width: auto;
+  border: 1px solid #fff;
+  margin-top: 40px;
+  display: inline-block;
+  position: relative;
+  padding: 10px 20px;
+  font-family: "Shippori Mincho", serif;
+
+}
+
+.more span {
+  background-color: transparent;
+}
