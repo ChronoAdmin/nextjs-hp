@@ -20,7 +20,7 @@ export const Navigation = ({position}) => {
   };
   return (
     <>
-      <div className={`${styles.navigation} ${position === "none" ? styles.none : ""}`}>
+      <div className={`${styles.navigation} ${position === "none" ? styles.none : ""} ${position === "top" ? styles.top : ""}`}>
         <ul ref={listRef}>
           <li
             className={`${styles.list} ${

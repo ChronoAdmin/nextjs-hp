@@ -13,6 +13,7 @@ export const Hero = () => {
     });
   };
 
+
   const leftRef = useRef(null);
   const rightRef = useRef(null);
   const textH1Ref = useRef(null);
@@ -21,10 +22,8 @@ export const Hero = () => {
   const navRef = useRef(null);
   const infoRef = useRef(null);
   useEffect(() => {
-
-    if (typeof window !== "undefined") {
-      animateChrono();
-
+    
+    animateChrono();
 
     gsap.to(leftRef.current, {
       width: "50%",
@@ -39,31 +38,16 @@ export const Hero = () => {
       width: "50%",
       ease: "power4.out",
     });
-    gsap.from(textH1Ref.current, {
-      x: 1000,
-      ease: "power4.out",
-    });
-    gsap.to(textH1Ref.current, {
-      delay: 0.8,
-      duration: 2,
-      x: 0,
-      ease: "power4.out",
-    });
-    gsap.from(Array.from(navRef.current.children), { x: 1000 });
-    gsap.to(navRef.current.children, {
-      delay: 2,
-      x: 0,
-      duration: 2,
-      ease: "power4.out",
-      stagger: 0.5,
-    });
-    gsap.from(infoRef.current, {
-      opacity: 0,
-      y: 100,
-      delay: 1.5,
-      duration: 2,
-      ease: "power4.out",
-    });
+    gsap.fromTo(
+      textH1Ref.current,
+      { x: 1000 }, 
+      { x: 0, duration: 2, ease: "power4.out", delay: 2 }
+    );
+    gsap.fromTo(
+      navRef.current.children,
+      { x: 1000 }, 
+      { x: 0, duration: 2, ease: "power4.out", delay: 2,stagger: 0.3, } 
+    );
     gsap.to(infoRef.current, {
       opacity: 1,
       delay: 0.6,
@@ -71,19 +55,15 @@ export const Hero = () => {
       y: 0,
       ease: "power4.out",
     });
-  // 画面サイズが変更されたときにアニメーションを再実行するリスナーを設定
-  const handleResize = () => {
-    animateChrono();
-  };
+    const handleResize = () => {
+      animateChrono();
+    };
 
-  window.addEventListener("resize", handleResize);
+    window.addEventListener("resize", handleResize);
 
-  // クリーンアップ関数でイベントリスナーを削除
-  return () => {
-    window.removeEventListener("resize", handleResize);
-  };
-}
-
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
   return (
     <>
@@ -93,11 +73,7 @@ export const Hero = () => {
 
         <div className={styles.content}>
           <div className={styles.img_wrap}>
-            <img
-              className={styles.chrono}
-              ref={chronoRef}
-              src="/hero.jpg"
-            />
+            <img className={styles.chrono} ref={chronoRef} src="/hero.jpg" />
           </div>
         </div>
 

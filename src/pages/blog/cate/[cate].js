@@ -107,7 +107,6 @@ export default function cate({category,filteredArticles,popPost, categories }) {
 
 
       <div className={styles.nextPage}>
-        <h1 className={styles.pageTitle}>stack blog</h1>
         <div className={styles.main}>
           <div className={styles.posts}>
             <Posts allBlogData={filteredArticles} />

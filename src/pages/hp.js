@@ -128,6 +128,10 @@ export default function Hp() {
                   Speed & Flexibility <br />
                   Outperform Your Competitors
                 </h2>
+                <h3>
+                  スピードと柔軟性で <br />
+                  競合他社を凌駕する
+                </h3>
               </div>
             </div>
             <div
@@ -144,6 +148,10 @@ export default function Hp() {
                   <br />
                   Rise Above the Competition
                 </h2>
+                <h3>
+                  スピードと柔軟性で <br />
+                  競合他社を凌駕する2aaa
+                </h3>
               </div>
             </div>
             <div
@@ -199,6 +207,9 @@ export default function Hp() {
                   <br />
                   Stay Ahead in the Game
                 </h2>
+                <h3>
+                スピードと柔軟性で競合他社を凌駕する3
+                </h3>
               </div>
             </div>
           </div>

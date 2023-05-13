@@ -5,6 +5,8 @@ import Layout from "../../components/Layout";
 import { useEffect } from "react";
 import MouseFollower from "../../components/MouseFollower";
 
+
+
 export default function App({ Component, pageProps }) {
   // useEffect(() => {
   //   let lastScrollTop = 0;

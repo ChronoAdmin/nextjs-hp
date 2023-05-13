@@ -1,33 +1,18 @@
 import { client } from "../../libs/client";
-import { Mv } from "../../components/home/Mv";
 import { About } from "../../components/home/About";
-import { Service } from "../../components/home/Service";
 import { Blog } from "../../components/Blog";
-import { Flow } from "../../components/home/Flow";
-import { Stack } from "../../components/home/Stack";
-// import { Ec } from "../../components/home/Ec";
-import { Contact } from "../../components/home/Contact";
 import { useRouter } from "next/router";
-import { Loading } from "../../components/Loading";
 import { useEffect, useRef, useState } from "react";
-import { Mv2 } from "../../components/home/Mv2";
 import styles from "@/styles/home/index.module.css";
 import Image from "next/image";
 import hoverEffect from "hover-effect";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { Hero } from "../../components/home/Hero";
-import { BlogSlider } from "../../components/home/BlogSlider";
+import Circle from "../../components/Circle";
+import { TopLoading } from "../../components/home/TopLoading";
 gsap.registerPlugin(ScrollTrigger);
 
-
-
-
-// import { useEffect } from "react";
-// import { fetchDataFromApi } from "../../libs/api";
-
-// let categoryUrls = fetchDataFromApi("api/categories?populate=*");
-// console.log("Category URLs object:", categoryUrls);
 
 // SSG
 export const getStaticProps = async () => {
@@ -48,28 +33,6 @@ export const getStaticProps = async () => {
     return new Date(b.publishedAt) - new Date(a.publishedAt);
   });
 
-  // let categoryUrls = await fetchDataFromApi("/api/categories?populate=*");
-
-  // console.log(
-  //   "Category URLs object:",
-  //   categoryUrls.data[0].attributes.img.data.attributes.url
-  // );
-  // categoryUrls = categoryUrls.data
-  //   .map((category) => {
-  //     if (
-  //       category.attributes &&
-  //       category.attributes.img &&
-  //       category.attributes.img.data
-  //     ) {
-  //       return {
-  //         title: category.attributes.title,
-  //         url: category.attributes.img.data.attributes.url,
-  //       };
-  //     }
-  //     return null;
-  //   })
-  //   .filter((obj) => obj !== null && obj.url !== undefined);
-
   // 記事情報と商品情報を1つのpropsオブジェクトに含める
   return {
     props: {
@@ -81,20 +44,10 @@ export const getStaticProps = async () => {
 
 export default function Home({ articles, categoryUrls }) {
   const textRef = useRef(null);
-
-
   const router = useRouter();
   const handleFormSubmitSuccess = () => {
     router.push("/thanks");
   };
-
-  // useEffect(() => {
-  //   getCategories()
-  // },[])
-  // const getCategories = () => {
-  //   fetchDataFromApi("api/categories?populate=*").then(res => console.log(res))
-  // }
-
   const mvRef = useRef(null);
 
   useEffect(() => {
@@ -123,25 +76,28 @@ export default function Home({ articles, categoryUrls }) {
         trigger: "#width",
         start: "top 80%",
         end: "center center",
-        // toggleActions: "play reverse play reverse",
-        // scrub: true,
       },
     });
   }, []);
+  const [loading, setLoading] = useState(true);
 
-  const images = [
-    '/images/mv2.webp',
-    '/images/mv2.webp',
-    '/images/mv2.webp',
-  ]
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 5000); // 5秒後にloadingをfalseに設定
+
+    return () => clearTimeout(timer); // コンポーネントがアンマウントされたときにタイマーをクリア
+  }, []);
+
   return (
     <>
-      {/* {loading && <Loading title="Chrono Office" />} */}
-      {/* <Mv2 /> */}
-      <Hero />
+    {loading ? <TopLoading /> : null}
+
+    <Circle />
+    {!loading ? <Hero /> : null}
       <div className="wrap">
         <div className="inner">
-          <About />
           <div className={styles.widthArea} >
             <div className={styles.img}>
               <div ref={mvRef} className={styles.imgref}></div>
@@ -179,26 +135,11 @@ export default function Home({ articles, categoryUrls }) {
               </div>
             </div>
           </div>
-          <Blog articles={articles} />
-          {/* <BlogSlider images={images} /> */}
-          {/* <Stack /> */}
-          {/* <Service /> */}
+          <About />
 
-          {/* <Flow /> */}
+          <Blog articles={articles} />
         </div>
       </div>
-      {/* <Contact onFormSubmitSuccess={handleFormSubmitSuccess} /> */}
-      {/* <div className="category-urls">
-        {categoryUrls.map((obj, index) => (
-          <div key={index} className="category-url">
-            <img
-              src={process.env.NEXT_PUBLIC_DEV_URL + obj.url}
-              alt={obj.title}
-            />
-            <h1>{obj.title}</h1>
-          </div>
-        ))}
-      </div> */}
     </>
   );
 }

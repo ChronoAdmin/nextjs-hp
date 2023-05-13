@@ -16,64 +16,26 @@ export const About = () => {
   const titleRef = useRef(null);
   const subtitleRef = useRef(null);
   const contentsRef = useRef(null);
+  const rightRef = useRef(null);
+
+
 
   useEffect(() => {
-    // title
-    gsap.set(titleRef.current, { opacity: 0 });
-    gsap.from(titleRef.current, {
-      y: "-50px",
-    });
-    gsap.to(titleRef.current, {
-      y: "0",
-      opacity: 1,
+    gsap.to(rightRef.current, {
+      delay: 1.5,
       duration: 2,
+      backgroundColor: "#b3b4af",
       ease: "power4.out",
       scrollTrigger: {
-        trigger: "#title",
-        start: "top 80%",
+        trigger: "#about",
+        start: "top center",
         end: "bottom center",
-        // toggleActions: "play reverse play reverse",
-        // scrub: true,
-      },
+       
+        toggleActions: "play reverse play reverse",
+        scrub: 1
+      }
     });
-
-    // subtitle
-    gsap.set(subtitleRef.current, { opacity: 0 });
-    gsap.from(subtitleRef.current, {
-      x: "-50px",
-    });
-    gsap.to(subtitleRef.current, {
-      x: "0",
-      opacity: 1,
-      duration: 2,
-      ease: "power4.out",
-      scrollTrigger: {
-        trigger: "#subtitle",
-        start: "top 80%",
-        end: "bottom center",
-        // toggleActions: "play reverse play reverse",
-        // scrub: true,
-      },
-    });
-
-    // コンテンツ
-    gsap.set(contentsRef.current, { opacity: 0 });
-    gsap.from(contentsRef.current, {
-      y: "50px",
-    });
-    gsap.to(contentsRef.current, {
-      y: "0",
-      opacity: 1,
-      duration: 2,
-      ease: "power4.out",
-      scrollTrigger: {
-        trigger: "#contents",
-        start: "top 80%",
-        end: "bottom center",
-        // toggleActions: "play reverse play reverse",
-        // scrub: true,
-      },
-    });
+  
     
   }, []);
 
@@ -83,12 +45,12 @@ export const About = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <section className={styles.about} id="about" >
-        <div className={styles.title} ref={titleRef} id="title">
+        {/* <div className={styles.title} ref={titleRef} id="title">
           <h2>About</h2>
           <div className={styles.c_scrolldown}>
             <div className={styles.c_line}></div>
           </div>
-        </div>
+        </div> */}
         {/* <div className={styles.container}>
           <div className={styles.card}>
             <div className={styles.imgBx}>
@@ -111,7 +73,7 @@ export const About = () => {
             </div>
           </div>
         </div> */}
-        <div className={styles.container}>
+        {/* <div className={styles.container}>
           <h3 className={styles.about_sub_title} ref={subtitleRef} id="subtitle">
             <span style={{color:"#b50c45"}}>C</span>hrono-Office / クロノオフィス
           </h3>
@@ -140,6 +102,19 @@ export const About = () => {
             </div>
             <div className={styles.img_inner}>
               <Image src="HatchfulExport-All/linkedin_banner_image_2.png" alt="chrono-officeのロゴ" height={"500"} width={"1000"} />
+            </div>
+          </div>
+        </div> */}
+        <div className={styles.wrap}>
+          <div className={styles.inner}>
+            <div className={styles.left}>
+              <h2><span style={{color: "rgb(255, 0, 85)"}}>C</span>hrono<br />Office</h2>
+              <img src="/HatchfulExport-All/logo_transparent.png" alt="" />
+            </div>
+            <div className={styles.right} style={{padding:"2vw"}} ref={rightRef}>
+              <h2>about</h2>
+              <p>Chrono officeは、群馬県高崎市を中心に活動するホームページ制作会社です。<br />Next.jsとmicroCMSを用いた、素早く美しく機能的なWebサイトのを強みに活動しています。<br />他にも、お客様のビジネスの成功へのソリューションの提供、サイトを運用するうえでのアフターフォローなど。<br /><br />単なる制作会社として「Webサイトをつくるだけ」ではなく、<br />いつまでもお客様の役に立つ、「制作＋α」の価値を提供する存在に。<br /><br />私たちはお客様とともに、常に新しい価値を生み出すWebサイト制作・運用を目指しています。</p>
+              <a href=""><span>more</span></a>
             </div>
           </div>
         </div>
