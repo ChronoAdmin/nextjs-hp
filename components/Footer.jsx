@@ -61,7 +61,7 @@ export const Footer = ({ onFormSubmitSuccess }) => {
               <div className={styles.logo}>
                 <h3>Chrono Office</h3>
                 <p>
-                "サイトをつくるだけ"でなく<br />いつまでもお客様の役に立つ<br />"制作＋α"の価値を提供する存在に
+                &quot;サイトをつくるだけ&quot;でなく<br />いつまでもお客様の役に立つ<br />&quot;制作＋α&quot;の価値を提供する存在に
                 </p>
               </div>
             </div>
