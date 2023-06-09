@@ -5,7 +5,7 @@ import Image from "next/image";
 import { gsap } from "gsap";
 import { useRouter } from "next/router";
 
-export default function contact() {
+export default function Contact() {
   const emailRef = useRef(null);
   const router = useRouter();
 
