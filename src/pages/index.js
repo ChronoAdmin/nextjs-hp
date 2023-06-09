@@ -101,7 +101,7 @@ export default function Home({ articles, categoryUrls }) {
     {!loading ? <HeroMain /> : null}
       <div className="wrap">
         <div className="inner">
-          <div className={styles.widthArea} >
+          {/* <div className={styles.widthArea} >
             <div className={styles.img}>
               <div ref={mvRef} className={styles.imgref}></div>
               <div className={styles.imgText}>
@@ -137,7 +137,7 @@ export default function Home({ articles, categoryUrls }) {
                 <p>このロゴは、私たちが持つ創造性と技術力を象徴し、お客様に信頼感と期待感を与えるデザインとなっています。</p>
               </div>
             </div>
-          </div>
+          </div> */}
           <About />
           <Blog articles={articles} />
           <Accordion />
