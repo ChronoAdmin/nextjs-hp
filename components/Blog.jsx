@@ -10,23 +10,6 @@ gsap.registerPlugin(ScrollTrigger);
 export const Blog = ({ articles }) => {
   const latestArticles = articles.slice(0, 5);
 
-  const rightRef = useRef(null);
-
-  useEffect(() => {
-    gsap.to(rightRef.current, {
-      delay: 1.5,
-      duration: 2,
-      backgroundColor: "#b3b4af",
-      ease: "power4.out",
-      scrollTrigger: {
-        trigger: "#blog",
-        start: "top center",
-        end: "bottom center",
-        toggleActions: "play reverse play reverse",
-        scrub: 1,
-      },
-    });
-  }, []);
   return (
     <>
       <div className={styles.wrap} id="blog">
@@ -39,7 +22,6 @@ export const Blog = ({ articles }) => {
           <div
             className={styles.right}
             style={{ padding: "2vw" }}
-            ref={rightRef}
           >
             <div className={styles.grid}>
               <div className={styles.list}>

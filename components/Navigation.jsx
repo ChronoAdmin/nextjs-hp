@@ -80,7 +80,7 @@ export const Navigation = ({position}) => {
             }`}
             onClick={handleItemClick}
           >
-            <Link href="/contact">
+            <Link href="/blog/csr-demo/">
               <span className={styles.icon}>
                 <AiOutlineMail />
               </span>

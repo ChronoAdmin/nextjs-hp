@@ -44,6 +44,7 @@ const Circle = ({loading}) => {
             top: 0;
             left: 0;
             z-index: 1;
+            
           }
           .circle div {
             position: absolute;

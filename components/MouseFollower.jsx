@@ -79,13 +79,15 @@ const MouseFollower = () => {
       left: position.x,
       width: isHovering ? '60px' : '20px', // 大きさを変更
       height: isHovering ? '60px' : '20px', // 大きさを変更
-      background: '#b50c45',
+      background: '#fff',
       borderRadius: '50%',
       transform: 'translate(-50%, -50%)',
       pointerEvents: 'none',
       zIndex: 9999,
       transition: 'width 0.3s, height 0.3s', // 大きさの変更にアニメーションを追加
-      opacity: .4,
+      opacity: 1,
+      mixBlendMode: "difference",
+
     }}
   ></div>
   );

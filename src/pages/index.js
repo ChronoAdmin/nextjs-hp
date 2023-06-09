@@ -11,6 +11,8 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { Hero } from "../../components/home/Hero";
 import Circle from "../../components/Circle";
 import { TopLoading } from "../../components/home/TopLoading";
+import { Accordion } from "../../components/home/Accordion";
+import HeroMain from "../../components/home/HeroMain";
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -80,29 +82,23 @@ export default function Home({ articles, categoryUrls }) {
     });
   }, []);
   const [loading, setLoading] = useState(true);
-  const [opacity, setOpacity] = useState(1);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setOpacity(0);
-    }, 5000); // 5秒後にフェードアウト開始
-
-    const opacityTimer = setTimeout(() => {
-      setLoading(false);
-    }, 6000); // フェードアウト後に非表示にする
-
-    return () => {
-      clearTimeout(timer);
-      clearTimeout(opacityTimer);
-    };
-  }, []);
+    if (loading) {
+      const timer = setTimeout(() => {
+        setLoading(false);
+      }, 3000);
+  
+      return () => clearTimeout(timer);
+    }
+  }, [loading]);
 
   return (
     <>
-    {loading ? <TopLoading opacity={opacity} /> : null}
+    {loading ? <TopLoading /> : null}
 
     <Circle />
-    {!loading ? <Hero /> : null}
+    {!loading ? <HeroMain /> : null}
       <div className="wrap">
         <div className="inner">
           <div className={styles.widthArea} >
@@ -143,8 +139,8 @@ export default function Home({ articles, categoryUrls }) {
             </div>
           </div>
           <About />
-
           <Blog articles={articles} />
+          <Accordion />
         </div>
       </div>
     </>

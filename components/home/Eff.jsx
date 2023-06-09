@@ -1,8 +1,7 @@
-// components/WaterEffect.jsx
 
 import React, { useRef } from "react";
 import { Canvas } from "@react-three/fiber";
-import { Water } from "@react-three/drei"; // <-- この行を変更
+import { Water } from "@react-three/drei"; 
 import { TextureLoader } from "three/src/loaders/TextureLoader";
 
 export const WaterEffect = () => {
