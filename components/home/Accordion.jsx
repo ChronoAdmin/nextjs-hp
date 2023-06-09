@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "@/styles/home/Accordion.module.css";
 import { gsap } from "gsap";
+import Image from "next/image";
 
 export const Accordion = () => {
     const [activeAccordion, setActiveAccordion] = useState(1); // 初期値を1に設定
@@ -161,8 +162,10 @@ export const Accordion = () => {
                 activeAccordion === 2 ? styles.active : ""
               }`}
             />
-            <img
+            <Image
               src="/hero.webp"
+              width={300}
+              height={500}
               alt="3"
               className={`${styles.accord_img} ${
                 activeAccordion === 3 ? styles.active : ""
