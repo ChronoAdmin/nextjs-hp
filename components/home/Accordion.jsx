@@ -148,15 +148,19 @@ export const Accordion = () => {
           </div>
 
           <div className={styles.accordion_img}>
-            <img
-              src="/images/blog.jpg"
+            <Image
+              src="/hero.webp"
+              width={300}
+              height={500}
               alt="1"
               className={`${styles.accord_img} ${
                 activeAccordion === 1 ? styles.active : ""
               }`}
             />
-            <img
-              src="/images/blog.jpg"
+            <Image
+              src="/hero.webp"
+              width={300}
+              height={500}
               alt="2"
               className={`${styles.accord_img} ${
                 activeAccordion === 2 ? styles.active : ""
