@@ -34,7 +34,7 @@ const Top = ({ setShowMain }) => {
   };
 
   return (
-    <div className={`${styles.wrap} ${isHidden ? styles.hide : ''}`}>  // isHiddenに基づいてclassnameを追加
+    <div className={`${styles.wrap} ${isHidden ? styles.hide : ''}`}>  
       <div className={styles.box}>
         <h2>このサイトは音楽が流れます</h2>
         <div className={styles.check}>
@@ -42,7 +42,7 @@ const Top = ({ setShowMain }) => {
           <div className={styles.no} onClick={handlePause}>OFF</div>
         </div>
       </div>
-      <audio src={musicFile} ref={audioRef} loop />  // 音楽ファイルを指定、ループ再生を設定
+      <audio src={musicFile} ref={audioRef} loop />  
     </div>
   );
 };
