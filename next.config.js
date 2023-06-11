@@ -1,4 +1,5 @@
 // @ts-check
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -6,11 +7,16 @@ const nextConfig = {
     formats: ["image/avif", "image/webp"],
     domains: ["images.microcms-assets.io"],
   },
-  webpack(config) {
+  webpack(config, { dev }) {
     config.module.rules.push({
       test: /\.svg$/,
       use: ["@svgr/webpack"],
     });
+
+    // 開発ビルド時のみバンドルアナライザを有効にする
+    if (dev && process.env.ANALYZE === 'true') {
+      config.plugins.push(new BundleAnalyzerPlugin())
+    }
 
     return config;
   },

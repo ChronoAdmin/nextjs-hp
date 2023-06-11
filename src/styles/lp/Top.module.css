@@ -1,0 +1,65 @@
+.wrap {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 9999;
+}
+
+
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+}
+
+.box h2 {
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+    color: #060b23;
+}
+
+.box .check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 160px;
+    color: #060b23;
+}
+
+.yes {
+    padding: 30px 50px;
+    border: 1px solid #060b23;
+    border-right: none;
+    cursor: pointer;
+}
+
+.no {
+    padding: 30px 50px;
+    border: 1px solid #060b23; 
+    cursor: pointer;
+}
+
+
+.yes:hover {
+    background-color: #060b23;
+    color: aliceblue;
+}
+.no:hover {
+    background-color: #060b23;
+    color: aliceblue;
+}
+
+.hide {
+    animation: fadeOut 1s forwards;  /* 1秒間でフェードアウト */
+    z-index: 0;
+  }
+  
+  @keyframes fadeOut {
+    0% { opacity: 1; }
+    99% { opacity: 0; visibility: visible; }  /* ほとんどの間、要素は表示されます */
+    100% { opacity: 0;visibility: hidden; }   /* 非表示にする */
+  }

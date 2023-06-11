@@ -6,7 +6,9 @@ const HeroMain = () => {
    <>
    <div className={styles.wrap}>
     <div className={styles.inner}>
-        <div className={styles.object}></div>
+        <div className={styles.object}>
+            <a href="https://www.instagram.com/chrono_office_pr/" target='_brank'>INSTAGRAM</a>
+        </div>
     </div>
    </div>
    </>
