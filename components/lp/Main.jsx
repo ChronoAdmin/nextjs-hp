@@ -7,6 +7,36 @@ import { useRouter } from "next/router";
 
 const Main = ({ showMain }) => {
     const emailRef = useRef(null);
+    const router = useRouter();
+
+  const handleFormSubmitSuccess = () => {
+    router.push("/thanks");
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    let data = {
+      email: emailRef.current.value,
+    };
+
+    await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        Accept: "application/json, text/plain",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    }).then((res) => {
+      if (res.status === 200) {
+        console.log("送信成功");
+        res.text().then((text) => console.log(text));
+        handleFormSubmitSuccess();
+      } else {
+        res.text().then((text) => console.error(`Error: ${text}`));
+      }
+    });
+  };
 
   // 以下の行を追加
   const bg_img_ref = useRef(null);
@@ -68,10 +98,10 @@ const Main = ({ showMain }) => {
     <div className={styles.container}>
         <div className={`${styles.wrapeer} ${styles.hero_image_wrapper}`}>
           <div className={styles.bg_img} ref={bg_img_ref}>
-            <Image src="/hero.jpg" width={1000} height={800} />
+            <Image src="/hero.jpg" width={1000} height={800} alt="a" />
           </div>
           <div className={styles.front_img} ref={front_img_ref}>
-            <Image src="/hero.jpg" width={500} height={500} />
+            <Image src="/hero.jpg" width={500} height={500} alt="a" />
           </div>
         </div>
         <div className={`${styles.wrapeer} ${styles.content_wrapper}`}>

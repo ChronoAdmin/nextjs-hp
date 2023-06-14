@@ -85,10 +85,10 @@ export default function Contact() {
       <div className={styles.container}>
         <div className={`${styles.wrapeer} ${styles.hero_image_wrapper}`}>
           <div className={styles.bg_img} ref={bg_img_ref}>
-            <Image src="/hero.jpg" width={1000} height={800} />
+            <Image src="/hero.jpg" width={1000} height={800} alt='a' />
           </div>
           <div className={styles.front_img} ref={front_img_ref}>
-            <Image src="/hero.jpg" width={500} height={500} />
+            <Image src="/hero.jpg" width={500} height={500} alt='a' />
           </div>
         </div>
         <div className={`${styles.wrapeer} ${styles.content_wrapper}`}>

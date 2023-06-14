@@ -1,7 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600&display=swap');
 
+@font-face {
+  font-family: "ja-lp";  /* フォントに任意の名前を付けます */
+  src: url("/font/Senobi-Gothic-Bold.ttf") ;  /* フォントファイルのパスを指定します */
+  font-weight: 400;  /* フォントのウェイトを指定します */
+  font-style: normal;  /* フォントのスタイルを指定します */
+}
 
+@font-face {
+  font-family: "ja-lp-reg";
+  src: url("/font/Senobi-Gothic-Regular.ttf");
+}
 
 /*! destyle.css v4.0.0 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 

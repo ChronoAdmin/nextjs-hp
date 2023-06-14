@@ -1,0 +1,129 @@
+.wrap {
+    width: 100%;
+    background-color: rgb(35, 35, 35);
+    padding: 50px 0;
+    font-family: "ja-lp";
+    position: relative;
+}
+
+.title h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.worries_list {
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 3% 10%;
+}
+
+.worries_list li {
+    margin-bottom: 25px;
+    align-items: center;
+    gap: 10px;
+}
+
+.worries_list li:last-child  {
+    margin-bottom: 0;
+}
+
+.worries_list li p {
+    font-size: 24px;
+    display: inline-block;
+    margin-left: 10px;
+    position: relative;
+}
+
+.worries_list li p::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    width: 10px;
+    height: 5px;
+    border-left: 2px solid #25AF01;
+    border-bottom: 2px solid #25AF01;
+    transform: rotate(-45deg) translateY(-50%);
+}
+
+
+.i path {
+    stroke: rgb(255, 0, 85); /* 赤に変更 */
+}
+
+.wrap::before {
+    content: "";
+    position: absolute;
+    bottom: -70px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 0;
+    height: 0;
+    border-left: 130px solid transparent;  /* 三角形の右側 */
+    border-right: 130px solid transparent;  /* 三角形の左側 */
+    border-top: 70px solid rgb(35, 35, 35);  /* 三角形の下側 */
+}
+
+.down {
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+}
+
+@media screen and (max-width: 1280px) {
+    .down {
+        right: 0%;
+    }
+ }
+
+ @media screen and (max-width: 794px) {
+    .wrap {
+        padding: 70px 10px;
+    }
+
+    .title h2 {
+        font-size: 2rem;
+    }
+
+    .worries_list li p {
+        font-size: 18px;
+    }
+
+    .down {
+        display: none;
+    }
+
+    .i  {
+        display: none;
+    }
+    
+  }
+
+  @media screen and (max-width: 550px) {
+    .title h2 {
+        font-size: 1.7rem;
+    }
+    .wrap {
+        padding: 70px 10px 30px 10px;
+    }
+
+    .worries_list li p {
+        line-height: 1.5;
+    }
+
+    .wrap::before {
+        content: "";
+        position: absolute;
+        bottom: -40px;
+        left: 50%;
+        transform: translate(-50%);
+        width: 0;
+        height: 0;
+        border-left: 70px solid transparent;  /* 三角形の右側 */
+        border-right: 70px solid transparent;  /* 三角形の左側 */
+        border-top: 40px solid rgb(35, 35, 35);  /* 三角形の下側 */
+    }
+
+   }

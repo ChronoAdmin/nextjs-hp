@@ -1,0 +1,134 @@
+.wrap {
+    background-color: rgb(255, 255, 255);
+    padding: 5%;
+    font-family: "ja-lp-reg";
+}
+
+.title {
+    color: black;
+    text-align: center;
+}
+
+.title h2 {
+    font-size: 4vw;
+    margin-bottom: 20px;
+  }
+
+  .title p {
+    font-size: 14px;
+    color: #848484;
+  }
+
+.pricingTable {
+    min-width: 600px;
+    margin: 0 auto;
+    color: black;
+    margin-top: 50px;
+  }
+
+
+
+  .boxs {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: fit-content;
+  }
+
+  .plan {
+    width: 300px;
+    height: 600px;
+    border-right: 1px solid #e8e8e8;
+    padding: 30px 25px;
+    position: relative;
+  }
+
+  .plan:nth-child(3) {
+    border-right: none;
+  }
+
+  .planTitle {
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 20px;
+    position: relative;
+  }
+
+  .planTitle::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    width: 80%;
+    height: 5px;
+    border-radius: 50px;
+  }
+
+  .plan:nth-of-type(1) .planTitle::before{
+    background-color: rgb(50, 205, 153);
+  }
+  .plan:nth-of-type(2) .planTitle::before{
+    background-color: rgb(12, 82, 161);
+  }
+
+  .features {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .features li {
+    font-size: 16px;
+    color: #848484;
+  }
+
+  .check {
+    fill: rgb(0, 203, 101);  /* ここに色を指定します。 */
+    margin-right: 5px;
+  }
+
+  .last {
+    margin-top: 150px;
+    text-align: center;
+  }
+
+  .last h3 {
+    font-size: 20px;
+  }
+
+  .last h3 span {
+    font-size: 50px;
+  }
+  .plan:nth-child(1) .last h3 span {
+    font-size: 50px;
+    color: red;
+  }
+
+  .last .cta {
+    display: block;
+    padding: 10px;
+    background-color: rgb(50, 205, 153);
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 50px;
+    box-shadow: 5px 5px 20px rgba(50, 205, 153, 0.87);
+    color: #fff;
+    margin-top: 10px;
+  }
+  .last .main_cta {
+    display: block;
+    padding: 10px;
+    background-color: rgb(12, 82, 161);
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 50px;
+    box-shadow: 5px 5px 20px rgba(12, 82, 161, 0.87);
+    color: #fff;
+    margin-top: 10px;
+  }

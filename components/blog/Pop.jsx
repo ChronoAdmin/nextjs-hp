@@ -8,7 +8,7 @@ export const Pop = ({blogs}) => {
     <>
       <div className={styles.pop}>
         <Link href="/">
-          <Image src="/images/blog/chrono&ill.png" alt="" width={1920} height={1080} />
+          <Image src="/images/blog/chrono&ill.png" alt="a" width={1920} height={1080} />
           <div className={styles.ps}>
           </div>
         </Link>

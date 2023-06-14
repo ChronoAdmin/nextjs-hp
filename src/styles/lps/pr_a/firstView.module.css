@@ -1,0 +1,152 @@
+.wrap {
+  width: 100%;
+  background-color: rgb(255, 238, 0);
+  padding: 150px 3%;
+  font-family: "ja-lp";
+}
+
+.wrap .contents {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.wrap .left {
+  position: relative;
+  padding: 50px 1%;
+  padding-left: 100px;
+  z-index: 20;
+}
+
+.left .box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.logo img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.left .title {
+  font-size: 4rem;
+  background: linear-gradient(90deg, #4158D0, #C850C0 30%, #FFCC70);
+  background: -webkit-linear-gradient(0deg, #4158D0, #C850C0 30%, #FFCC70);
+  -webkit-background-clip: text;
+
+  color: transparent;
+}
+
+.left .cta {
+  display: flex;
+  margin-top: 50px;
+  gap: 50px;
+}
+
+.left .cta a {
+    padding: 25px 15px;
+    font-size: 20px;
+    transition: all 0.3s;
+    border-radius: 0px;
+    color: #fff;
+    margin-right: 20px;
+    animation: anim1 4s infinite ease-in-out;  /* アニメーションの時間を調整し、ease-in-outを追加 */
+  }
+
+  .left .cta a:nth-child(1){
+    background-image: linear-gradient(90deg, rgba(141, 139, 226, 1), rgba(253, 187, 203, 1));
+  }
+  
+.left .cta a:nth-child(2) {
+  background-image: linear-gradient(90deg, rgba(255, 55, 216, 1), rgba(161, 15, 255, 1));
+    animation-delay: 3s;
+  }
+  
+  @keyframes anim1 {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(5px);  /* 中間状態を追加 */
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  @keyframes anim2 {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(5px);  /* 中間状態を追加 */
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  
+ 
+
+
+.wrap .right {
+    position: absolute;
+    top: 5px;
+    right: 5%;
+    z-index: 10;
+}
+
+@media screen and (max-width: 1500px) {
+    .right {
+        /* opacity: .5; */
+        z-index: 0;
+    }
+ }
+
+ @media screen and (max-width: 727px) {
+    .wrap .left {
+        padding: 50px 1%;
+        padding-left: 0px;
+      }
+  }
+
+  @media screen and (max-width: 550px) {
+    .wrap {
+        padding: 50px 10px;
+    }
+    .left .title {
+        font-size: 2.5rem;
+    }
+    .left .cta {
+        display: flex;
+        margin-top: 50px;
+        gap: 10px;
+      }
+
+      .left .cta a {
+        padding: 20px 10px;
+        font-size: 18px;
+        transition: all 0.3s;
+        border-radius: 0px;
+        color: #fff;
+        margin-right: 20px;
+        animation: anim1 4s infinite ease-in-out;  /* アニメーションの時間を調整し、ease-in-outを追加 */
+      }
+
+      .right {
+        z-index: 0;
+      }
+   }
