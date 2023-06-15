@@ -23,7 +23,7 @@ const UserVoice = () => {
                 </div>
                 <span>群馬県/イベントプランナー</span>
                 <span>
-                  綿引ルイ<span>様</span>
+                  綿引<span>様</span>
                 </span>
               </div>
             </div>
@@ -43,9 +43,9 @@ const UserVoice = () => {
                     alt='a'
                   />
                 </div>
-                <span>群馬県/イベントプランナー</span>
+                <span>埼玉県/飲食店経営</span>
                 <span>
-                  綿引ルイ<span>様</span>
+                  吉田<span>様</span>
                 </span>
               </div>
             </div>
@@ -69,6 +69,10 @@ const UserVoice = () => {
             <div className={styles.up}>
               <h3>
                 \ 広告費<span>755円</span> & 3日間でインプレッション数
+                <span>16910</span>回UP! /
+              </h3>
+              <h3>
+                \ 広告費<span>755円</span> & 3日間で<br />インプレッション数
                 <span>16910</span>回UP! /
               </h3>
             </div>

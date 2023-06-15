@@ -1,128 +1,220 @@
 .wrap {
-    background-color: rgb(255, 255, 255);
-    padding: 5%;
-    font-family: "ja-lp";
+  background-color: rgb(255, 255, 255);
+  padding: 5%;
+  font-family: "ja-lp";
 }
 
 .inner {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .inner h2 {
-    text-align: center;
-    font-size: 4vw;
-    color: black;
+  text-align: center;
+  font-size: 4vw;
+  color: black;
 }
 
 .boxs {
-    width: 70%;
-    min-width: 800px;
-    margin-top: 50px;
+  width: 70%;
+  min-width: 800px;
+  margin-top: 50px;
 }
 
 .boxs h3 {
-    font-size: 2rem;
-    padding: 10px;
-    text-align: center;
-    background-color: rgb(50, 205, 153);
-
+  font-size: 2rem;
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(50, 205, 153);
 }
-
 
 .contents {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px;
-    color: black;
-    position: relative;
-    z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  color: black;
+  position: relative;
+  z-index: 3;
 }
-
-
 
 .arrow {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    background-color: rgba(50, 205, 153, 0.226);
-    height: 50px;
-    width: 97%;
-    z-index: 2; 
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: rgba(50, 205, 153, 0.226);
+  height: 50px;
+  width: 97%;
+  z-index: 2;
 }
 
-.arrow::after{
-    content: '';
+.arrow::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-left: 30px solid rgba(50, 205, 153, 0.226);
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  height: 300px;
+  z-index: 4;
+}
+
+.box img {
+  object-fit: cover;
+}
+
+.boxs:nth-of-type(2) h3 {
+  background-color: rgb(12, 82, 161);
+}
+.boxs:nth-of-type(2) .arrow {
+  background-color: rgb(12, 82, 161, 0.226);
+}
+.boxs:nth-of-type(2) .arrow::after {
+  border-left: 30px solid rgba(12, 82, 161, 0.226);
+}
+
+.boxs:nth-of-type(2) {
+  margin-top: 100px;
+}
+
+.cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 350px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 20px;
+  margin: 0 auto;
+  background-color: rgb(50, 205, 153);
+  box-shadow: 5px 5px 20px rgba(50, 205, 153, 0.87);
+  font-family: "ja-lp";
+
+}
+.main_cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 350px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 20px;
+  margin: 0 auto;
+  background-color: rgb(12, 82, 161);
+  box-shadow: 5px 5px 20px rgba(12, 82, 161, 0.87);
+  font-family: "ja-lp";
+}
+
+@media screen and (max-width: 850px) {
+  .boxs {
+    width: 70%;
+    min-width: 350px;
+    margin-top: 50px;
+  }
+  .contents {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(50, 205, 153, 0.226);
+    height: 97%;
+    width: 50px;
+    z-index: 2;
+  }
+
+  .arrow::after {
+    content: "";
     position: absolute;
     display: block;
     width: 0;
     height: 0;
-    right: -30px;
-    top: 50%;
-    transform: translateY(-50%);
-    border-left: 30px solid rgba(50, 205, 153, 0.226);
-    border-top: 30px solid transparent;
-    border-bottom: 30px solid transparent;
+    left: 50%;
+    bottom: -60px;
+    top: unset;
+    right: unset;
+    transform: translateX(-50%);
+    border-top: 30px solid rgba(50, 205, 153, 0.226);
+    border-right: 30px solid transparent;
+    border-left: 30px solid transparent;
   }
 
+  .boxs:nth-of-type(2) .arrow {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(12, 82, 161, 0.226);
+    height: 97%;
+    width: 50px;
+    z-index: 2;
+  }
 
-.box {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    position: relative;
-    height: 300px;
-    z-index: 4;
-}
-
-.box img {
-    object-fit: cover;
-}
-
-.boxs:nth-of-type(2) h3 {
-    background-color: rgb(12, 82, 161);
-}
-.boxs:nth-of-type(2) .arrow {
-    background-color: rgb(12, 82, 161,0.226);
-}
 .boxs:nth-of-type(2) .arrow::after {
-    border-left: 30px solid rgba(12, 82, 161,0.226);
-}
-
-.boxs:nth-of-type(2) {
-    margin-top: 100px;
-}
-
-.cta {
-    height: 70px;
-    width: 350px;
-    border-radius: 50px;
-    cursor: pointer;
-    font-size: 20px;
+    content: "";
+    position: absolute;
     display: block;
-    margin: 0 auto;
-    background-color: rgb(50, 205, 153);
-    box-shadow: 5px 5px 20px rgba(50, 205, 153, 0.87);
-    font-family: "ja-lp";
+    width: 0;
+    height: 0;
+    left: 50%;
+    bottom: -60px;
+    top: unset;
+    right: unset;
+    transform: translateX(-50%);
+    border-top: 30px solid rgba(12, 82, 161, 0.226);
+    border-right: 30px solid transparent;
+    border-left: 30px solid transparent;
+  }
 
-}
-.main_cta {
-    height: 70px;
-    width: 350px;
-    border-radius: 50px;
-    cursor: pointer;
-    font-size: 20px;
-    display: block;
-    margin: 0 auto;
-    background-color: rgb(12, 82, 161);
-    box-shadow: 5px 5px 20px rgba(12, 82, 161, 0.87);
-    font-family: "ja-lp";
+  .cta {
+    height: 50px;
+    width: 330px;
+    margin-top: 30px;
+  }
+  .main_cta {
+    height: 50px;
+    width: 330px;
+    margin-top: 30px;
+  }
 
+  @media screen and (max-width: 790px) { 
+    .inner h2 {
+      text-align: center;
+      font-size: 3rem;
+      color: black;
+    }
+  }
+  @media screen and (max-width: 550px) { 
+    .inner h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: black;
+      margin-top: 20px;
+    }
+  }
 
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from "@/styles/lps/pr_a/plan.module.css";
 import Image from 'next/image';
+import Link from 'next/link';
 
 
 const Plan = () => {
@@ -26,7 +27,7 @@ const Plan = () => {
                             <h4>成果の確認</h4>
                         </div>
                     </div>
-                    <button className={styles.cta}>無料お試し</button>
+                    <Link href="instagram://user?username=chrono_office_pr" className={styles.cta}>無料お試し</Link>
                 </div>
                 <div className={styles.boxs}>
                     <h3>for 新規契約</h3>
@@ -45,7 +46,7 @@ const Plan = () => {
                             <h4>成果の確認</h4>
                         </div>
                     </div>
-                    <button className={styles.main_cta}>お見積もり</button>
+                    <Link href="/contact" className={styles.main_cta}>お見積もり</Link>
                 </div>
             </div>
         </div>

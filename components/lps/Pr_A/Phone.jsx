@@ -37,7 +37,7 @@ const Phone = ({x,y,z}) => {
     <>
       <div className={styles.box} ref={subRef}>
         <div className={styles.inner}>
-          <video src="/lps/pr_a/fv.mp4" autoPlay loop muted />
+          <video src="/lps/pr_a/fv2.mp4" autoPlay loop muted />
           <div
             className={`${styles.island_popup} ${
               isActive ? styles.active : ""

@@ -117,16 +117,16 @@ const Value = () => {
             ))}
             <div className={styles.cta} ref={subRef}>
               <h2>
-                今なら<Link href="/">@chrono_office_pr</Link>
+                今なら<Link href="instagram://user?username=chrono_office_pr" className={styles.insta_id}>@chrono_office_pr</Link>
                 をフォローすると無料で広告を１つ作成！
               </h2>
               <div>
-                <button>
+                <Link href="instagram://user?username=chrono_office_pr" className={styles.follow}>
                   <span>
                     <AiOutlineInstagram />
                     無料で作成
                   </span>
-                </button>
+                </Link>
                 <p>※instagramのプロフィールに遷移します</p>
               </div>
             </div>

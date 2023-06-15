@@ -15,90 +15,77 @@ const PricingTable = () => {
         <div className={styles.pricingTable}>
           <div className={styles.boxs}>
             <div className={styles.plan}>
-              <h3 className={styles.planTitle}>無料体験</h3>
+              <h3 className={styles.planTitle}>Hobby</h3>
               <ul className={styles.features}>
                 <li>
                   <BsCheck className={styles.check} />
-                  インスタアカウントのフォロー
+                  ターゲット層の選定
                 </li>
                 <li>
                   <BsCheck className={styles.check} />
-                  ターゲット層の絞り込み
+                  広告デザイン作成
                 </li>
                 <li>
                   <BsCheck className={styles.check} />
                   成果の確認
-                </li>
-                <li>
-                  <BsCheck className={styles.check} />
-                  無料お試し
                 </li>
               </ul>
               <div className={styles.last}>
                 <h3>
                   <span>0</span>円
                 </h3>
-                <Link href="#aaa" className={styles.cta}>
+                <Link href="instagram://user?username=chrono_office_pr" className={styles.cta}>
                   無料お試し
                 </Link>
               </div>
             </div>
 
             <div className={styles.plan} id="aaa">
-              <h3 className={styles.planTitle}>新規契約</h3>
+              <h3 className={styles.planTitle}>Business</h3>
+                <span className={styles.den}>Hobbyプランに加え</span>
               <ul className={styles.features}>
                 <li>
                   <BsCheck className={styles.check} />
-                  無料お見積もり
+                  本投稿までの修正無制限
                 </li>
                 <li>
                   <BsCheck className={styles.check} />
-                  広告の出稿/分析
+                  広告分析ツールの使用
                 </li>
                 <li>
                   <BsCheck className={styles.check} />
-                  成果の確認
-                </li>
-                <li>
-                  <BsCheck className={styles.check} />
-                  お見積もり
+                  ターゲット数無制限
                 </li>
               </ul>
               <div className={styles.last}>
                 <h3>
                   <span>50</span>円/c
                 </h3>
-                <Link href="#aaa" className={styles.main_cta}>
+                <Link href="/contact" className={styles.main_cta}>
                 無料見積もり
                 </Link>
               </div>
             </div>
 
             <div className={styles.plan}>
-              <h3 className={styles.planTitle}>新規契約</h3>
+              <h3 className={styles.planTitle}>Advanced</h3>
+              <span className={styles.den}>Businessプランに加え</span>
+
               <ul className={styles.features}>
                 <li>
                   <BsCheck className={styles.check} />
-                  無料お見積もり
+                  誘導先のLP作成
                 </li>
                 <li>
                   <BsCheck className={styles.check} />
-                  広告の出稿/分析
-                </li>
-                <li>
-                  <BsCheck className={styles.check} />
-                  成果の確認
-                </li>
-                <li>
-                  <BsCheck className={styles.check} />
-                  お見積もり
+                  LPのアナリティクス診断
                 </li>
               </ul>
               <div className={styles.last}>
                 <h3>
                 <span>50</span>円/c
                 </h3>
-                <Link href="#aaa" className={styles.main_cta}>
+                <Link href="/contact" className={styles.main_cta}>
                   無料見積もり
                 </Link>
               </div>
