@@ -19,7 +19,7 @@ const FirstView = () => {
               </h1>
             </div>
             <div className={styles.cta}>
-              <Link href="/contact">お見積もり</Link>
+              <Link href="/">お見積もり</Link>
               <Link href="instagram://user?username=chrono_office_pr">無料で広告を作成</Link>
             </div>
           </div>
