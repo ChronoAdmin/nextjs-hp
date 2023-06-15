@@ -34,7 +34,10 @@ const PricingTable = () => {
                 <h3>
                   <span>0</span>円
                 </h3>
-                <Link href="instagram://user?username=chrono_office_pr" className={styles.cta}>
+                <Link
+                  href="instagram://user?username=chrono_office_pr"
+                  className={styles.cta}
+                >
                   無料お試し
                 </Link>
               </div>
@@ -42,7 +45,7 @@ const PricingTable = () => {
 
             <div className={styles.plan} id="aaa">
               <h3 className={styles.planTitle}>Business</h3>
-                <span className={styles.den}>Hobbyプランに加え</span>
+              <span className={styles.den}>Hobbyプランに加え</span>
               <ul className={styles.features}>
                 <li>
                   <BsCheck className={styles.check} />
@@ -59,10 +62,10 @@ const PricingTable = () => {
               </ul>
               <div className={styles.last}>
                 <h3>
-                  <span>50</span>円/c
+                  <span>50</span>円/click ※1
                 </h3>
                 <Link href="/contact" className={styles.main_cta}>
-                無料見積もり
+                  無料見積もり
                 </Link>
               </div>
             </div>
@@ -83,7 +86,7 @@ const PricingTable = () => {
               </ul>
               <div className={styles.last}>
                 <h3>
-                <span>50</span>円/c
+                  約<span>5</span>万円 ※2
                 </h3>
                 <Link href="/contact" className={styles.main_cta}>
                   無料見積もり
@@ -91,6 +94,10 @@ const PricingTable = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div className={styles.tyuui}>
+          <p>※1上限設定で料金プランも変更できますので、まずはご相談を</p>
+          <p>※2ページ数やライティングなどによって変動します</p>
         </div>
       </div>
     </>

@@ -180,3 +180,14 @@
     margin-top: 20px;
   }
 }
+
+.tyuui {
+  font-size: 14px;
+  color: #848484;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.tyuui p {
+  margin-bottom: 10px;
+}
