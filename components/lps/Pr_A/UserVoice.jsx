@@ -13,8 +13,7 @@ const UserVoice = () => {
             <div className={styles.voice}>
               <div className={styles.comment}>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Optio, quos?
+                  イベントを開催するにあたってインスタ広告を作成して頂きました。低予算にも関わらずフォローに繋がってイベントの認知度も向上できました！
                 </p>
               </div>
               <div className={styles.user}>
@@ -30,8 +29,7 @@ const UserVoice = () => {
             <div className={styles.voice}>
               <div className={styles.comment}>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Optio, quos?
+                  最近はSNSが強いと聞いて自社用のアカウントを作成しましたが、集客に繋げる方法がわからずに放置状態でした。そこで代行で広告をお願いしたところ予約が20%増えたので広告の効果を実感できました！
                 </p>
               </div>
               <div className={styles.user}>
