@@ -1,29 +1,66 @@
-
+import React, { useEffect, useRef } from "react";
+import styles from "@/styles/home/About.module.css";
+import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
-import styles from "../../src/styles/home/About.module.css";
+import { MdKeyboardArrowRight } from "react-icons/md";
 
+export const About = () => {
+  const imageRef = useRef(null);
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      // Check if we're in a browser environment
+      const SimpleParallax = require("simple-parallax-js");
+      const imageElement = imageRef.current;
+      const parallaxInstance = new SimpleParallax(imageElement, {
+        scale: 1.35,
+        delay: 1,
+      });
 
-
-export const About = () => {  
+      // Clean up function
+      return () => {
+        parallaxInstance.destroy();
+      };
+    }
+  }, []);
 
   return (
     <>
-      <section className={styles.about} id="about" >
-        <div className={styles.wrap}>
-          <div className={styles.inner}>
-            <div className={styles.left}>
-              <h2><span style={{color: "rgb(255, 0, 85)"}}>C</span>hrono<br />Office</h2>
+      <div className={styles.wrap}>
+        <div className={styles.about_text}>
+          <div className={styles.left}>
+            <div>
+              <span>About</span>
+              <h2>Chrono-Officeについて</h2>
             </div>
-            <div className={styles.right} style={{padding:"2vw"}}>
-              <h2>about</h2>
-              <p>Chrono officeは、群馬県高崎市を中心に活動するホームページ制作会社です。<br />Next.jsとmicroCMSを用いた、素早く美しく機能的なWebサイトのを強みに活動しています。<br />他にも、お客様のビジネスの成功へのソリューションの提供、サイトを運用するうえでのアフターフォローなど。<br /><br />単なる制作会社として「Webサイトをつくるだけ」ではなく、<br />いつまでもお客様の役に立つ、「制作＋α」の価値を提供する存在に。<br /><br />私たちはお客様とともに、常に新しい価値を生み出すWebサイト制作・運用を目指しています。</p>
-              <Link href=""><span>more</span></Link>
+            <div className={styles.left_txt}>
+              <p>2022年9月に設立</p>
+              <p>
+                群馬県を拠点に、大阪.京都.福岡県.でHP作成やSNS広告代行に始まり、
+                <br />
+                MEO対策やイベント企画まで幅広い業務を行っております。
+              </p>
+            </div>
+          </div>
+          <div className={styles.right}>
+            <div>
+              <Link href="/">
+                About More
+                <MdKeyboardArrowRight />
+              </Link>
             </div>
           </div>
         </div>
-      </section>
+        <div className={styles.about_imgs}>
+          <div className={styles.imageContainer}>
+            <img src="/images/About/about.webp" ref={imageRef} />
+          </div>
+          <div className={styles.imgTitle}>
+            <h2>Low price & high quality</h2>
+            <p>低価格高品質の提供でお客様のビジネスの成長を後押し致します。</p>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

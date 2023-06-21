@@ -1,6 +1,5 @@
 import { client } from "../../libs/client";
 import { About } from "../../components/home/About";
-import { Blog } from "../../components/Blog";
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 import styles from "@/styles/home/index.module.css";
@@ -8,13 +7,10 @@ import Image from "next/image";
 import hoverEffect from "hover-effect";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { Hero } from "../../components/home/Hero";
 import Circle from "../../components/Circle";
-import { TopLoading } from "../../components/home/TopLoading";
-import { Accordion } from "../../components/home/Accordion";
 import HeroMain from "../../components/home/HeroMain";
+import Service from "../../components/home/Service";
 gsap.registerPlugin(ScrollTrigger);
-
 
 // SSG
 export const getStaticProps = async () => {
@@ -81,25 +77,12 @@ export default function Home({ articles, categoryUrls }) {
       },
     });
   }, []);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    if (loading) {
-      const timer = setTimeout(() => {
-        setLoading(false);
-      }, 3000);
-  
-      return () => clearTimeout(timer);
-    }
-  }, [loading]);
 
   return (
     <>
-    {loading ? <TopLoading /> : null}
-
-    <Circle />
-    {!loading ? <HeroMain /> : null}
-      <div className="wrap">
+      <Circle />
+      <HeroMain />
+      <div className="wrap" style={{ marginTop: "100vh" }}>
         <div className="inner">
           {/* <div className={styles.widthArea} >
             <div className={styles.img}>
@@ -139,8 +122,10 @@ export default function Home({ articles, categoryUrls }) {
             </div>
           </div> */}
           <About />
-          <Blog articles={articles} />
-          <Accordion />
+          <Service />
+          {/* <Blog articles={articles} /> */}
+          
+          {/* <Accordion /> */}
         </div>
       </div>
     </>

@@ -1,12 +1,107 @@
-.about {
-  position: relative;
-  width: 100%;
-  font-family: "Shippori Mincho", serif;
-}
+
 
 .wrap {
+  width: 94%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
 
-  padding: 0 2vw;
+.about_text {
+  width: 70%;
+  display: flex;
+  margin: 0 auto;
+  border-bottom: 1px solid #8d8d8d;
+}
+
+.left {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding: 50px;
+}
+
+.left span {
+  color: #c1c1c1;
+}
+
+.left h2 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.left_txt p {
+  letter-spacing: 2px;
+  margin-bottom: 3px;
+  line-height: 1.5;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 50px;
+}
+
+.right div a {
+  display: flex;
+  align-items: center;
+}
+
+.right div a {
+  padding: 10px;
+  letter-spacing: 3px;
+  transition: all .3s ease-in-out;
+}
+.right div a:hover {
+  letter-spacing: 1px;
+  opacity: .7;
+}
+
+/* about_imgs ----------------------------------------------------------- */
+
+.about_imgs {
+  width: 100%;
+  position: relative;
+  height: 400px;
+  margin-top: 100px;
+}
+
+.imageContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1000px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+
+
+.imgTitle {
+  position: absolute;
+  top: 20%;
+  right: 0;
+  z-index: 3;
+}
+
+.imgTitle h2 {
+  font-size: 5rem;
+  color: #c1c1c1;
+}
+.imgTitle p {
+  font-size: 1rem;
+  text-align: right;
+  margin-top: 30px;
 }
 
 .inner {
@@ -15,100 +110,92 @@
   margin-top: 40px;
 }
 
-.left {
-  width: 40%;
-  position: relative;
-}
-
-.left h2 {
-  width: auto;
-  max-width: none;
-  color: #fff;
-  text-align: left;
-  text-transform: uppercase;
-  margin-top: 0;
-  margin-bottom: 0;
-  font-family: Roboto, sans-serif;
-  font-size: 77px;
-  font-weight: 400;
-  line-height: 1em;
-  position: relative;
-  z-index: 11;
-}
-
-
-
-.right {
-  width: 60%;
-  position: relative;
-  z-index: 100;
-}
-
-.right h2 {
-font-size: 24px;
-text-transform: uppercase;
-
-}
-
-.right p {
-  text-align: left;
-  margin-top: 40px;
-  font-size: 14px;
-  line-height: 1.5em;;
-}
-
-.right a {
-  width: auto;
-  -webkit-text-fill-color: inherit;
-  background-color: rgba(0, 0, 0, 0);
-  background-clip: border-box;
-  border: 1px solid #fff;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  margin-top: 40px;
-  display: inline-block;
-  position: relative;
-  padding: 10px 20px;
-
-}
-
-@media screen and (max-width: 1024px) {
-  .wrap {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-  .inner {
-    display: block;
-  }
-  .left {
+/* 1280 */
+@media screen and (max-width: 1280px) {
+  .imageContainer {
     width: 100%;
   }
-  .left h2 {
-    font-size: 62px;
-  }
-  .left img {
-    width: 60%;
-    top: -30%;
-  }
-  .right{
+  
+  .imageContainer::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.265);
+    height: 100%;
     width: 100%;
-    text-align: left;
-    margin-top: 40px;
+    z-index: 2;
   }
-  .right p {
-    margin-top: 12px;
+
+  .imgTitle h2 {
+    font-size: 3rem;
+    color: #c1c1c1;
+  }
+
+  .imgTitle p {
+    font-size: 1rem;
+    text-align: right;
+    margin-top: 30px;
+  }
+
+  
+  .imgTitle {
+    padding: 10px;
   }
  }
 
- @media screen and (max-width: 600px) {
-  .left img {
-    width: 80%;
-    top: -10%;
+ /* 794 */
+ @media screen and (max-width: 794px) {
+
+  .about_text {
+    flex-direction: column;
+  }
+
+  .left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+  }
+
+  .about_imgs {
+    width: 100vw;
+    margin: 0 calc(50% - 50vw);
+    height: 250px;
+    margin-top: 50px;
+  }
+
+
+  .imgTitle h2 {
+    font-size: 1.5rem;
+  }
+
+  .imgTitle p {
+    font-size: 1rem;
+    text-align: left;
+    margin-top: 10px;
   }
   }
- 
-  @media screen and (max-width: 490px) {
-    .left h2 {
-      font-size: 52px;
-    }
-   }
+
+/* 1111 */
+@media screen and (max-width: 1111px) { 
+  .about_text {
+    width: 100%;
+  }
+
+  .right {
+    flex: 1;
+    padding: 20px;
+    align-items: flex-end;
+  }
+}
+
+/* 600 */
+@media screen and (max-width: 600px) { 
+  .about_text {
+    width: 100vw;
+    margin: 0 calc(50% - 50vw);
+    padding: 0 5px;
+  }
+}

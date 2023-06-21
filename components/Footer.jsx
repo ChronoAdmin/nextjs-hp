@@ -46,14 +46,15 @@ export const Footer = ({ onFormSubmitSuccess }) => {
     <>
       <footer className={styles.footer}>
         <div className={styles.footer_video}>
-          <video
+          {/* <video
             src="/images/footer_video.mp4"
             autoPlay
             loop
             muted
             playsInline={true}
             loading="lazy"
-          ></video>
+          ></video> */}
+          <div></div>
         </div>
         <div className={styles.container}>
           <div className={styles.row}>

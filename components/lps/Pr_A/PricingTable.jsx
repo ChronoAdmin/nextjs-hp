@@ -4,6 +4,8 @@ import { BsCheck } from "react-icons/bs";
 import Link from "next/link";
 
 const PricingTable = () => {
+
+
   return (
     <>
       <div className={styles.wrap}>
@@ -100,6 +102,8 @@ const PricingTable = () => {
           <p>※2ページ数やライティングなどによって変動します</p>
         </div>
       </div>
+
+
     </>
   );
 };

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Roboto+Slab:wght@300&display=swap');
 
 @font-face {
   font-family: "ja-lp";  /* フォントに任意の名前を付けます */
@@ -28,12 +28,10 @@
   margin-block-end: 0;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-
   -webkit-margin-before: 0;
   margin-block-start: 0;
   -webkit-margin-after: 0;
   margin-block-end: 0;
-
 }
 
 /* Document */
@@ -213,7 +211,7 @@ html,
 body {
   overflow-x: hidden;
   color: #fff;
- font-family:  'Oswald', sans-serif;;
+ font-family:  'Klee One', sans-serif;;
  background-color: #191921;
 
   /* font-family: 'Shippori Mincho', serif;  */
@@ -231,14 +229,16 @@ body {
   position: relative;
   width: 100%;
   margin: 0 auto;
-  background-color: #191921;
+  /* background-color: #191921; */
+  background-color: #000;
   z-index: 2;
+  border-radius: 50px 50px 0 0;
+  padding: 25px 50px;
 }
 
 
 .inner {
-  width: 80%;
-  min-width: 300px;
+  width: 100%;
   margin: 0 auto;
   padding-bottom: 100px;
 }
@@ -249,88 +249,4 @@ body {
   }
  }
  
-
-.scroll {
-  width: 70px;
-  height: 70px;
-  position: absolute;
-  right: 10px;
-  margin-left: -30px;
-  bottom: 0px;
-  z-index: 5;
-}
- 
-.arrows {
-  height: 70px;
-  width: 70px;
-}
-
-
-.arrows path {
-  stroke: rgb(2, 73, 73);
-  fill: transparent;
-  stroke-width: 1px;  
-  animation: arrow 2s infinite;
-  -webkit-animation: arrow 2s infinite; 
-}
-
-@keyframes arrow
-{
-0% {opacity:0}
-40% {opacity:1}
-80% {opacity:0}
-100% {opacity:0}
-}
-
-@-webkit-keyframes arrow /*Safari and Chrome*/
-{
-0% {opacity:0}
-40% {opacity:1}
-80% {opacity:0}
-100% {opacity:0}
-}
-
-.arrows path.a1 {
-  animation-delay:-1s;
-  -webkit-animation-delay:-1s; /* Safari 和 Chrome */
-}
-
-.arrows path.a2 {
-  animation-delay:-0.5s;
-  -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
-}
-
-.arrows path.a3 { 
-  animation-delay:0s;
-  -webkit-animation-delay:0s; /* Safari 和 Chrome */
-}
-
-
- 
-
- .com {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 40vh;
-  background-color: #154647;
-  width: 100%;
-  backdrop-filter: blur(10px);
-  position: relative;
-  z-index: 1;
-  background-image: url("/images/Plan/plan_bg.jpg");
-  background-size: cover;
-  background-position: center;
- }
- .com::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  backdrop-filter: blur(10px);
- }
-
 

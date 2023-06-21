@@ -5,9 +5,10 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
 
-gsap.registerPlugin(ScrollTrigger);
 
 export const Blog = ({ articles }) => {
+  gsap.registerPlugin(ScrollTrigger);
+
   const latestArticles = articles.slice(0, 5);
 
   return (
@@ -43,8 +44,8 @@ export const Blog = ({ articles }) => {
               </div>
             </div>
 
-            <Link href="" className={styles.more}>
-              <span>more</span>
+            <Link href="/blog" className={styles.more}>
+              <span>Blog More</span>
             </Link>
           </div>
         </div>

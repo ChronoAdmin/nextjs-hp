@@ -8,26 +8,6 @@ import MouseFollower from "../../components/MouseFollower";
 
 
 export default function App({ Component, pageProps }) {
-  // useEffect(() => {
-  //   let lastScrollTop = 0;
-
-  //   const handleScroll = () => {
-  //     const currentScrollTop = window.pageYOffset;
-  //     const delta = currentScrollTop - lastScrollTop;
-
-  //     if (delta > 0 && lastScrollTop > 0) {
-  //       window.scrollTo(0, lastScrollTop + delta * 1.5);
-  //     }
-
-  //     lastScrollTop = currentScrollTop;
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
   return (
     <>
       <Head>
