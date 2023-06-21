@@ -1,11 +1,6 @@
 import Head from "next/head";
-import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import styles from "@/styles/ec/index.module.css";
-import Layout from "../../../components/Layout";
-import { AiOutlineShoppingCart, AiOutlineUser } from "react-icons/ai";
-import * as wanakana from "wanakana";
-import { Items } from "../../../components/ec/Items";
 import Header from "../../../components/ec/Header";
 
 export default function Home() {
@@ -38,7 +33,6 @@ export default function Home() {
       <div className={styles.wrap}>
         <Header />
         <main className={styles.main}>
-          <Items />
           <div>
             <h1>リニューアル中です...</h1>
             <h2>技術担当が頑張ってくれています...</h2>
