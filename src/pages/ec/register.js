@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import styles from "@/styles/ec/signin.module.css";
 import Header from "../../../components/ec/Header";
 import Link from "next/link";
-import valid from "../../../libs/valid";
 
 
 export default function Register() {
@@ -19,8 +18,7 @@ export default function Register() {
 
     const handleSubmit = e => {
         e.preventDefault()
-        const errMsg = valid(name, email, password,cf_password)
-        if(errMsg) console.log(errMsg)
+        
     }
 
   return (
