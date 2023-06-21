@@ -53,7 +53,7 @@ export const About = () => {
         </div>
         <div className={styles.about_imgs}>
           <div className={styles.imageContainer}>
-            <img src="/images/About/about.webp" ref={imageRef} />
+            <img src="/images/About/about.webp" ref={imageRef}  alt="about" />
           </div>
           <div className={styles.imgTitle}>
             <h2>Low price & high quality</h2>

@@ -55,10 +55,12 @@ const HeroMain = () => {
             width={1920}
             alt="heromain"
             ref={boxRef2}
+            priority="true"
+
           />
         </div>
         <div className={styles.inner}>
-          <Image src="/HatchfulExport-All/logo.png" height={300} width={300} className={styles.logo} ref={boxRef3} />
+          <Image src="/HatchfulExport-All/logo.png" height={300} width={300} className={styles.logo} ref={boxRef3} alt="logo" />
           <h1 ref={boxRef4}>Chrono-Office</h1>
         </div>
       </div>

@@ -2,15 +2,10 @@ import { client } from "../../libs/client";
 import { About } from "../../components/home/About";
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
-import styles from "@/styles/home/index.module.css";
-import Image from "next/image";
-import hoverEffect from "hover-effect";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
 import Circle from "../../components/Circle";
 import HeroMain from "../../components/home/HeroMain";
 import Service from "../../components/home/Service";
-gsap.registerPlugin(ScrollTrigger);
 
 // SSG
 export const getStaticProps = async () => {
@@ -45,38 +40,10 @@ export default function Home({ articles, categoryUrls }) {
   const router = useRouter();
   const handleFormSubmitSuccess = () => {
     router.push("/thanks");
+    
   };
-  const mvRef = useRef(null);
 
-  useEffect(() => {
-    if (mvRef.current) {
-      new hoverEffect({
-        parent: mvRef.current,
-        intensity: 0.3,
-        image1: "/images/width1.webp",
-        image2: "/images/width2.webp",
-        displacementImage: "/images/map.png",
-      });
-    }
-  }, [mvRef]);
 
-  useEffect(() => {
-    gsap.set(textRef.current, { opacity: 0 });
-    gsap.from(textRef.current, {
-      y: "50px",
-    });
-    gsap.to(textRef.current, {
-      y: "0px",
-      opacity: 1,
-      duration: 2,
-      ease: "power4.out",
-      scrollTrigger: {
-        trigger: "#width",
-        start: "top 80%",
-        end: "center center",
-      },
-    });
-  }, []);
 
   return (
     <>
