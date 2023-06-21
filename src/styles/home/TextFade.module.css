@@ -1,0 +1,31 @@
+.wrap {
+    width: 100vw;
+    margin: 0 calc(50% - 50vw);
+    position: relative;
+    margin-top: 5vw;
+    display: flex;
+    flex-direction: column;
+    background-image: url(/images/TextFade.webp);
+    background-size: cover;
+    background-position: center center;
+    padding: 1vw 0;
+}
+
+.wrap span {
+    font-size: 5rem;
+    white-space: nowrap;
+    mix-blend-mode: difference;
+    font-family: "Oswald";
+    letter-spacing: 5px;
+    transition: all .05s ease-in-out;
+}
+
+
+@media screen and (max-width: 700px) {
+    .wrap span {
+        font-size: 2rem;
+        white-space: nowrap;
+        mix-blend-mode: difference;
+        font-family: "Oswald";
+    }
+ }

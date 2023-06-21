@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import Circle from "../../components/Circle";
 import HeroMain from "../../components/home/HeroMain";
 import Service from "../../components/home/Service";
+import TextFade from "../../components/home/TextFade";
 
 // SSG
 export const getStaticProps = async () => {
@@ -90,6 +91,7 @@ export default function Home({ articles, categoryUrls }) {
           </div> */}
           <About />
           <Service />
+          <TextFade />
           {/* <Blog articles={articles} /> */}
           
           {/* <Accordion /> */}

@@ -58,6 +58,9 @@
     padding: 0 50px;
     letter-spacing: 7px;
     opacity: 0;
+    font-family: "Oswald";
+    margin-top: 2vw;
+
 }
 
 
@@ -89,3 +92,24 @@
     width: 200px;
     opacity: 0;
 }
+
+
+@media screen and (max-width: 794px) {
+    .logo {
+        height: 100px;
+        width: 100px;
+        opacity: 0;
+    }
+
+
+.inner h1 {
+    font-size: 2rem;
+    color: aliceblue;
+    position: relative;
+    padding: 0 10px;
+    letter-spacing: 7px;
+    opacity: 0;
+    font-family: "Oswald";
+    margin-top: 2vw;
+}
+ }

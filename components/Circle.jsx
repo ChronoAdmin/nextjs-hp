@@ -33,7 +33,7 @@ const Circle = ({loading}) => {
         }}
         className="circle"
       >
-        <Image src="/circle.png" width={300} height={300} alt='a' />
+        <Image src="/circle.png" width={150} height={150} alt='a' />
         <div>{Math.round(scrollPercentage)}%</div>
       </div>
 
@@ -44,6 +44,7 @@ const Circle = ({loading}) => {
             top: 0;
             left: 0;
             z-index: 1;
+            transform: scale(0.5);
             
           }
           .circle div {

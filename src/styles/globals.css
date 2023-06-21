@@ -225,7 +225,7 @@ body {
 }
 
 .wrap {
-  max-width: 1920px;
+  /* max-width: 1920px; */
   position: relative;
   width: 100%;
   margin: 0 auto;
@@ -233,19 +233,25 @@ body {
   background-color: #000;
   z-index: 2;
   border-radius: 50px 50px 0 0;
-  padding: 25px 50px;
+  padding: 25px 50px 0 50px;
 }
 
 
 .inner {
   width: 100%;
   margin: 0 auto;
-  padding-bottom: 100px;
 }
 
 @media screen and (max-width: 1575px) {
   .inner {
     width: 94%;
+  }
+ }
+
+ @media screen and (max-width: 794px) { 
+  .wrap {
+    border-radius: 25px 25px 0 0;
+    padding: 25px 50px 0 50px;
   }
  }
  
