@@ -56,7 +56,6 @@ const HeroMain = () => {
             alt="heromain"
             ref={boxRef2}
             priority="true"
-
           />
         </div>
         <div className={styles.inner}>
