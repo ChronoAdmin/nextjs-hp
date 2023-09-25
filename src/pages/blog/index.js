@@ -5,7 +5,6 @@ import { News } from "../../../components/blog/News";
 import { client } from "../../../libs/client";
 import { Pop } from "../../../components/blog/Pop";
 import { TakasakiBlog } from "../../../components/blog/TakasakiBlog";
-import { Category } from "../../../components/blog/Category";
 import { Sidebar } from "../../../components/blog/allblog/Sidebar";
 
 export const getStaticProps = async () => {

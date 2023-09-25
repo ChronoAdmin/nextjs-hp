@@ -1,10 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "@/styles/hp/HeroMain.module.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Lenis from "@studio-freight/lenis";
+import Typing from 'react-typing-effect';
+
 
 const HeroMain = () => {
+
   useEffect(() => {
     // 794px以上の場合のみアニメーションを適用する
     if (window.innerWidth > 794) {
@@ -60,8 +63,9 @@ const HeroMain = () => {
               <h1>あなたの夢をコードに変える</h1>
               <h2>最先端のホームページ制作でビジネスを加速</h2>
             </div>
-            <div className={styles.typing}>
-              <h3>Your Dream = code + MyStack 😊</h3>
+            <div className={styles.spText}>
+            <h1>あなたの夢を<br />コードに変える</h1>
+              <h2>最先端のホームページ制作で<br />ビジネスを加速</h2>
             </div>
           </div>
         </section>
@@ -79,8 +83,9 @@ const HeroMain = () => {
               <h1>SEOに優れたホームページ</h1>
               <h2>NetxJsを使用し、サイト評価の向上化やSEO対策を行います。</h2>
             </div>
-            <div className={styles.typing}>
-              <h3>Highly rated sites = NextJs 😊</h3>
+            <div className={styles.spText}>
+              <h1>SEOに優れた<br />ホームページ</h1>
+              <h2>NetxJsを使用し、サイト評価の<br />向上化やSEO対策を行います。</h2>
             </div>
           </div>
         </section>
@@ -101,8 +106,9 @@ const HeroMain = () => {
               <h1>低価格高品質</h1>
               <h2>開発速度の向上化で制作コスト削減</h2>
             </div>
-            <div className={styles.typing}>
-              <h3>LowPrice + High Quality 😊</h3>
+            <div className={styles.spText}>
+              <h1>低価格高品質</h1>
+              <h2>開発速度の向上化で制作コスト削減</h2>
             </div>
           </div>
         </section>
@@ -122,8 +128,9 @@ const HeroMain = () => {
               <h1>持続可能なホームページ</h1>
               <h2>作成して終わりではなく、長期的なサポートを</h2>
             </div>
-            <div className={styles.typing}>
-              <h3>SustainableSites = Long Term Support 😊</h3>
+            <div className={styles.spText}>
+              <h1>持続可能な<br />ホームページ</h1>
+              <h2>作成して終わりではなく、長期的なサポートを</h2>
             </div>
           </div>
         </section>

@@ -1,0 +1,168 @@
+.F {
+    color: #55CCFF;
+    text-shadow: 0 0 5px #2f6e8a;
+    font-size: 30px;
+}
+.I {
+    color: #D84084;
+    text-shadow: 0 0 5px #772248;
+    font-size: 30px;
+}
+
+.wrap {
+  
+}
+
+
+.title {
+    font-family: "impact";
+    margin-bottom: 50px;
+}
+
+.title h2 {
+    font-size: 64px;
+}
+
+.title span {
+    font-size: 20px;
+}
+
+.box {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 10vw;
+  flex-shrink: 0;
+  margin-bottom: 50px;
+}
+
+.border {
+  height: 200px;
+  width: 4px;
+  background-color: rgb(57, 57, 57);
+}
+
+.img {
+  height: 560px;
+  height: 30vw;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px #b4b4b497;
+  border-radius: 20px 0 20px 0;
+  overflow: hidden;
+}
+
+.img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.description {
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.description p {
+    text-shadow: 0 0 5px #0000003b;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.text p {
+  font-size: 5rem;
+  text-align: center;
+  font-family: "impact";
+}
+
+.text a {
+  display: block;
+  width: 60%;
+  padding: 20px 20px;
+  background-color: rgb(0, 0, 0);
+  margin: 0 auto;
+  text-align: center;
+  max-width: 700px;
+}
+
+
+@media screen and (max-width: 794px) { 
+  .title h2 {
+    font-size: 42px;
+  }
+
+  .title span {
+    font-size: 16px;
+  }
+
+  .box {
+    position: relative;
+    height: 360px;
+  }
+
+  .border {
+    display: none;
+  }
+
+  .img {
+    height: 360px;
+    /* height: 30vw; */
+    width: 350px;
+    position: absolute;
+    right: 0;
+  }
+
+  .description {
+    font-size: 18px;
+    position: absolute;
+    bottom: 0;
+    background-color: #ffffffb0;
+    border-radius: 20px;
+    color: #000;
+    z-index: 2;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .img {
+    height: 360px;
+    /* height: 30vw; */
+    width: 350px;
+    position: absolute;
+    right: unset;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .description {
+    font-size: 18px;
+    position: absolute;
+    bottom: 0;
+    background-color: #ffffffd2;
+    border-radius: 20px;
+    color: #000;
+    z-index: 2;
+    padding: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 350px;
+  }
+
+  .text p {
+    font-size: 2rem;
+    text-align: center;
+    font-family: "impact";
+  }
+ }

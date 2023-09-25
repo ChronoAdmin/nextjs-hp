@@ -10,7 +10,6 @@ const HeroMain = () => {
   const boxRef3 = useRef(null);
   const boxRef4 = useRef(null);
   useEffect(() => {
-
     gsap.from(boxRef2.current, {
       y: "-50px",
     });
@@ -42,7 +41,6 @@ const HeroMain = () => {
       delay: 1.5,
       ease: "power4.out",
     });
-
   });
 
   return (
@@ -50,7 +48,7 @@ const HeroMain = () => {
       <div className={styles.wrap} id="wrap">
         <div className={styles.img}>
           <Image
-            src="/hero.webp"
+            src="/images/bg.svg"
             height={1080}
             width={1920}
             alt="heromain"
@@ -59,8 +57,25 @@ const HeroMain = () => {
           />
         </div>
         <div className={styles.inner}>
-          <Image src="/HatchfulExport-All/logo.png" height={300} width={300} className={styles.logo} ref={boxRef3} alt="logo" />
-          <h1 ref={boxRef4}>Chrono-Office</h1>
+          <span className={styles.cc}>
+            Chrono-office :)
+            <br />
+            Expand Your
+            <br />
+            Business
+          </span>
+          <span className={styles.rl}>
+            HP制作 / instagram広告 / MEO対策 / LP制作
+          </span>
+          <span className={styles.rb_img}>
+            <img src="/images/1.webp" alt="" />
+          </span>
+          <span className={styles.tr_text}>
+            <p>Web Design</p>
+            <p>HP Create</p>
+            <p>Ads Create</p>
+          </span>
+          <h1>Chrono-office</h1>
         </div>
       </div>
     </>

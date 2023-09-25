@@ -1,0 +1,76 @@
+
+.wrap {
+  height: 100vh;
+  width: 100%;
+  background-image: url(/ads_fv.webp);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  filter: saturate(1.3);
+  font-family: "impact";
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.logo_text {
+  width: fit-content;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-20%,-50%);
+}
+
+.insta {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 120px;
+  width: 120px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.facebook {
+  display: flex;
+}
+
+.text {
+  font-size: 8vw;
+  position: relative;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.629);
+  color: transparent;
+}
+
+.text::before {
+  position: absolute;
+  content:"Instagram";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: rgba(0,0,0,0);
+  background: linear-gradient(90deg,#FFCC55, #D84084, #5252CC);
+  background: -webkit-linear-gradient(0deg, #FFCC55, #D84084, #5252CC);
+  -webkit-background-clip: text;
+  text-shadow: none;
+}
+
+.facebook .text::before {
+  content: "Facebook";
+  background: linear-gradient(90deg, #0660FF, #55CCFF, #0660FF);
+  background: -webkit-linear-gradient(0deg, #0660FF, #55CCFF, #0660FF);
+  -webkit-background-clip: text;
+}
+
+.fv_h1 {
+  font-size: 10vw;
+  letter-spacing: -3px;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.629);
+}

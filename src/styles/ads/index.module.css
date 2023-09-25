@@ -1,0 +1,279 @@
+/* .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 160px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  z-index: 999;
+}
+
+.header.hidden {
+  transform: translateY(-160px);
+}
+
+.logo {
+  width: 180px;
+  height: 160px;
+  position: relative;
+  background-color: #ffffff;
+}
+
+.logo::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: rgb(224, 224, 224);
+}
+.logo::after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background-color: rgb(224, 224, 224);
+}
+
+.logo a {
+  display: block;
+  height: 100%;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+.nav {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  background-color: #ffffff;
+}
+
+.navlist {
+  display: flex;
+  height: 100%;
+  flex: 1 0 auto;
+  position: relative;
+}
+
+.navlist::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  height: 1px;
+  background-color: rgb(224, 224, 224);
+}
+
+.nav ul li {
+  width: 25%;
+  position: relative;
+  color: #333;
+}
+.nav ul li::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 1px;
+  background-color: rgb(224, 224, 224);
+}
+
+.nav ul li a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-size: 14px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  color: #938080;
+
+}
+.nav ul li a:hover {
+  background-color: #938080;
+  color: #ffffff;
+}
+
+
+
+.member {
+  width: 160px;
+  display: flex;
+}
+
+.member p {
+    font-size: 12px;
+}
+
+.member .login {
+  position: relative;
+  background-color: #ffffff;
+  color: #938080;
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+.member .login:hover {
+    background-color: #938080;
+    color: #ffffff;
+}
+
+.member .login::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #938080;
+}
+
+.member .cart {
+    background-color: rgb(167, 59, 40);
+    transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+.cart p {
+    transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+.cart .cart_icon {
+    transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+
+}
+
+.cart:hover p {
+display: none;
+}
+
+.cart:hover .cart_icon {
+    transform: scale(1.4);
+}
+
+.member a {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.member .cart_icon,
+.member .login_icon {
+  font-size: 20px;
+}
+
+
+.searchForm {
+  height: 80px;
+  display: flex;
+}
+
+.input {
+  flex: 1 1 0%;
+  font-size: 20px;
+  padding: 30px 40px;
+  background-color: rgb(242, 242, 242);
+  border: none;
+  color: #333;
+}
+
+.input:focus {
+  border: none;
+  outline: none;
+}
+
+.input::placeholder {
+    font-size: 12px;
+    text-align: center;
+}
+
+.searchButton {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  width: 160px;
+  height: 100%;
+  color: rgb(255, 255, 255);
+  background-color: #333;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  border: none;
+}
+
+
+
+.main {
+    background-color: rgb(229, 229, 229);
+}
+
+.main div {
+  height: 50vh;
+  width: 100%;
+  text-align: center;
+  color: #333;
+}
+
+.wrap {
+  background-color: rgb(229, 229, 229);
+    height: auto;
+    position: relative;
+    z-index: 0;
+} */
+
+
+.main {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  margin-top: 100vh;
+
+  /* background-color: #552727bb; */
+}
+
+.container {
+  backdrop-filter: blur(10px) grayscale(20%);
+  padding: 5vw;
+
+}
+/* 
+.main::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #55555586;
+  filter: blur(5px);
+} */
+
+
+
+

@@ -42,18 +42,10 @@ export const About = () => {
               </p>
             </div>
           </div>
-          <div className={styles.right}>
-            <div>
-              <Link href="/">
-                About More
-                <MdKeyboardArrowRight />
-              </Link>
-            </div>
-          </div>
         </div>
         <div className={styles.about_imgs}>
           <div className={styles.imageContainer}>
-            <img src="/images/About/about.webp" ref={imageRef}  alt="about" />
+            <img src="/images/About/about.svg" ref={imageRef}  alt="about" />
           </div>
           <div className={styles.imgTitle}>
             <h2>Low price & high quality</h2>

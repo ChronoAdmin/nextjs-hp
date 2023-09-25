@@ -50,11 +50,11 @@ export const Navigation = ({position}) => {
           </li>
           <li
             className={`${styles.list} ${
-              router.pathname === "/ec" ? styles.active : ""
+              router.pathname === "/ads" ? styles.active : ""
             }`}
             onClick={handleItemClick}
           >
-            <Link href="/ec">
+            <Link href="/ads">
               <span className={styles.icon}>
                 <BsBagCheck />
               </span>
@@ -80,7 +80,7 @@ export const Navigation = ({position}) => {
             }`}
             onClick={handleItemClick}
           >
-            <Link href="/blog/csr-demo/">
+            <Link href="/contact">
               <span className={styles.icon}>
                 <AiOutlineMail />
               </span>

@@ -7,7 +7,10 @@ import MouseFollower from "../../components/MouseFollower";
 
 
 
+
+
 export default function App({ Component, pageProps }) {
+
   return (
     <>
       <Head>

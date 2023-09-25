@@ -13,6 +13,16 @@
   src: url("/font/Senobi-Gothic-Regular.ttf");
 }
 
+@font-face {
+  font-family: "impact";
+  src: url("/font/impact-Font/impact.ttf");
+}
+
+@font-face {
+  font-family: "Glacial";
+  src: url("/font/GlacialIndifference-Bold.otf");
+}
+
 /*! destyle.css v4.0.0 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 
 /* Reset box-model and set borders */
@@ -198,8 +208,6 @@ samp {
  img {
   vertical-align: top;
  }
-
-
 
 
 ::selection {

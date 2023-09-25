@@ -1,9 +1,7 @@
 import styles from "@/styles/Blog.module.css";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import Image from "next/image";
 
 
 export const Blog = ({ articles }) => {

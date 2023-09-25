@@ -1,0 +1,154 @@
+.wrap {
+  margin: 10vw 0;
+}
+
+.title {
+  font-family: "impact";
+  margin-bottom: 50px;
+}
+
+.title h2 {
+  font-size: 64px;
+}
+
+.title span {
+  font-size: 20px;
+}
+
+.boxs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  gap: 1vw;
+  flex-wrap: wrap;
+}
+
+.box {
+  color: black;
+  height: 25vw;
+  width: 40%;
+  background-color: rgb(234, 234, 234);
+  position: relative;
+}
+
+.box .number {
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 5%;
+  background: #5063c6;
+  font-size: 6vw;
+  font-family: "impact";
+}
+
+.box:nth-of-type(1) .number {
+  padding-left: 7%;
+}
+
+.box:nth-of-type(2) .number {
+  left: 0;
+  right: unset;
+  background: #ca38a6;
+}
+
+.box:nth-of-type(3) .number {
+  top: 0;
+  right: 0;
+  left: unset;
+  bottom: unset;
+  background: #ff8c48;
+}
+
+.box:nth-of-type(4) .number {
+  top: 0;
+  left: 0;
+  right: unset;
+  bottom: unset;
+  background: #f83362;
+}
+
+.box .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  opacity: 0.3;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.box:nth-of-type(2) .img {
+  right: 0;
+  left: unset;
+}
+.box:nth-of-type(3) .img {
+  left: 0;
+  bottom: 0;
+  left: unset;
+  top: unset;
+}
+.box:nth-of-type(4) .img {
+  right: 0;
+  left: unset;
+  bottom: 0;
+  top: unset;
+}
+
+.box .subTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.box .subTitle h3 {
+  font-size: 2vw;
+  text-shadow: 0 0 10px #00000064;
+  background-color: #5063c6;
+  padding: 10px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.box:nth-of-type(1) .subTitle h3 {
+  margin-bottom: 20%;
+}
+
+.box:nth-of-type(2) .subTitle h3 {
+  background-color: #ca38a6;
+  margin-bottom: 20%;
+}
+.box:nth-of-type(3) .subTitle h3 {
+  background-color: #ff8c48;
+  margin-top: 20%;
+}
+.box:nth-of-type(4) .subTitle h3 {
+  background-color: #f83362;
+  margin-top: 20%;
+}
+
+@media screen and (max-width: 794px) {
+  .title h2 {
+    font-size: 42px;
+  }
+
+  .title span {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .wrap {
+    padding: 50px 0;
+  }
+}
+

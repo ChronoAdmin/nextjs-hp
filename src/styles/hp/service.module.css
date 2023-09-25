@@ -1,0 +1,17 @@
+.wrap {
+    background-color: turquoise;
+    position: relative;
+    z-index: 9;
+}
+
+.wrap div {
+    height: auto;
+    position: relative;
+}
+
+.wrap div img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+
+}

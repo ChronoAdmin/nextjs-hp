@@ -82,21 +82,47 @@
 
 .typing h3 {
 
-        white-space: nowrap;
-        overflow: hidden;
-        border-right: .15em solid rgb(238, 238, 238); /* カーソルの色 */
-        font-size: 1em; /* 文字のサイズ */
-        width: 16ch; /* 文字の数 */
-        animation: typing 5s steps(16, end), blink-caret .75s step-end infinite;
+
 
 }
 
-@keyframes typing {
+/* @keyframes typing {
     from { width: 0 }
     to { width: 16ch }
   }
 
-  /* カーソルの点滅 */
   @keyframes blink-caret {
     50% { border-color: transparent; }
+  } */
+
+  .spText {
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    transform: translate(-30%,-40%);
+    color: rgb(196, 196, 196);
   }
+
+  @media screen and (max-width: 749px) {
+    .section {
+        height: 70vh;
+    }
+
+    .title {
+        display: none;
+    }
+    .spText h1 {
+        font-size: 2rem;
+        text-shadow: 0 0 10px #00000088;
+    }
+    .spText h2 {
+        font-size: 1rem;
+        margin-top: 15px;
+        padding-left: 1vw;
+    }
+
+    .spText {
+        display: block;
+    }
+   }

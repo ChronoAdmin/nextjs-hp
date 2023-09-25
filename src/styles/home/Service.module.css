@@ -78,6 +78,14 @@
   object-fit: cover;
 }
 
+.gallery_item_image video {
+  width: 100%;
+  width: 100%;
+  will-change: transform;
+  transform: scale(1);
+  object-fit: cover;
+}
+
 @media screen and (max-width: 900px) { 
   .gallery {
     height: 40vh;

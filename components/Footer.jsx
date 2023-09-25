@@ -35,7 +35,6 @@ export const Footer = ({ onFormSubmitSuccess }) => {
         res.text().then((text) => console.log(text));
         onFormSubmitSuccess();
         resetForm(); // フォームをリセット
-
       } else {
         res.text().then((text) => console.error(`Error: ${text}`));
       }
