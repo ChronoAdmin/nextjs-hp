@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "@/styles/ads/plan.module.css";
+import Link from "next/link";
 
 const Plan = () => {
   return (
@@ -22,9 +23,9 @@ const Plan = () => {
               <li>・１投稿分の広告のみとなります。</li>
               <li>・初めて広告を出す方にオススメ。</li>
             </ul>
-            <a href="/" className={styles.button}>
+            <Link href="/" className={styles.button}>
               申し込み
-            </a>
+            </Link>
           </div>
           <div className={styles.grid_1_5}>
             <h2 style={{color: "#ca38a6"}}>ライト</h2>
@@ -37,9 +38,9 @@ const Plan = () => {
               <li>・契約期間は1ヶ月~です。</li>
               <li>・素材はあるが、広告を出す時間や<br />知識がない方にオススメ。</li>
             </ul>
-            <a href="/" className={styles.button}>
+            <Link href="/" className={styles.button}>
             申し込み
-            </a>
+            </Link>
           </div>
           <div className={styles.grid_1_5}>
             <h2 style={{color: "#ff8c48"}}>プロ</h2>
@@ -52,9 +53,9 @@ const Plan = () => {
               <li>・契約期間は1ヶ月~です。</li>
               <li>・素材や画像作成から日々の運用まで丸投げしたい方にオススメ。</li>
             </ul>
-            <a href="/" className={styles.button}>
+            <Link href="/" className={styles.button}>
             申し込み
-            </a>
+            </Link>
           </div>
         </div>
       </div>
