@@ -71,9 +71,7 @@ const HeroMain = () => {
             <img src="/images/1.webp" alt="" />
           </span>
           <span className={styles.tr_text}>
-            <p>Web Design</p>
-            <p>HP Create</p>
-            <p>Ads Create</p>
+          <Image src="/circle.png" width={150} height={150} alt='a' />
           </span>
           <h1>Chrono-office</h1>
         </div>

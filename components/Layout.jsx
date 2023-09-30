@@ -11,9 +11,9 @@ const Layout = ({children, navPosition}) => {
   };
   return (
     <>
-        <Navigation position={navPosition}  />
+        {/* <Navigation position={navPosition}  /> */}
         {children}
-        <Footer onFormSubmitSuccess={handleFormSubmitSuccess}  />
+        {/* <Footer onFormSubmitSuccess={handleFormSubmitSuccess}  /> */}
     </>
   )
 }

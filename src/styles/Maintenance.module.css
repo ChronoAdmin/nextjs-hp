@@ -1,0 +1,95 @@
+.wrap {
+    height: 100vh;
+    background: url(/header.svg) center center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap h1 {
+    font-size: 4vw;
+    color: #000;
+    position: relative;
+    z-index: 10;
+}
+
+.svg1,
+.svg2,
+.svg3,
+.svg4 {
+    position: fixed;
+    animation:  up 15s infinite;
+}
+
+.svg1 {
+    top: 50%;
+    right: -10%;
+    animation-delay: 2s;
+}
+.svg2 {
+    top: 0%;
+    right: 0%;
+    max-width: 200px;
+    animation-delay: 7s;
+    
+}
+.svg3 {
+    top: 0%;
+    left: -5%;
+    max-width: 200px;
+    animation-delay: 4s;
+}
+.svg4 {
+    top: 50%;
+    left: 30%;
+    transform: translateY(-50%);
+    max-width: 200px;
+}
+
+@media screen and (max-width: 450px) {
+    .wrap h1 {
+        font-size: 2rem;
+        color: #000;
+    }
+
+    .svg1 {
+        top: unset;
+        bottom: 0%;
+        right: -10%;
+        max-width: 200px;
+    }
+    .svg2 {
+        top: 0%;
+        right: -15%;
+        max-width: 200px;
+    }
+    .svg3 {
+        top: 0%;
+        left: -25%;
+        max-width: 200px;
+    }
+    .svg4 {
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+        max-width: 200px;
+    }
+ }
+
+ @keyframes up {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(50px);
+
+    }
+
+    100% {
+        transform: translateY(0);
+
+    }
+ }

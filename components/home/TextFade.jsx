@@ -36,10 +36,10 @@ const TextFade = () => {
   return (
     <div className={styles.wrap}>
         <span ref={ref}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
+        Create HomePage Advertising agency MEO measures Create LandingPage
         </span>
         <span ref={ref2}>
-          Lorem dolor sit amet consectetur adipisicing elit. Iste, mollitia!
+        Create HomePage Advertising agency MEO measures Create LandingPage
         </span>
     </div>
   );

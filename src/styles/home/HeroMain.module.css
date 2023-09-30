@@ -139,8 +139,20 @@
   position: absolute;
   top: 22px;
   right: 0;
-  transform: rotate(40deg);
   line-height: 1.3;
+}
+
+.tr_text img {
+    animation: rotation 12s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .inner h1 {

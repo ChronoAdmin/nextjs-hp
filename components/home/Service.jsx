@@ -20,8 +20,8 @@ const images = [
   },
   {
     src: "/images/Service/10.mp4",
-    title: "Event企画",
-    subTitle: "Chrono event planning",
+    title: "LP作成",
+    subTitle: "Chrono Create LandingPage",
   },
 
 ]
